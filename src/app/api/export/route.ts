@@ -1,0 +1,99 @@
+import { db } from "@/db";
+import { businesses } from "@/db/schema";
+import { buildMapLinks, toBusinessRecord } from "@/lib/business-data";
+import { desc } from "drizzle-orm";
+
+export const dynamic = "force-dynamic";
+
+function escapeCsv(value: string) {
+  const escaped = value.replace(/"/g, '""');
+  return `"${escaped}"`;
+}
+
+export async function GET(request: Request) {
+  const { searchParams } = new URL(request.url);
+  const format = searchParams.get("format") ?? "json";
+
+  const rows = await db.select().from(businesses).orderBy(desc(businesses.leadScore), desc(businesses.updatedAt)).limit(1000);
+  const records = rows.map(toBusinessRecord);
+
+  if (format === "csv") {
+    const header = [
+      "id",
+      "نام",
+      "دسته",
+      "آدرس",
+      "شهر",
+      "lat",
+      "lng",
+      "تلفن",
+      "وبسایت",
+      "وضعیت",
+      "امتیاز_کیفیت",
+      "امتیاز_لید",
+      "لینک_گوگل_مپ",
+      "لینک_نشان",
+      "لینک_ویز",
+      "پرامپت_طراحی_سایت",
+    ];
+
+    const lines = [header.map(escapeCsv).join(",")];
+
+    for (const record of records) {
+      const links = buildMapLinks(record);
+      lines.push(
+        [
+          String(record.id),
+          record.name,
+          record.category,
+          record.address,
+          record.city,
+          String(record.latitude ?? ""),
+          String(record.longitude ?? ""),
+          record.phone ?? "",
+          record.website ?? "",
+          record.websiteQuality,
+          String(record.qualityScore),
+          String(record.leadScore),
+          links.google,
+          links.neshan,
+          links.waze,
+          (record.websitePrompt ?? "").slice(0, 8000).replace(/\n/g, " "),
+        ]
+          .map(escapeCsv)
+          .join(","),
+      );
+    }
+
+    const csv = "\uFEFF" + lines.join("\n");
+    return new Response(csv, {
+      headers: {
+        "Content-Type": "text/csv; charset=utf-8",
+        "Content-Disposition": `attachment; filename="businesses-${new Date().toISOString().slice(0, 10)}.csv"`,
+      },
+    });
+  }
+
+  const enriched = records.map((record) => ({
+    ...record,
+    mapLinks: buildMapLinks(record),
+  }));
+
+  return Response.json(
+    {
+      generatedAt: new Date().toISOString(),
+      count: enriched.length,
+      notice: "فایل نهایی شامل لینک‌های قابل کلیک گوگل مپ، نشان، ویز و پرامپت طراحی سایت برای هر کسب‌وکار بحرانی است.",
+      areas: {
+        density: "بررسی تراکم در سعادت‌آباد، حوالی پل مدیریت و چهارراه سرو با کلاستر نقشه",
+        hotspots: ["سعادت‌آباد مرکز", "میدان کاج", "پل مدیریت", "شهرک غرب دادمان", "مرزداران پل یادگار"],
+      },
+      items: enriched,
+    },
+    {
+      headers: {
+        "Content-Disposition": `attachment; filename="businesses-${new Date().toISOString().slice(0, 10)}.json"`,
+      },
+    },
+  );
+}

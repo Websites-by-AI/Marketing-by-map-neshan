@@ -1,0 +1,511 @@
+import type { businesses } from "@/db/schema";
+
+export type BusinessRecord = {
+  id: number;
+  neshanId: string | null;
+  name: string;
+  category: string;
+  address: string;
+  city: string;
+  latitude: number | null;
+  longitude: number | null;
+  phone: string | null;
+  website: string | null;
+  websiteTitle: string | null;
+  websiteFound: boolean;
+  websiteStatus: string;
+  websiteQuality: string;
+  websitePrompt: string | null;
+  qualityScore: number;
+  digitalMaturity: number;
+  hasOnlineOrder: boolean;
+  hasBooking: boolean;
+  hasContactPage: boolean;
+  hasSocialLinks: boolean;
+  leadScore: number;
+  technologies: string[];
+  socialLinks: string[];
+  source: string;
+  lastChecked: string | null;
+};
+
+type DatabaseBusiness = typeof businesses.$inferSelect;
+
+export function generateWebsitePrompt(params: {
+  name: string;
+  category: string;
+  address: string;
+  phone?: string | null;
+  website?: string | null;
+  websiteQuality?: string;
+  qualityScore?: number;
+  hasOnlineOrder?: boolean;
+  hasBooking?: boolean;
+  hasContactPage?: boolean;
+  hasSocialLinks?: boolean;
+  technologies?: string[];
+  leadScore?: number;
+}): string {
+  const { name, category, address, phone, website, websiteQuality, qualityScore, hasOnlineOrder, hasBooking, hasContactPage, hasSocialLinks, technologies, leadScore } = params;
+  const problems: string[] = [];
+  if (!website) problems.push("⛔ وب‌سایت رسمی ندارد و فقط در نقشه و اینستاگرام دیده می‌شود");
+  if (qualityScore !== undefined && qualityScore < 55) problems.push(`⚠️ امتیاز کیفیت فعلی ${qualityScore}/100 و نیازمند بازطراحی است`);
+  if (!hasContactPage) problems.push("📞 صفحه تماس / فرم تماس استاندارد ندارد");
+  if (!hasSocialLinks) problems.push("🔗 اتصال به شبکه‌های اجتماعی ضعیف است");
+  if (!hasBooking && (category.includes("پزشک") || category.includes("کلینیک") || category.includes("آموزش") || category.includes("ورزش") || category.includes("زیبایی"))) problems.push("📅 سیستم رزرو/نوبت‌دهی آنلاین ندارد");
+  if (!hasOnlineOrder && (category.includes("رستوران") || category.includes("کافه") || category.includes("فروشگاه") || category.includes("مبلمان") || category.includes("سوپر"))) problems.push("🛒 امکان سفارش/خرید آنلاین ندارد");
+
+  if (problems.length === 0) problems.push("✅ سایت پایه دارد اما برای رشد محلی نیاز به سئو محلی و تبدیل بالاتر دارد");
+
+  const stack = technologies && technologies.length ? technologies.join(", ") : "پیشنهاد: Next.js + Tailwind + صفحه‌ساز فارسی";
+
+  return `تو یک تیم طراحی وب‌سایت تجاری حرفه‌ای برای بازار ایران هستی.
+
+**کسب‌وکار مورد نظر:**
+- نام: ${name}
+- دسته: ${category}
+- آدرس: ${address}
+${phone ? `- تلفن: ${phone}` : ""}
+- وب‌سایت فعلی: ${website ?? "ندارد"}
+- وضعیت: ${websiteQuality ?? "بررسی نشده"} - امتیاز لید ${leadScore ?? "-"}
+- تکنولوژی فعلی: ${stack}
+
+**وضعیت بحرانی فعلی:**
+${problems.map((p) => `- ${p}`).join("\n")}
+
+**هدف نهایی:**
+یک وب‌سایت سریع، سئو محلی قوی، قابل اعتماد، با نرخ تبدیل بالا و مجهز به:
+${!hasBooking ? "- فرم رزرو/نوبت‌دهی آنلاین با تقویم شمسی" : ""}
+${!hasOnlineOrder ? "- فروشگاه/منو آنلاین + پرداخت آنلاین + پیگیری سفارش" : ""}
+- صفحه اول با هیرو قدرتمند، اعتمادسازی (نمادها، نظرات)، CTA واضح
+- صفحه خدمات/محصولات/منو، گالری تصاویر واقعی
+- صفحه درباره ما و داستان کسب‌وکار محلی
+- صفحه تماس با نقشه نشان/گوگل مپ قابل کلیک، فرم تماس، واتساپ و دکمه تماس
+- بلاگ سئو محلی (مثلا: بهترین ${category} در سعادت‌آباد)
+- سئو کامل: title، meta description، schema LocalBusiness، OG، sitemap، robots
+- سرعت: Lighthouse بالای 90، تصاویر بهینه، فونت فارسی Vazirmatn
+- اتصال به سرچ کنسول، اینستاگرام، و آنالیتیکس
+
+**پرامپت آماده برای ابزارهای AI (Lovable, Framer, v0, Bolt):**
+"""
+Design a modern, fast, Persian RTL website for "${name}" (${category}) located at "${address}". 
+Style: minimal, trustworthy, local, with rounded 2xl cards, soft shadows, accent #ee6748 and navy #132b45. 
+Must include sticky header with call button, hero with address and map links, feature sections for ${category}, ${!hasOnlineOrder ? "online ordering" : "product showcase"}, ${!hasBooking ? "online booking" : "booking status"}, contact with clickable Neshan/Google Map pins, FAQ, and footer with Enamad placeholder.
+Generate all pages in Persian, SEO optimized for local keyword "${category} در ${address.split("،")[0] ?? "تهران"}".
+Technologies: Next.js 14, Tailwind, Persian font.
+"""
+
+**لینک‌های نقشه که باید قابل کلیک باشند:**
+- با مختصات اگر موجود است، لینک نشان، گوگل و Waze بساز.
+- اگر مختصات ندارد، لینک جستجوی نام + آدرس در گوگل مپ بساز.
+
+این پرامپت را به عنوان سند نیازمندی در دیتابیس ذخیره کن و نسخه نهایی سایت را روی دامنه IR و با SSL منتشر کن.
+`;
+}
+
+export function buildMapLinks(record: { name: string; address: string; latitude: number | null; longitude: number | null }) {
+  const q = encodeURIComponent(`${record.name} ${record.address}`);
+  if (record.latitude && record.longitude) {
+    const lat = record.latitude;
+    const lng = record.longitude;
+    return {
+      google: `https://www.google.com/maps/search/?api=1&query=${lat},${lng}`,
+      neshan: `https://nshn.ir/${lat},${lng}`,
+      neshanOrg: `https://www.neshan.org/maps/@${lat},${lng},16z`,
+      waze: `https://waze.com/ul?ll=${lat},${lng}&navigate=yes`,
+      embedQuery: `${lat},${lng}`,
+    };
+  }
+  return {
+    google: `https://www.google.com/maps/search/?api=1&query=${q}`,
+    neshan: `https://www.neshan.org/search?term=${q}`,
+    neshanOrg: `https://www.neshan.org/search?term=${q}`,
+    waze: `https://waze.com/ul?q=${q}`,
+    embedQuery: q,
+  };
+}
+
+export function toBusinessRecord(row: DatabaseBusiness): BusinessRecord {
+  return {
+    id: row.id,
+    neshanId: row.neshanId,
+    name: row.name,
+    category: row.category,
+    address: row.address,
+    city: row.city,
+    latitude: row.latitude ? Number(row.latitude) : null,
+    longitude: row.longitude ? Number(row.longitude) : null,
+    phone: row.phone,
+    website: row.website,
+    websiteTitle: row.websiteTitle ?? null,
+    websiteFound: row.websiteFound,
+    websiteStatus: row.websiteStatus,
+    websiteQuality: row.websiteQuality,
+    websitePrompt: row.websitePrompt ?? null,
+    qualityScore: row.qualityScore,
+    digitalMaturity: row.digitalMaturity,
+    hasOnlineOrder: row.hasOnlineOrder,
+    hasBooking: row.hasBooking,
+    hasContactPage: row.hasContactPage,
+    hasSocialLinks: row.hasSocialLinks,
+    leadScore: row.leadScore,
+    technologies: row.technologies,
+    socialLinks: row.socialLinks,
+    source: row.source,
+    lastChecked: row.lastChecked?.toISOString() ?? null,
+  };
+}
+
+function promptForDemo(record: Omit<BusinessRecord, "websitePrompt">): string {
+  return generateWebsitePrompt({
+    name: record.name,
+    category: record.category,
+    address: record.address,
+    phone: record.phone,
+    website: record.website,
+    websiteQuality: record.websiteQuality,
+    qualityScore: record.qualityScore,
+    hasOnlineOrder: record.hasOnlineOrder,
+    hasBooking: record.hasBooking,
+    hasContactPage: record.hasContactPage,
+    hasSocialLinks: record.hasSocialLinks,
+    technologies: record.technologies,
+    leadScore: record.leadScore,
+  });
+}
+
+const baseDemos: Omit<BusinessRecord, "websitePrompt">[] = [
+  {
+    id: -1,
+    neshanId: "neshan-demo-001",
+    name: "کافه روف گاردن ایوان",
+    category: "کافه و رستوران",
+    address: "تهران، سعادت‌آباد، بلوار دریا، پلاک ۱۴۸ - نزدیک میدان شهرداری",
+    city: "تهران",
+    latitude: 35.7856,
+    longitude: 51.3852,
+    phone: "۰۲۱-۸۸۵۸ ۲۳۴۰",
+    website: null,
+    websiteTitle: null,
+    websiteFound: false,
+    websiteStatus: "not_found",
+    websiteQuality: "بدون سایت - بحرانی",
+    qualityScore: 0,
+    digitalMaturity: 1,
+    hasOnlineOrder: false,
+    hasBooking: false,
+    hasContactPage: false,
+    hasSocialLinks: true,
+    leadScore: 96,
+    technologies: [],
+    socialLinks: ["Instagram"],
+    source: "نمونه داشبورد",
+    lastChecked: new Date().toISOString(),
+  },
+  {
+    id: -2,
+    neshanId: "neshan-demo-002",
+    name: "کلینیک دندانپزشکی آریا",
+    category: "کلینیک دندانپزشکی",
+    address: "تهران، سعادت‌آباد، سرو غربی، تقاطع پاک‌نژاد، برج آریا",
+    city: "تهران",
+    latitude: 35.7901,
+    longitude: 51.3778,
+    phone: "۰۲۱-۲۲۳۶ ۸۹۱۰",
+    website: "ariadental.ir",
+    websiteTitle: "کلینیک دندانپزشکی آریا - سعادت‌آباد",
+    websiteFound: true,
+    websiteStatus: "healthy",
+    websiteQuality: "نیازمند بهبود شدید",
+    qualityScore: 38,
+    digitalMaturity: 2,
+    hasOnlineOrder: false,
+    hasBooking: false,
+    hasContactPage: true,
+    hasSocialLinks: true,
+    leadScore: 91,
+    technologies: ["WordPress"],
+    socialLinks: ["Instagram", "WhatsApp"],
+    source: "نمونه داشبورد",
+    lastChecked: new Date().toISOString(),
+  },
+  {
+    id: -3,
+    neshanId: "neshan-demo-003",
+    name: "فست‌فود تند و آتشین - شعبه سعادت‌آباد",
+    category: "رستوران و فست‌فود",
+    address: "تهران، سعادت‌آباد، بلوار سرو، پلاک ۸۹، روبروی بانک ملت",
+    city: "تهران",
+    latitude: 35.7882,
+    longitude: 51.3821,
+    phone: "۰۲۱-۲۲۱۴ ۰۵۵۰",
+    website: "tondfastfood.com",
+    websiteTitle: "فست‌فود تند و آتشین",
+    websiteFound: true,
+    websiteStatus: "healthy",
+    websiteQuality: "متوسط - بدون سفارش آنلاین",
+    qualityScore: 53,
+    digitalMaturity: 2,
+    hasOnlineOrder: false,
+    hasBooking: false,
+    hasContactPage: true,
+    hasSocialLinks: true,
+    leadScore: 88,
+    technologies: ["WooCommerce"],
+    socialLinks: ["Instagram", "Telegram"],
+    source: "نمونه داشبورد",
+    lastChecked: new Date().toISOString(),
+  },
+  {
+    id: -4,
+    neshanId: "neshan-demo-004",
+    name: "آموزشگاه موسیقی آوای پارسی",
+    category: "آموزشگاه",
+    address: "تهران، شهرک غرب، بلوار دادمان، خیابان سپهر، کوچه هفتم",
+    city: "تهران",
+    latitude: 35.7579,
+    longitude: 51.3688,
+    phone: "۰۲۱-۸۸۵۸ ۷۷۱۱",
+    website: null,
+    websiteTitle: null,
+    websiteFound: false,
+    websiteStatus: "not_found",
+    websiteQuality: "بدون سایت - بحرانی",
+    qualityScore: 0,
+    digitalMaturity: 1,
+    hasOnlineOrder: false,
+    hasBooking: false,
+    hasContactPage: false,
+    hasSocialLinks: true,
+    leadScore: 94,
+    technologies: [],
+    socialLinks: ["Instagram"],
+    source: "نمونه داشبورد",
+    lastChecked: new Date().toISOString(),
+  },
+  {
+    id: -5,
+    neshanId: "neshan-demo-005",
+    name: "مبل و دکوراسیون چوبینه",
+    category: "دکوراسیون و مبلمان",
+    address: "تهران، سعادت‌آباد، چهارراه سرو، مجتمع تجاری سروستان",
+    city: "تهران",
+    latitude: 35.7832,
+    longitude: 51.389,
+    phone: "۰۲۱-۶۶۵۷ ۴۱۲۲",
+    website: "choobinehhome.com",
+    websiteTitle: "چوبینه - فروشگاه آنلاین مبلمان",
+    websiteFound: true,
+    websiteStatus: "healthy",
+    websiteQuality: "متوسط",
+    qualityScore: 61,
+    digitalMaturity: 3,
+    hasOnlineOrder: true,
+    hasBooking: false,
+    hasContactPage: true,
+    hasSocialLinks: true,
+    leadScore: 71,
+    technologies: ["WooCommerce", "WordPress"],
+    socialLinks: ["Instagram", "Telegram"],
+    source: "نمونه داشبورد",
+    lastChecked: new Date().toISOString(),
+  },
+  {
+    id: -6,
+    neshanId: "neshan-demo-006",
+    name: "باشگاه کراس‌فیت تندرست",
+    category: "باشگاه ورزشی",
+    address: "تهران، مرزداران، بلوار ایثار، نبش پل یادگار، پلاک ۲۱۰",
+    city: "تهران",
+    latitude: 35.744,
+    longitude: 51.35,
+    phone: "۰۲۱-۴۴۲۳ ۹۹۳۰",
+    website: null,
+    websiteTitle: null,
+    websiteFound: false,
+    websiteStatus: "not_found",
+    websiteQuality: "بدون سایت - بحرانی",
+    qualityScore: 0,
+    digitalMaturity: 1,
+    hasOnlineOrder: false,
+    hasBooking: false,
+    hasContactPage: false,
+    hasSocialLinks: true,
+    leadScore: 93,
+    technologies: [],
+    socialLinks: ["Instagram", "WhatsApp"],
+    source: "نمونه داشبورد",
+    lastChecked: new Date().toISOString(),
+  },
+  {
+    id: -7,
+    neshanId: "neshan-demo-007",
+    name: "سالن زیبایی آناهیتا",
+    category: "سالن زیبایی",
+    address: "تهران، سعادت‌آباد، میدان کاج، خیابان سرو شرقی، پلاک ۶۰",
+    city: "تهران",
+    latitude: 35.7915,
+    longitude: 51.3805,
+    phone: "۰۲۱-۲۶۷۶ ۳۴۱۲",
+    website: "anahita-beauty.ir",
+    websiteTitle: "سالن زیبایی آناهیتا",
+    websiteFound: true,
+    websiteStatus: "healthy",
+    websiteQuality: "نیازمند رزرو آنلاین",
+    qualityScore: 48,
+    digitalMaturity: 2,
+    hasOnlineOrder: false,
+    hasBooking: false,
+    hasContactPage: true,
+    hasSocialLinks: true,
+    leadScore: 89,
+    technologies: ["WordPress"],
+    socialLinks: ["Instagram"],
+    source: "نمونه داشبورد",
+    lastChecked: new Date().toISOString(),
+  },
+];
+
+export const demoBusinesses: BusinessRecord[] = baseDemos.map((r) => ({
+  ...r,
+  websitePrompt: promptForDemo(r),
+}));
+
+export const tehranPresets = [
+  { label: "سعادت‌آباد - مرکز", lat: 35.785, lng: 51.385, description: "تراکم بالا - ۲۴ تیر / سرو" },
+  { label: "سعادت‌آباد - میدان کاج", lat: 35.7915, lng: 51.3805, description: "بحرانی - زیبایی و کلینیک" },
+  { label: "پل مدیریت - سعادت‌آباد", lat: 35.7801, lng: 51.389, description: "پل و دسترسی شریانی" },
+  { label: "شهرک غرب - دادمان", lat: 35.758, lng: 51.368, description: "کافه و رستوران" },
+  { label: "مرزداران - پل یادگار", lat: 35.744, lng: 51.35, description: "تراکم ورزشی و آموزشی" },
+  { label: "پونک - همیلا", lat: 35.765, lng: 51.325, description: "آموزش و خدمات" },
+] as const;
+
+export const cooperationModels = [
+  {
+    slug: "build",
+    title: "ساخت وب‌سایت فوری برای بی‌سایت‌ها",
+    tag: "۴۰٪ بازار",
+    leadRange: "امتیاز لید ۹۰+",
+    price: "از ۱۸ میلیون",
+    desc: "برای کسب‌وکارهای بحرانی بدون سایت در سعادت‌آباد و اطراف پل‌ها. تحویل ۷ روزه با نقشه قابل کلیک + سئو محلی.",
+    includes: ["طراحی پرامپت AI آماده", "نقشه نشان و گوگل قابل کلیک", "صفحه تماس + واتساپ", "بلاگ سئو محلی ۵ مقاله"],
+    color: "bg-[#fff0eb] text-[#d64b28] border-[#ffd5c7]",
+  },
+  {
+    slug: "revamp",
+    title: "بازطراحی سایت ضعیف",
+    tag: "۳۱٪ بازار",
+    leadRange: "امتیاز ۴۰-۶۰",
+    price: "از ۱۴ میلیون",
+    desc: "سایت دارند اما قدیمی/کند/غیر ریسپانسیو. تبدیل به Next.js سریع با امتیاز ۹۰+.",
+    includes: ["تحلیل Lighthouse فعلی", "تولید پرامپت بهبود", "حفظ سئو قدیمی", "افزودن رزرو/سفارش"],
+    color: "bg-[#f3f0ff] text-[#5b4bb6] border-[#e1dcff]",
+  },
+  {
+    slug: "seo",
+    title: "سئو محلی + گوگل مپ",
+    tag: "رشد فوری",
+    leadRange: "برای همه",
+    price: "ماهانه از ۶ میلیون",
+    desc: "رتبه گرفتن در 'بهترین X در سعادت‌آباد' و اتصال به نشان/گوگل بیزینس.",
+    includes: ["بهینه‌سازی Google Business", "نقشه نشان", "محتوای محلی", "اسکیما LocalBusiness"],
+    color: "bg-[#e9f8f3] text-[#0d7a6a] border-[#c7efe3]",
+  },
+  {
+    slug: "system",
+    title: "افزودن سیستم فروش/رزرو",
+    tag: "تبدیل بالا",
+    leadRange: "امتیاز فروش پایین",
+    price: "از ۹ میلیون",
+    desc: "برای رستوران‌ها (سفارش آنلاین) و کلینیک/سالن زیبایی (رزرو).",
+    includes: ["سبد خرید + درگاه پرداخت", "تقویم شمسی رزرو", "پیامک اطلاع‌رسانی", "پنل مدیریت فارسی"],
+    color: "bg-[#fff8e6] text-[#8a6d1b] border-[#ffe8ab]",
+  },
+] as const;
+
+export function distanceKm(a: { lat: number; lng: number }, b: { lat: number; lng: number }) {
+  const toRad = (v: number) => (v * Math.PI) / 180;
+  const dLat = toRad(b.lat - a.lat);
+  const dLng = toRad(b.lng - a.lng);
+  const s = Math.sin(dLat / 2) ** 2 + Math.cos(toRad(a.lat)) * Math.cos(toRad(b.lat)) * Math.sin(dLng / 2) ** 2;
+  return 2 * 6371 * Math.asin(Math.sqrt(s));
+}
+
+export type RelatedBusiness = BusinessRecord & { distanceMeters: number; connectionReason: string; connectionType: "complementary" | "same-street" | "service-chain" | "problem-cluster" };
+
+function getConnectionReason(a: BusinessRecord, b: BusinessRecord, distM: number): { reason: string; type: RelatedBusiness["connectionType"] } {
+  const catA = a.category;
+  const catB = b.category;
+  const bothCritical = (!a.websiteFound || a.qualityScore < 50) && (!b.websiteFound || b.qualityScore < 50);
+  const oneNoSite = !a.websiteFound || !b.websiteFound;
+  const streetSame = a.address.split("،")[1]?.trim() === b.address.split("،")[1]?.trim() || Math.abs((a.latitude ?? 0) - (b.latitude ?? 0)) < 0.002;
+
+  if (bothCritical) {
+    return { reason: `خوشه بحرانی در ${distM}م - هر دو بدون سایت/ضعیف، پیشنهاد پکیج مشترک ساخت سایت با تخفیف ۲۰٪ و اشتراک نقشه`, type: "problem-cluster" };
+  }
+  if (oneNoSite) {
+    return { reason: `${a.websiteFound ? a.name : b.name} سایت دارد، دیگری ندارد - اتصال ارجاع مشتری و بک‌لینک محلی`, type: "service-chain" };
+  }
+  if (catA.includes("رستوران") && (catB.includes("کافه") || catB.includes("باشگاه") || catB.includes("سینما"))) {
+    return { reason: `اتصال مصرفی: مشتری ${catB} بعد از ${catA} - پیشنهاد کمپین مشترک تخفیف`, type: "complementary" };
+  }
+  if (catA.includes("زیبایی") && (catB.includes("کلینیک") || catB.includes("آموزشگاه") || catB.includes("عکاس"))) {
+    return { reason: `زنجیره خدماتی زیبایی/سلامت - رزرو مشترک و پکیج عروس/مراسم`, type: "complementary" };
+  }
+  if (catA.includes("آموزش") && (catB.includes("کتاب") || catB.includes("کافه") || catB.includes("لوازم"))) {
+    return { reason: `اکوسیستم آموزشی - فضای مطالعه و خرید ملزومات`, type: "complementary" };
+  }
+  if (streetSame) {
+    return { reason: `هم‌خیابانی در ${distM}م - اشتراک مشتری پیاده و تبلیغ خیابانی مشترک`, type: "same-street" };
+  }
+  return { reason: `همسایگی ${distM} متری - امکان همکاری کراس‌پروموشن و سئو محلی مشترک`, type: "same-street" };
+}
+
+export function findRelatedCompanies(target: BusinessRecord, all: BusinessRecord[], maxDistanceMeters = 900, maxResults = 6): RelatedBusiness[] {
+  if (!target.latitude || !target.longitude) return [];
+  const base = { lat: target.latitude, lng: target.longitude };
+  const related: RelatedBusiness[] = [];
+  for (const other of all) {
+    if (other.id === target.id) continue;
+    if (!other.latitude || !other.longitude) continue;
+    const dist = distanceKm(base, { lat: other.latitude, lng: other.longitude }) * 1000;
+    if (dist <= maxDistanceMeters) {
+      const { reason, type } = getConnectionReason(target, other, Math.round(dist));
+      related.push({ ...other, distanceMeters: Math.round(dist), connectionReason: reason, connectionType: type });
+    }
+  }
+  return related.sort((a, b) => {
+    const criticalScore = (r: RelatedBusiness) => (!r.websiteFound ? 10 : 0) + (r.leadScore >= 80 ? 5 : 0) - r.distanceMeters / 200;
+    return criticalScore(b) - criticalScore(a);
+  }).slice(0, maxResults);
+}
+
+export function buildLocalNetworkClusters(all: BusinessRecord[]) {
+  const clusters: { center: { lat: number; lng: number }; label: string; businesses: BusinessRecord[]; problemCount: number; serviceGaps: string[] }[] = [];
+  const used = new Set<number>();
+  for (const biz of all) {
+    if (used.has(biz.id) || !biz.latitude || !biz.longitude) continue;
+    const nearby = all.filter(o => {
+      if (o.id === biz.id || used.has(o.id) || !o.latitude || !o.longitude) return false;
+      return distanceKm({ lat: biz.latitude!, lng: biz.longitude! }, { lat: o.latitude!, lng: o.longitude! }) * 1000 <= 600;
+    });
+    if (nearby.length >= 1) {
+      const group = [biz, ...nearby];
+      group.forEach(g => used.add(g.id));
+      const problemCount = group.filter(g => !g.websiteFound || g.qualityScore < 50).length;
+      const gaps: string[] = [];
+      if (group.every(g => !g.hasBooking)) gaps.push("هیچکدام رزرو آنلاین ندارند");
+      if (group.every(g => !g.hasOnlineOrder) && group.some(g => g.category.includes("رستوران") || g.category.includes("کافه"))) gaps.push("پتانسیل سفارش آنلاین مشترک");
+      if (group.filter(g => g.websiteFound).length <= 1) gaps.push("خوشه بی‌سایت - فروش گروهی");
+      clusters.push({
+        center: { lat: biz.latitude!, lng: biz.longitude! },
+        label: `${biz.address.split("،")[1] ?? biz.city} - ${group.length} کسب‌وکار`,
+        businesses: group,
+        problemCount,
+        serviceGaps: gaps,
+      });
+    }
+  }
+  return clusters;
+}
+
