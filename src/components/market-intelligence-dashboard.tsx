@@ -378,10 +378,11 @@ export default function MarketIntelligenceDashboard({
         </div>
       </div>
       <div className="mt-auto rounded-xl border border-white/10 bg-white/5 p-3">
-        <div className="mb-3 flex gap-2 text-[10px] font-bold">
+        <div className="mb-3 flex flex-wrap gap-2 text-[10px] font-bold">
           <a href="/audit" className="rounded-lg bg-white/10 px-2 py-1 text-white">صحت</a>
           <a href="/memory" className="rounded-lg bg-white/10 px-2 py-1 text-white">حافظه</a>
           <a href="/connect" className="rounded-lg bg-white/10 px-2 py-1 text-white">API</a>
+          <a href="/panel/sisters" className="rounded-lg bg-[#ee6748] px-2 py-1 text-white">ادمین خواهرها</a>
         </div>
         <p className="text-[11px] font-bold text-white">خروجی شبکه + پرامپت</p>
         <p className="mt-1 text-[10px] leading-5 text-slate-400">
@@ -1151,11 +1152,12 @@ export default function MarketIntelligenceDashboard({
             <div className="mt-6 rounded-2xl border border-slate-200 bg-white p-4">
               <div className="flex flex-wrap items-end justify-between gap-2">
                 <div>
-                  <h4 className="text-[14px] font-extrabold">{sisterCompanies.holding} — ده شرکت خواهر</h4>
-                  <p className="mt-1 text-[11px] text-slate-500">{sisterCompanies.note}</p>
+                  <h4 className="text-[14px] font-extrabold">{sisterCompanies.holding} — کاتالوگ خدمات</h4>
+                  <p className="mt-1 text-[11px] text-slate-500">صفحه عمومی فقط سایت و امتیاز است. سورس در پنل ادمین است.</p>
                 </div>
                 <div className="flex gap-2 text-[11px] font-bold">
-                  <a href="/sisters" className="rounded-lg bg-[#10263d] px-3 py-1.5 text-white">خواهرها</a>
+                  <a href="/sisters" className="rounded-lg bg-[#10263d] px-3 py-1.5 text-white">کاتالوگ</a>
+                  <a href="/panel/sisters" className="rounded-lg bg-[#ee6748] px-3 py-1.5 text-white">ادمین + سورس</a>
                   <a href="/oil" className="rounded-lg border px-3 py-1.5">نفت {faNumber.format(oilExhibitionMeta.companies)}</a>
                 </div>
               </div>

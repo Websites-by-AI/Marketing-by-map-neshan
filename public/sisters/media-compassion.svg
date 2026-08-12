@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#10263d"/>
+      <stop offset="1" stop-color="#1b4a6b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#g)"/>
+  <rect x="48" y="40" width="1104" height="44" rx="10" fill="#0b1a2b"/>
+  <circle cx="78" cy="62" r="7" fill="#ee6748"/>
+  <circle cx="102" cy="62" r="7" fill="#f5c16c"/>
+  <circle cx="126" cy="62" r="7" fill="#3dbe8c"/>
+  <text x="160" y="68" fill="#9fb3c8" font-size="18" font-family="Tahoma,sans-serif">سایت عمومی هنوز آماده نیست</text>
+  <text x="600" y="360" text-anchor="middle" fill="#ffffff" font-size="42" font-family="Tahoma,sans-serif">تحلیل‌گر مهربانی رسانه</text>
+  <text x="600" y="420" text-anchor="middle" fill="#f4b8a8" font-size="22" font-family="Tahoma,sans-serif">تحلیل لحن و سوگیری ویدیوی یوتیوب</text>
+</svg>

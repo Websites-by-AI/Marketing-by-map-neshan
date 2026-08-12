@@ -62,7 +62,32 @@
           "repo": "https://github.com/Websites-by-AI/Marketing-by-map-neshan",
           "website": "https://neshan-m.exhibition2world.ir",
           "status": "live",
-          "role": "نقشه + ۴۴۰ غرفه ساختمان ۱۴۰۵"
+          "role": "نقشه + ۴۴۰ غرفه ساختمان ۱۴۰۵",
+          "description": "نقشه رسمی ۴۴۰ غرفه ساختمان ۱۴۰۵ با لید دیجیتال و اتصال به نفت.",
+          "tags": [
+            "وب",
+            "سئو",
+            "لندینگ",
+            "زنده",
+            "دامنه IR"
+          ],
+          "score": 86,
+          "stage": "آماده استفاده",
+          "stageId": "ready",
+          "nextSteps": [
+            "فرم لید نمایشگاه اضافه کن",
+            "پکیج قیمت فارسی بنویس",
+            "به LeadFair وصل کن",
+            "قرارداد و قیمت آماده کن",
+            "۲ کیس موفق غرفه بگذار"
+          ],
+          "scoreWhy": [
+            "آدرس عمومی دارد",
+            "سایت زنده پاسخ می‌دهد",
+            "دامنه نمایشگاه یا .ir"
+          ],
+          "screenshot": "/sisters/neshan-m.jpg",
+          "ready": true
         },
         {
           "id": "celebration",
@@ -72,7 +97,29 @@
           "repo": "https://github.com/SBZ-EDU/celebration-design-by-ai",
           "website": "https://celebration-design-by-ai.pages.dev",
           "status": "live",
-          "role": "طراحی جشن و رویداد با AI — استارتاپ دوم حوزه وب"
+          "role": "طراحی جشن و رویداد با AI — استارتاپ دوم حوزه وب",
+          "description": "طراحی جشن و رونمایی محصول برای غرفه‌دار.",
+          "tags": [
+            "وب",
+            "سئو",
+            "لندینگ",
+            "زنده"
+          ],
+          "score": 84,
+          "stage": "نزدیک به آماده",
+          "stageId": "almost",
+          "nextSteps": [
+            "فرم لید نمایشگاه اضافه کن",
+            "پکیج قیمت فارسی بنویس",
+            "به LeadFair وصل کن"
+          ],
+          "scoreWhy": [
+            "آدرس عمومی دارد",
+            "سایت زنده پاسخ می‌دهد",
+            "هاست کلادفلر"
+          ],
+          "screenshot": "/sisters/celebration.jpg",
+          "ready": true
         },
         {
           "id": "adv-seo-2",
@@ -82,7 +129,29 @@
           "repo": "https://github.com/Websites-by-AI/Adv-seo-2",
           "website": "https://adv-seo-2.vercel.app",
           "status": "live",
-          "role": "آدیت سئو، ایمپورت نمایشگاه، موتور لید"
+          "role": "آدیت سئو، ایمپورت نمایشگاه، موتور لید",
+          "description": "موتور لید و آدیت سئو با ایمپورت لیست نمایشگاه.",
+          "tags": [
+            "وب",
+            "سئو",
+            "لندینگ",
+            "زنده"
+          ],
+          "score": 83,
+          "stage": "نزدیک به آماده",
+          "stageId": "almost",
+          "nextSteps": [
+            "فرم لید نمایشگاه اضافه کن",
+            "پکیج قیمت فارسی بنویس",
+            "به LeadFair وصل کن"
+          ],
+          "scoreWhy": [
+            "آدرس عمومی دارد",
+            "سایت زنده پاسخ می‌دهد",
+            "دمو Vercel"
+          ],
+          "screenshot": "/sisters/adv-seo-2.jpg",
+          "ready": true
         },
         {
           "id": "adv-seo",
@@ -92,7 +161,29 @@
           "repo": "https://github.com/Websites-by-AI/Adv-seo",
           "website": "https://adv-seo.vercel.app",
           "status": "live",
-          "role": "داشبورد سئو اول"
+          "role": "داشبورد سئو اول",
+          "description": "داشبورد سئو نسخه اول؛ برای دمو کافی است.",
+          "tags": [
+            "وب",
+            "سئو",
+            "لندینگ",
+            "زنده"
+          ],
+          "score": 83,
+          "stage": "نزدیک به آماده",
+          "stageId": "almost",
+          "nextSteps": [
+            "فرم لید نمایشگاه اضافه کن",
+            "پکیج قیمت فارسی بنویس",
+            "به LeadFair وصل کن"
+          ],
+          "scoreWhy": [
+            "آدرس عمومی دارد",
+            "سایت زنده پاسخ می‌دهد",
+            "دمو Vercel"
+          ],
+          "screenshot": "/sisters/adv-seo.jpg",
+          "ready": true
         },
         {
           "id": "seo-wp",
@@ -102,7 +193,30 @@
           "repo": "https://github.com/Websites-by-AI/SEO-wordpress-automation",
           "website": null,
           "status": "repo",
-          "role": "بعد از فروش سایت غرفه"
+          "role": "بعد از فروش سایت غرفه",
+          "description": "اتوماسیون محتوا بعد از فروش سایت وردپرسی.",
+          "tags": [
+            "وب",
+            "سئو",
+            "لندینگ",
+            "بدون سایت"
+          ],
+          "score": 28,
+          "stage": "ایده / نیاز به ساخت",
+          "stageId": "idea",
+          "nextSteps": [
+            "لندینگ عمومی روی Pages بساز",
+            "آدرس قابل کلیک بده",
+            "صفحه فارسی با CTA تماس",
+            "نسخه دمو را دیپلوی کن",
+            "فرم واتساپ/تماس بگذار"
+          ],
+          "scoreWhy": [
+            "سایت عمومی ندارد",
+            "فقط مخزن/نمونه"
+          ],
+          "screenshot": "/sisters/seo-wp.svg",
+          "ready": false
         }
       ]
     },
@@ -130,7 +244,29 @@
           "repo": "https://github.com/Websites-by-AI/exhibtion-rag-test1",
           "website": "https://master.leadfair.pages.dev/",
           "status": "live",
-          "role": "۱۷۳۰ شرکت نفت + جستجوی RAG زنده"
+          "role": "۱۷۳۰ شرکت نفت + جستجوی RAG زنده",
+          "description": "جستجوی RAG روی ۱۷۳۰ شرکت نفت و صف فروش غرفه.",
+          "tags": [
+            "فروش",
+            "B2B",
+            "لید",
+            "زنده"
+          ],
+          "score": 84,
+          "stage": "نزدیک به آماده",
+          "stageId": "almost",
+          "nextSteps": [
+            "فرم لید نمایشگاه اضافه کن",
+            "پکیج قیمت فارسی بنویس",
+            "به LeadFair وصل کن"
+          ],
+          "scoreWhy": [
+            "آدرس عمومی دارد",
+            "سایت زنده پاسخ می‌دهد",
+            "هاست کلادفلر"
+          ],
+          "screenshot": "/sisters/leadfair.jpg",
+          "ready": true
         },
         {
           "id": "seo-liderfer",
@@ -140,7 +276,29 @@
           "repo": "https://github.com/Websites-by-AI/seo-liderfer",
           "website": "https://seo-liderfer.vercel.app",
           "status": "live",
-          "role": "رادار فروش سئو و صف P1–P3"
+          "role": "رادار فروش سئو و صف P1–P3",
+          "description": "صف اولویت لید سئو P1 تا P3.",
+          "tags": [
+            "فروش",
+            "B2B",
+            "لید",
+            "زنده"
+          ],
+          "score": 83,
+          "stage": "نزدیک به آماده",
+          "stageId": "almost",
+          "nextSteps": [
+            "فرم لید نمایشگاه اضافه کن",
+            "پکیج قیمت فارسی بنویس",
+            "به LeadFair وصل کن"
+          ],
+          "scoreWhy": [
+            "آدرس عمومی دارد",
+            "سایت زنده پاسخ می‌دهد",
+            "دمو Vercel"
+          ],
+          "screenshot": "/sisters/seo-liderfer.jpg",
+          "ready": true
         },
         {
           "id": "chatredash",
@@ -150,7 +308,30 @@
           "repo": "https://github.com/Websites-by-AI/Chatredash-CRM",
           "website": null,
           "status": "repo",
-          "role": "CRM معرف و پیگیری فروش — محتوای فعلی مخزن رتبه برتر است"
+          "role": "CRM معرف و پیگیری فروش — محتوای فعلی مخزن رتبه برتر است",
+          "description": "CRM معرف؛ دمو عمومی پایدار ندارد.",
+          "tags": [
+            "فروش",
+            "B2B",
+            "لید",
+            "بدون سایت"
+          ],
+          "score": 28,
+          "stage": "ایده / نیاز به ساخت",
+          "stageId": "idea",
+          "nextSteps": [
+            "لندینگ عمومی روی Pages بساز",
+            "آدرس قابل کلیک بده",
+            "صفحه فارسی با CTA تماس",
+            "نسخه دمو را دیپلوی کن",
+            "فرم واتساپ/تماس بگذار"
+          ],
+          "scoreWhy": [
+            "سایت عمومی ندارد",
+            "فقط مخزن/نمونه"
+          ],
+          "screenshot": "/sisters/chatredash.svg",
+          "ready": false
         },
         {
           "id": "elecon",
@@ -160,7 +341,30 @@
           "repo": "https://github.com/Heroku-elasa/Elecon-based-of-helius-num2",
           "website": null,
           "status": "repo",
-          "role": "B2B برق — پیش‌بینی فروش و ناهنجاری"
+          "role": "B2B برق — پیش‌بینی فروش و ناهنجاری",
+          "description": "فروش هوشمند صنعت برق برای غرفه تاسیسات.",
+          "tags": [
+            "فروش",
+            "B2B",
+            "لید",
+            "بدون سایت"
+          ],
+          "score": 28,
+          "stage": "ایده / نیاز به ساخت",
+          "stageId": "idea",
+          "nextSteps": [
+            "لندینگ عمومی روی Pages بساز",
+            "آدرس قابل کلیک بده",
+            "صفحه فارسی با CTA تماس",
+            "نسخه دمو را دیپلوی کن",
+            "فرم واتساپ/تماس بگذار"
+          ],
+          "scoreWhy": [
+            "سایت عمومی ندارد",
+            "فقط مخزن/نمونه"
+          ],
+          "screenshot": "/sisters/elecon.svg",
+          "ready": false
         },
         {
           "id": "hourtash",
@@ -170,7 +374,30 @@
           "repo": "https://github.com/Heroku-elasa/Hour-Tash-Laboratory-Advanced-Analysis-Services-base-do-site",
           "website": null,
           "status": "repo",
-          "role": "آزمایش غذا و کشاورزی — خدمات B2B غرفه‌دار"
+          "role": "آزمایش غذا و کشاورزی — خدمات B2B غرفه‌دار",
+          "description": "آزمایش غذا و کشاورزی به‌عنوان خدمت جانبی.",
+          "tags": [
+            "فروش",
+            "B2B",
+            "لید",
+            "بدون سایت"
+          ],
+          "score": 28,
+          "stage": "ایده / نیاز به ساخت",
+          "stageId": "idea",
+          "nextSteps": [
+            "لندینگ عمومی روی Pages بساز",
+            "آدرس قابل کلیک بده",
+            "صفحه فارسی با CTA تماس",
+            "نسخه دمو را دیپلوی کن",
+            "فرم واتساپ/تماس بگذار"
+          ],
+          "scoreWhy": [
+            "سایت عمومی ندارد",
+            "فقط مخزن/نمونه"
+          ],
+          "screenshot": "/sisters/hourtash.svg",
+          "ready": false
         }
       ]
     },
@@ -195,7 +422,27 @@
           "repo": "https://huggingface.co/spaces/sosa123454321/Business-plan-generator",
           "website": "https://sosa123454321-business-plan-generator.hf.space",
           "status": "hf-error",
-          "role": "طرح مالی غرفه‌دار — Space الان خطای اجرا دارد"
+          "role": "طرح مالی غرفه‌دار — Space الان خطای اجرا دارد",
+          "description": "سازنده طرح کسب‌وکار؛ Space الان خطا دارد.",
+          "tags": [
+            "مالی",
+            "حسابرسی",
+            "طرح کسب‌وکار",
+            "Hugging Face"
+          ],
+          "score": 46,
+          "stage": "نمونه اولیه",
+          "stageId": "prototype",
+          "nextSteps": [
+            "خطای اجرا را درست کن",
+            "پشتیبان کلادفلر بساز"
+          ],
+          "scoreWhy": [
+            "آدرس عمومی دارد",
+            "Space خطا دارد"
+          ],
+          "screenshot": "/sisters/bizplan.svg",
+          "ready": false
         },
         {
           "id": "bizplan-2",
@@ -205,7 +452,27 @@
           "repo": "https://huggingface.co/spaces/sosa123454321/Bussiness-plan-maker",
           "website": "https://sosa123454321-bussiness-plan-maker.hf.space",
           "status": "hf-sleeping",
-          "role": "نسخه دوم طرح کسب‌وکار — خواب/سهمیه CPU"
+          "role": "نسخه دوم طرح کسب‌وکار — خواب/سهمیه CPU",
+          "description": "نسخه دوم طرح کسب‌وکار؛ Space خواب است.",
+          "tags": [
+            "مالی",
+            "حسابرسی",
+            "طرح کسب‌وکار",
+            "Hugging Face"
+          ],
+          "score": 52,
+          "stage": "بتا / دمو",
+          "stageId": "beta",
+          "nextSteps": [
+            "Space را بیدار کن یا نسخه استاتیک بساز",
+            "سقف CPU را رفع کن"
+          ],
+          "scoreWhy": [
+            "آدرس عمومی دارد",
+            "Space خواب است"
+          ],
+          "screenshot": "/sisters/bizplan-2.svg",
+          "ready": false
         },
         {
           "id": "realty-finance",
@@ -215,7 +482,30 @@
           "repo": "https://github.com/Websites-by-AI/Realty-State-AI-Wizard",
           "website": null,
           "status": "repo",
-          "role": "برآورد قیمت ملک تهران/کرج/مشهد — پرونده مالی وثیقه"
+          "role": "برآورد قیمت ملک تهران/کرج/مشهد — پرونده مالی وثیقه",
+          "description": "برآورد قیمت ملک برای پرونده مالی.",
+          "tags": [
+            "مالی",
+            "حسابرسی",
+            "طرح کسب‌وکار",
+            "بدون سایت"
+          ],
+          "score": 28,
+          "stage": "ایده / نیاز به ساخت",
+          "stageId": "idea",
+          "nextSteps": [
+            "لندینگ عمومی روی Pages بساز",
+            "آدرس قابل کلیک بده",
+            "صفحه فارسی با CTA تماس",
+            "نسخه دمو را دیپلوی کن",
+            "فرم واتساپ/تماس بگذار"
+          ],
+          "scoreWhy": [
+            "سایت عمومی ندارد",
+            "فقط مخزن/نمونه"
+          ],
+          "screenshot": "/sisters/realty-finance.svg",
+          "ready": false
         },
         {
           "id": "hesabras",
@@ -225,7 +515,30 @@
           "repo": "https://github.com/Websites-by-AI/HesabrasYar---Intelligent-Audit-Assistant-",
           "website": null,
           "status": "missing",
-          "role": "دستیار حسابرسی — مخزن در ۱۲ اوت ۲۰۲۶ از API گیت‌هاب ۴۰۴ بود"
+          "role": "دستیار حسابرسی — مخزن در ۱۲ اوت ۲۰۲۶ از API گیت‌هاب ۴۰۴ بود",
+          "description": "دستیار حسابرسی؛ مخزن اصلی الان در دسترس نیست.",
+          "tags": [
+            "مالی",
+            "حسابرسی",
+            "طرح کسب‌وکار",
+            "بدون سایت"
+          ],
+          "score": 20,
+          "stage": "ایده / نیاز به ساخت",
+          "stageId": "idea",
+          "nextSteps": [
+            "لندینگ عمومی روی Pages بساز",
+            "آدرس قابل کلیک بده",
+            "صفحه فارسی با CTA تماس",
+            "مخزن را بازیابی یا جایگزین کن",
+            "README و دمو استاتیک بساز"
+          ],
+          "scoreWhy": [
+            "سایت عمومی ندارد",
+            "مخزن پیدا نشد"
+          ],
+          "screenshot": "/sisters/hesabras.svg",
+          "ready": false
         },
         {
           "id": "steel-hesabras",
@@ -235,7 +548,30 @@
           "repo": "https://github.com/Heroku-elasa/Steel-Online---AI-Assitance-online",
           "website": null,
           "status": "repo",
-          "role": "نسخه Heroku-elasa دستیار حسابرسی (جایگزین مخزن ۴۰۴ HesabrasYar)"
+          "role": "نسخه Heroku-elasa دستیار حسابرسی (جایگزین مخزن ۴۰۴ HesabrasYar)",
+          "description": "جایگزین حسابرس‌یار روی استیل‌آنلاین.",
+          "tags": [
+            "مالی",
+            "حسابرسی",
+            "طرح کسب‌وکار",
+            "بدون سایت"
+          ],
+          "score": 28,
+          "stage": "ایده / نیاز به ساخت",
+          "stageId": "idea",
+          "nextSteps": [
+            "لندینگ عمومی روی Pages بساز",
+            "آدرس قابل کلیک بده",
+            "صفحه فارسی با CTA تماس",
+            "نسخه دمو را دیپلوی کن",
+            "فرم واتساپ/تماس بگذار"
+          ],
+          "scoreWhy": [
+            "سایت عمومی ندارد",
+            "فقط مخزن/نمونه"
+          ],
+          "screenshot": "/sisters/steel-hesabras.svg",
+          "ready": false
         }
       ]
     },
@@ -258,7 +594,30 @@
           "repo": "https://github.com/Websites-by-AI/Realty-State-AI-Wizard",
           "website": null,
           "status": "repo",
-          "role": "استارتاپ دوم حوزه وام: قیمت‌گذاری ملک برای پرونده تسهیلات"
+          "role": "استارتاپ دوم حوزه وام: قیمت‌گذاری ملک برای پرونده تسهیلات",
+          "description": "املاک AI برای پرونده وام و وثیقه.",
+          "tags": [
+            "وام",
+            "وثیقه",
+            "بانک",
+            "بدون سایت"
+          ],
+          "score": 28,
+          "stage": "ایده / نیاز به ساخت",
+          "stageId": "idea",
+          "nextSteps": [
+            "لندینگ عمومی روی Pages بساز",
+            "آدرس قابل کلیک بده",
+            "صفحه فارسی با CTA تماس",
+            "نسخه دمو را دیپلوی کن",
+            "فرم واتساپ/تماس بگذار"
+          ],
+          "scoreWhy": [
+            "سایت عمومی ندارد",
+            "فقط مخزن/نمونه"
+          ],
+          "screenshot": "/sisters/realty-loan.svg",
+          "ready": false
         },
         {
           "id": "bizplan-loan",
@@ -268,7 +627,27 @@
           "repo": "https://huggingface.co/spaces/sosa123454321/Bussiness-plan-maker",
           "website": "https://huggingface.co/spaces/sosa123454321/Bussiness-plan-maker",
           "status": "hf-sleeping",
-          "role": "پیش‌نویس طرح برای وام سرمایه در گردش — سایت اختصاصی وام هنوز روی کلادفلر نیست"
+          "role": "پیش‌نویس طرح برای وام سرمایه در گردش — سایت اختصاصی وام هنوز روی کلادفلر نیست",
+          "description": "طرح کسب‌وکار بانکی؛ سایت وام جدا ندارد.",
+          "tags": [
+            "وام",
+            "وثیقه",
+            "بانک",
+            "Hugging Face"
+          ],
+          "score": 52,
+          "stage": "بتا / دمو",
+          "stageId": "beta",
+          "nextSteps": [
+            "Space را بیدار کن یا نسخه استاتیک بساز",
+            "سقف CPU را رفع کن"
+          ],
+          "scoreWhy": [
+            "آدرس عمومی دارد",
+            "Space خواب است"
+          ],
+          "screenshot": "/sisters/bizplan-loan.svg",
+          "ready": false
         },
         {
           "id": "realty-heroku",
@@ -278,7 +657,30 @@
           "repo": "https://github.com/Heroku-elasa/realty-state-ai-wizard",
           "website": null,
           "status": "repo",
-          "role": "همان ویزارد املاک روی حساب Heroku-elasa"
+          "role": "همان ویزارد املاک روی حساب Heroku-elasa",
+          "description": "کپی ویزارد املاک روی Heroku-elasa.",
+          "tags": [
+            "وام",
+            "وثیقه",
+            "بانک",
+            "بدون سایت"
+          ],
+          "score": 28,
+          "stage": "ایده / نیاز به ساخت",
+          "stageId": "idea",
+          "nextSteps": [
+            "لندینگ عمومی روی Pages بساز",
+            "آدرس قابل کلیک بده",
+            "صفحه فارسی با CTA تماس",
+            "نسخه دمو را دیپلوی کن",
+            "فرم واتساپ/تماس بگذار"
+          ],
+          "scoreWhy": [
+            "سایت عمومی ندارد",
+            "فقط مخزن/نمونه"
+          ],
+          "screenshot": "/sisters/realty-heroku.svg",
+          "ready": false
         }
       ]
     },
@@ -305,7 +707,32 @@
           "repo": "https://github.com/Websites-by-AI/armanlawfirm.ir-based-of-adl-pendar-based-of-dadgar-AI-with-insurance-armanlawfirm.ir",
           "website": "https://armanlawfirm.ir",
           "status": "live",
-          "role": "دستیار وکیل + بیمه"
+          "role": "دستیار وکیل + بیمه",
+          "description": "دستیار وکیل و بیمه آرمان روی دامنه زنده.",
+          "tags": [
+            "حقوقی",
+            "قرارداد",
+            "سند",
+            "زنده",
+            "دامنه IR"
+          ],
+          "score": 86,
+          "stage": "آماده استفاده",
+          "stageId": "ready",
+          "nextSteps": [
+            "فرم لید نمایشگاه اضافه کن",
+            "پکیج قیمت فارسی بنویس",
+            "به LeadFair وصل کن",
+            "قرارداد و قیمت آماده کن",
+            "۲ کیس موفق غرفه بگذار"
+          ],
+          "scoreWhy": [
+            "آدرس عمومی دارد",
+            "سایت زنده پاسخ می‌دهد",
+            "دامنه نمایشگاه یا .ir"
+          ],
+          "screenshot": "/sisters/arman.jpg",
+          "ready": true
         },
         {
           "id": "notary-662",
@@ -315,7 +742,29 @@
           "repo": "https://github.com/SBZ-EDU/Notary-662-Cloudflare",
           "website": "https://notary-662-sbz.pages.dev",
           "status": "live",
-          "role": "استارتاپ دوم حقوقی: تنظیم سند و RAG حقوقی روی کلادفلر"
+          "role": "استارتاپ دوم حقوقی: تنظیم سند و RAG حقوقی روی کلادفلر",
+          "description": "دفتر اسناد ۶۶۲ با RAG حقوقی روی کلادفلر.",
+          "tags": [
+            "حقوقی",
+            "قرارداد",
+            "سند",
+            "زنده"
+          ],
+          "score": 84,
+          "stage": "نزدیک به آماده",
+          "stageId": "almost",
+          "nextSteps": [
+            "فرم لید نمایشگاه اضافه کن",
+            "پکیج قیمت فارسی بنویس",
+            "به LeadFair وصل کن"
+          ],
+          "scoreWhy": [
+            "آدرس عمومی دارد",
+            "سایت زنده پاسخ می‌دهد",
+            "هاست کلادفلر"
+          ],
+          "screenshot": "/sisters/notary-662.jpg",
+          "ready": true
         },
         {
           "id": "notary-source",
@@ -325,7 +774,29 @@
           "repo": "https://github.com/Websites-by-AI/Notary-662",
           "website": "https://notary-662.pages.dev",
           "status": "live",
-          "role": "نسخه منبع همان سردفتر"
+          "role": "نسخه منبع همان سردفتر",
+          "description": "نسخه منبع همان سردفتر.",
+          "tags": [
+            "حقوقی",
+            "قرارداد",
+            "سند",
+            "زنده"
+          ],
+          "score": 84,
+          "stage": "نزدیک به آماده",
+          "stageId": "almost",
+          "nextSteps": [
+            "فرم لید نمایشگاه اضافه کن",
+            "پکیج قیمت فارسی بنویس",
+            "به LeadFair وصل کن"
+          ],
+          "scoreWhy": [
+            "آدرس عمومی دارد",
+            "سایت زنده پاسخ می‌دهد",
+            "هاست کلادفلر"
+          ],
+          "screenshot": "/sisters/notary-source.jpg",
+          "ready": true
         },
         {
           "id": "haqyar",
@@ -335,7 +806,30 @@
           "repo": "https://github.com/Websites-by-AI/Chatre-danesh-2hagh-yar",
           "website": null,
           "status": "repo",
-          "role": "مشاوره حقوقی آنلاین — متن و قرارداد"
+          "role": "مشاوره حقوقی آنلاین — متن و قرارداد",
+          "description": "مشاوره حقوقی آنلاین؛ دمو عمومی ندارد.",
+          "tags": [
+            "حقوقی",
+            "قرارداد",
+            "سند",
+            "بدون سایت"
+          ],
+          "score": 28,
+          "stage": "ایده / نیاز به ساخت",
+          "stageId": "idea",
+          "nextSteps": [
+            "لندینگ عمومی روی Pages بساز",
+            "آدرس قابل کلیک بده",
+            "صفحه فارسی با CTA تماس",
+            "نسخه دمو را دیپلوی کن",
+            "فرم واتساپ/تماس بگذار"
+          ],
+          "scoreWhy": [
+            "سایت عمومی ندارد",
+            "فقط مخزن/نمونه"
+          ],
+          "screenshot": "/sisters/haqyar.svg",
+          "ready": false
         },
         {
           "id": "arman2",
@@ -345,7 +839,30 @@
           "repo": "https://github.com/SBZ-EDU/Arman2",
           "website": null,
           "status": "repo",
-          "role": "فقط نوت‌بوک RAG اتصال نمایشگاه — README ندارد"
+          "role": "فقط نوت‌بوک RAG اتصال نمایشگاه — README ندارد",
+          "description": "فقط نوت‌بوک اتصال نمایشگاه.",
+          "tags": [
+            "حقوقی",
+            "قرارداد",
+            "سند",
+            "بدون سایت"
+          ],
+          "score": 28,
+          "stage": "ایده / نیاز به ساخت",
+          "stageId": "idea",
+          "nextSteps": [
+            "لندینگ عمومی روی Pages بساز",
+            "آدرس قابل کلیک بده",
+            "صفحه فارسی با CTA تماس",
+            "نسخه دمو را دیپلوی کن",
+            "فرم واتساپ/تماس بگذار"
+          ],
+          "scoreWhy": [
+            "سایت عمومی ندارد",
+            "فقط مخزن/نمونه"
+          ],
+          "screenshot": "/sisters/arman2.svg",
+          "ready": false
         },
         {
           "id": "dadgar-legal",
@@ -355,7 +872,30 @@
           "repo": "https://github.com/Heroku-elasa/Legal-Desitar-with-its-own-modules-offering-Dadgar-AI---Intelligent-Legal-Assistant",
           "website": null,
           "status": "repo",
-          "role": "پیش‌نویس سند و جستجوی وکیل — نسخه Heroku-elasa"
+          "role": "پیش‌نویس سند و جستجوی وکیل — نسخه Heroku-elasa",
+          "description": "دادگر AI برای پیش‌نویس سند.",
+          "tags": [
+            "حقوقی",
+            "قرارداد",
+            "سند",
+            "بدون سایت"
+          ],
+          "score": 28,
+          "stage": "ایده / نیاز به ساخت",
+          "stageId": "idea",
+          "nextSteps": [
+            "لندینگ عمومی روی Pages بساز",
+            "آدرس قابل کلیک بده",
+            "صفحه فارسی با CTA تماس",
+            "نسخه دمو را دیپلوی کن",
+            "فرم واتساپ/تماس بگذار"
+          ],
+          "scoreWhy": [
+            "سایت عمومی ندارد",
+            "فقط مخزن/نمونه"
+          ],
+          "screenshot": "/sisters/dadgar-legal.svg",
+          "ready": false
         },
         {
           "id": "arman-heroku",
@@ -365,7 +905,32 @@
           "repo": "https://github.com/Heroku-elasa/armanlawfirm.ir-based-of-adl-pendar-based-of-dadgar-AI-with-insurance-armanlawfirm.ir",
           "website": "https://armanlawfirm.ir",
           "status": "live",
-          "role": "کپی مخزن وکیل+بیمه روی Heroku-elasa"
+          "role": "کپی مخزن وکیل+بیمه روی Heroku-elasa",
+          "description": "همان سایت آرمان از حساب Heroku-elasa.",
+          "tags": [
+            "حقوقی",
+            "قرارداد",
+            "سند",
+            "زنده",
+            "دامنه IR"
+          ],
+          "score": 86,
+          "stage": "آماده استفاده",
+          "stageId": "ready",
+          "nextSteps": [
+            "فرم لید نمایشگاه اضافه کن",
+            "پکیج قیمت فارسی بنویس",
+            "به LeadFair وصل کن",
+            "قرارداد و قیمت آماده کن",
+            "۲ کیس موفق غرفه بگذار"
+          ],
+          "scoreWhy": [
+            "آدرس عمومی دارد",
+            "سایت زنده پاسخ می‌دهد",
+            "دامنه نمایشگاه یا .ir"
+          ],
+          "screenshot": "/sisters/arman.jpg",
+          "ready": true
         }
       ]
     },
@@ -390,7 +955,31 @@
           "repo": "https://github.com/Websites-by-AI/AI-Iimmigration-visa-assistant-",
           "website": "https://immigration.exhibition2world.ir",
           "status": "live",
-          "role": "ویزای تجاری روی دامنه نمایشگاه"
+          "role": "ویزای تجاری روی دامنه نمایشگاه",
+          "description": "دستیار ویزای تجاری روی دامنه نمایشگاه.",
+          "tags": [
+            "ویزا",
+            "مهاجرت",
+            "زنده",
+            "دامنه IR"
+          ],
+          "score": 86,
+          "stage": "آماده استفاده",
+          "stageId": "ready",
+          "nextSteps": [
+            "فرم لید نمایشگاه اضافه کن",
+            "پکیج قیمت فارسی بنویس",
+            "به LeadFair وصل کن",
+            "قرارداد و قیمت آماده کن",
+            "۲ کیس موفق غرفه بگذار"
+          ],
+          "scoreWhy": [
+            "آدرس عمومی دارد",
+            "سایت زنده پاسخ می‌دهد",
+            "دامنه نمایشگاه یا .ir"
+          ],
+          "screenshot": "/sisters/visa-fair.jpg",
+          "ready": true
         },
         {
           "id": "shahrokh",
@@ -400,7 +989,28 @@
           "repo": "https://github.com/SBZ-EDU/shahrokh-immigration-turkey",
           "website": "https://shahrokh-immigration.pages.dev",
           "status": "live",
-          "role": "استارتاپ دوم مهاجرت: ایران به استانبول — بات تلگرام وصل نشده"
+          "role": "استارتاپ دوم مهاجرت: ایران به استانبول — بات تلگرام وصل نشده",
+          "description": "مسیر ایران به استانبول — فقط سایت، بدون بات.",
+          "tags": [
+            "ویزا",
+            "مهاجرت",
+            "زنده"
+          ],
+          "score": 84,
+          "stage": "نزدیک به آماده",
+          "stageId": "almost",
+          "nextSteps": [
+            "فرم لید نمایشگاه اضافه کن",
+            "پکیج قیمت فارسی بنویس",
+            "به LeadFair وصل کن"
+          ],
+          "scoreWhy": [
+            "آدرس عمومی دارد",
+            "سایت زنده پاسخ می‌دهد",
+            "هاست کلادفلر"
+          ],
+          "screenshot": "/sisters/shahrokh.jpg",
+          "ready": true
         }
       ]
     },
@@ -425,7 +1035,31 @@
           "repo": "https://github.com/Websites-by-AI/armanlawfirm.ir-based-of-adl-pendar-based-of-dadgar-AI-with-insurance-armanlawfirm.ir",
           "website": "https://armanlawfirm.ir",
           "status": "live",
-          "role": "ماژول بیمه همان سایت وکیل"
+          "role": "ماژول بیمه همان سایت وکیل",
+          "description": "ماژول بیمه همان سایت آرمان.",
+          "tags": [
+            "بیمه",
+            "مسئولیت",
+            "زنده",
+            "دامنه IR"
+          ],
+          "score": 86,
+          "stage": "آماده استفاده",
+          "stageId": "ready",
+          "nextSteps": [
+            "فرم لید نمایشگاه اضافه کن",
+            "پکیج قیمت فارسی بنویس",
+            "به LeadFair وصل کن",
+            "قرارداد و قیمت آماده کن",
+            "۲ کیس موفق غرفه بگذار"
+          ],
+          "scoreWhy": [
+            "آدرس عمومی دارد",
+            "سایت زنده پاسخ می‌دهد",
+            "دامنه نمایشگاه یا .ir"
+          ],
+          "screenshot": "/sisters/arman.jpg",
+          "ready": true
         },
         {
           "id": "eternal-path",
@@ -435,7 +1069,28 @@
           "repo": "https://github.com/Websites-by-AI/Eternal-Path-Burial-Portal",
           "website": "https://eternal-path-burial-portal.pages.dev",
           "status": "live",
-          "role": "استارتاپ دوم بیمه/خدمات وابسته — پورتال ترحیم روی کلادفلر"
+          "role": "استارتاپ دوم بیمه/خدمات وابسته — پورتال ترحیم روی کلادفلر",
+          "description": "پورتال خدمات ترحیم و مسیر قبر.",
+          "tags": [
+            "بیمه",
+            "مسئولیت",
+            "زنده"
+          ],
+          "score": 84,
+          "stage": "نزدیک به آماده",
+          "stageId": "almost",
+          "nextSteps": [
+            "فرم لید نمایشگاه اضافه کن",
+            "پکیج قیمت فارسی بنویس",
+            "به LeadFair وصل کن"
+          ],
+          "scoreWhy": [
+            "آدرس عمومی دارد",
+            "سایت زنده پاسخ می‌دهد",
+            "هاست کلادفلر"
+          ],
+          "screenshot": "/sisters/eternal-path.jpg",
+          "ready": true
         }
       ]
     },
@@ -461,7 +1116,29 @@
           "repo": "https://github.com/Websites-by-AI/Digifair-ai-cloadfllare",
           "website": "https://digifair-cloudflare-full-fa.elasa2next.workers.dev",
           "status": "live",
-          "role": "خدمات غرفه روی Worker"
+          "role": "خدمات غرفه روی Worker",
+          "description": "خدمات غرفه دیجی‌فیر روی Worker.",
+          "tags": [
+            "لجستیک",
+            "غرفه",
+            "پسماند",
+            "زنده"
+          ],
+          "score": 84,
+          "stage": "نزدیک به آماده",
+          "stageId": "almost",
+          "nextSteps": [
+            "فرم لید نمایشگاه اضافه کن",
+            "پکیج قیمت فارسی بنویس",
+            "به LeadFair وصل کن"
+          ],
+          "scoreWhy": [
+            "آدرس عمومی دارد",
+            "سایت زنده پاسخ می‌دهد",
+            "هاست کلادفلر"
+          ],
+          "screenshot": "/sisters/digifair-cf.jpg",
+          "ready": true
         },
         {
           "id": "digifair-vercel",
@@ -471,7 +1148,30 @@
           "repo": "https://github.com/Websites-by-AI/Digifair-ai-vercel",
           "website": null,
           "status": "repo",
-          "role": "نسخه دوم همان خدمات نمایشگاه"
+          "role": "نسخه دوم همان خدمات نمایشگاه",
+          "description": "نسخه دوم دیجی‌فیر بدون دمو پایدار.",
+          "tags": [
+            "لجستیک",
+            "غرفه",
+            "پسماند",
+            "بدون سایت"
+          ],
+          "score": 28,
+          "stage": "ایده / نیاز به ساخت",
+          "stageId": "idea",
+          "nextSteps": [
+            "لندینگ عمومی روی Pages بساز",
+            "آدرس قابل کلیک بده",
+            "صفحه فارسی با CTA تماس",
+            "نسخه دمو را دیپلوی کن",
+            "فرم واتساپ/تماس بگذار"
+          ],
+          "scoreWhy": [
+            "سایت عمومی ندارد",
+            "فقط مخزن/نمونه"
+          ],
+          "screenshot": "/sisters/digifair-vercel.svg",
+          "ready": false
         },
         {
           "id": "smartwaste",
@@ -481,7 +1181,29 @@
           "repo": "https://github.com/Websites-by-AI/SmartWaste-AI---Intelligent-Waste-Management-number-2",
           "website": "https://smartwaste.pages.dev",
           "status": "live",
-          "role": "پسماند هوشمند EcoSmart — زنده روی Pages؛ نسخه سازمان و Heroku-elasa یکی است"
+          "role": "پسماند هوشمند EcoSmart — زنده روی Pages؛ نسخه سازمان و Heroku-elasa یکی است",
+          "description": "پسماند هوشمند EcoSmart برای سالن.",
+          "tags": [
+            "لجستیک",
+            "غرفه",
+            "پسماند",
+            "زنده"
+          ],
+          "score": 84,
+          "stage": "نزدیک به آماده",
+          "stageId": "almost",
+          "nextSteps": [
+            "فرم لید نمایشگاه اضافه کن",
+            "پکیج قیمت فارسی بنویس",
+            "به LeadFair وصل کن"
+          ],
+          "scoreWhy": [
+            "آدرس عمومی دارد",
+            "سایت زنده پاسخ می‌دهد",
+            "هاست کلادفلر"
+          ],
+          "screenshot": "/sisters/smartwaste.jpg",
+          "ready": true
         }
       ]
     },
@@ -504,7 +1226,27 @@
           "repo": "https://github.com/Websites-by-AI/Findexpert2",
           "website": "https://findexpert2.pages.dev",
           "status": "down",
-          "role": "پیدا کردن متخصص و گزارش محیط‌زیست — Pages الان ۵۲۲ است"
+          "role": "پیدا کردن متخصص و گزارش محیط‌زیست — Pages الان ۵۲۲ است",
+          "description": "پیدا کردن متخصص؛ Pages الان قطع است.",
+          "tags": [
+            "منابع انسانی",
+            "رزومه",
+            "قطع"
+          ],
+          "score": 54,
+          "stage": "بتا / دمو",
+          "stageId": "beta",
+          "nextSteps": [
+            "قطع بودن Pages را درست کن",
+            "DNS و SSL را چک کن"
+          ],
+          "scoreWhy": [
+            "آدرس عمومی دارد",
+            "آدرس هست ولی قطع است",
+            "هاست کلادفلر"
+          ],
+          "screenshot": "/sisters/findexpert.svg",
+          "ready": false
         },
         {
           "id": "chatre-karname",
@@ -514,7 +1256,29 @@
           "repo": "https://github.com/SBZ-EDU/Chattre-danesh-karname2",
           "website": null,
           "status": "repo",
-          "role": "استارتاپ دوم منابع انسانی: سامانه کنکور وکالت، سردفتری، قضاوت"
+          "role": "استارتاپ دوم منابع انسانی: سامانه کنکور وکالت، سردفتری، قضاوت",
+          "description": "کارنامه کنکور وکالت و سردفتری.",
+          "tags": [
+            "منابع انسانی",
+            "رزومه",
+            "بدون سایت"
+          ],
+          "score": 28,
+          "stage": "ایده / نیاز به ساخت",
+          "stageId": "idea",
+          "nextSteps": [
+            "لندینگ عمومی روی Pages بساز",
+            "آدرس قابل کلیک بده",
+            "صفحه فارسی با CTA تماس",
+            "نسخه دمو را دیپلوی کن",
+            "فرم واتساپ/تماس بگذار"
+          ],
+          "scoreWhy": [
+            "سایت عمومی ندارد",
+            "فقط مخزن/نمونه"
+          ],
+          "screenshot": "/sisters/chatre-karname.svg",
+          "ready": false
         },
         {
           "id": "chatre-org",
@@ -524,7 +1288,29 @@
           "repo": "https://github.com/Websites-by-AI/Chattre-danesh-karname2",
           "website": null,
           "status": "repo",
-          "role": "همان محصول روی سازمان"
+          "role": "همان محصول روی سازمان",
+          "description": "همان چتر دانش روی سازمان.",
+          "tags": [
+            "منابع انسانی",
+            "رزومه",
+            "بدون سایت"
+          ],
+          "score": 28,
+          "stage": "ایده / نیاز به ساخت",
+          "stageId": "idea",
+          "nextSteps": [
+            "لندینگ عمومی روی Pages بساز",
+            "آدرس قابل کلیک بده",
+            "صفحه فارسی با CTA تماس",
+            "نسخه دمو را دیپلوی کن",
+            "فرم واتساپ/تماس بگذار"
+          ],
+          "scoreWhy": [
+            "سایت عمومی ندارد",
+            "فقط مخزن/نمونه"
+          ],
+          "screenshot": "/sisters/chatre-org.svg",
+          "ready": false
         },
         {
           "id": "karyab",
@@ -534,7 +1320,29 @@
           "repo": "https://github.com/Heroku-elasa/Job-resume-maker-like-tealhq.com",
           "website": null,
           "status": "repo",
-          "role": "رزومه لینکدین + ردیاب شغل برای متخصص ایرانی"
+          "role": "رزومه لینکدین + ردیاب شغل برای متخصص ایرانی",
+          "description": "رزومه‌ساز برای نیروی موقت غرفه.",
+          "tags": [
+            "منابع انسانی",
+            "رزومه",
+            "بدون سایت"
+          ],
+          "score": 28,
+          "stage": "ایده / نیاز به ساخت",
+          "stageId": "idea",
+          "nextSteps": [
+            "لندینگ عمومی روی Pages بساز",
+            "آدرس قابل کلیک بده",
+            "صفحه فارسی با CTA تماس",
+            "نسخه دمو را دیپلوی کن",
+            "فرم واتساپ/تماس بگذار"
+          ],
+          "scoreWhy": [
+            "سایت عمومی ندارد",
+            "فقط مخزن/نمونه"
+          ],
+          "screenshot": "/sisters/karyab.svg",
+          "ready": false
         }
       ]
     },
@@ -564,7 +1372,32 @@
           "repo": "https://github.com/Websites-by-AI/Marketing-by-map-neshan",
           "website": "https://neshan-m.exhibition2world.ir/notebooks",
           "status": "live",
-          "role": "Colab تست‌شده RAG نفت/ساختمان"
+          "role": "Colab تست‌شده RAG نفت/ساختمان",
+          "description": "نوت‌بوک‌های تست‌شده RAG نفت و ساختمان.",
+          "tags": [
+            "آموزش",
+            "آزمون",
+            "RAG",
+            "زنده",
+            "دامنه IR"
+          ],
+          "score": 86,
+          "stage": "آماده استفاده",
+          "stageId": "ready",
+          "nextSteps": [
+            "فرم لید نمایشگاه اضافه کن",
+            "پکیج قیمت فارسی بنویس",
+            "به LeadFair وصل کن",
+            "قرارداد و قیمت آماده کن",
+            "۲ کیس موفق غرفه بگذار"
+          ],
+          "scoreWhy": [
+            "آدرس عمومی دارد",
+            "سایت زنده پاسخ می‌دهد",
+            "دامنه نمایشگاه یا .ir"
+          ],
+          "screenshot": "/sisters/notebooks.jpg",
+          "ready": true
         },
         {
           "id": "digiamoozesh",
@@ -574,7 +1407,29 @@
           "repo": "https://github.com/Websites-by-AI/AI-4-Homemaker-women",
           "website": "https://ai-4-homemaker-women.vercel.app",
           "status": "live",
-          "role": "آکادمی کسب‌وکار خانگی"
+          "role": "آکادمی کسب‌وکار خانگی",
+          "description": "آکادمی کسب‌وکار خانگی دیجی‌آموزش.",
+          "tags": [
+            "آموزش",
+            "آزمون",
+            "RAG",
+            "زنده"
+          ],
+          "score": 83,
+          "stage": "نزدیک به آماده",
+          "stageId": "almost",
+          "nextSteps": [
+            "فرم لید نمایشگاه اضافه کن",
+            "پکیج قیمت فارسی بنویس",
+            "به LeadFair وصل کن"
+          ],
+          "scoreWhy": [
+            "آدرس عمومی دارد",
+            "سایت زنده پاسخ می‌دهد",
+            "دمو Vercel"
+          ],
+          "screenshot": "/sisters/digiamoozesh.jpg",
+          "ready": true
         },
         {
           "id": "vibelab",
@@ -584,7 +1439,29 @@
           "repo": "https://github.com/Websites-by-AI/Ai-coirse_1_bootcamp_2day",
           "website": "https://ai-coirse-1-bootcamp-2day.vercel.app",
           "status": "live",
-          "role": "ماراتن ۲ روزه ساخت وب‌اپ با AI"
+          "role": "ماراتن ۲ روزه ساخت وب‌اپ با AI",
+          "description": "بوت‌کمپ دو روزه ساخت وب‌اپ.",
+          "tags": [
+            "آموزش",
+            "آزمون",
+            "RAG",
+            "زنده"
+          ],
+          "score": 83,
+          "stage": "نزدیک به آماده",
+          "stageId": "almost",
+          "nextSteps": [
+            "فرم لید نمایشگاه اضافه کن",
+            "پکیج قیمت فارسی بنویس",
+            "به LeadFair وصل کن"
+          ],
+          "scoreWhy": [
+            "آدرس عمومی دارد",
+            "سایت زنده پاسخ می‌دهد",
+            "دمو Vercel"
+          ],
+          "screenshot": "/sisters/vibelab.jpg",
+          "ready": true
         },
         {
           "id": "taranom",
@@ -594,7 +1471,29 @@
           "repo": "https://github.com/SBZ-EDU/taranom2psychology2school",
           "website": "https://taranom-psychology-school-10milion.vercel.app",
           "status": "live",
-          "role": "مدرسه روانشناسی/کنکور — برند جدا، بات وصل نیست"
+          "role": "مدرسه روانشناسی/کنکور — برند جدا، بات وصل نیست",
+          "description": "مدرسه روانشناسی و کنکور ترنم.",
+          "tags": [
+            "آموزش",
+            "آزمون",
+            "RAG",
+            "زنده"
+          ],
+          "score": 83,
+          "stage": "نزدیک به آماده",
+          "stageId": "almost",
+          "nextSteps": [
+            "فرم لید نمایشگاه اضافه کن",
+            "پکیج قیمت فارسی بنویس",
+            "به LeadFair وصل کن"
+          ],
+          "scoreWhy": [
+            "آدرس عمومی دارد",
+            "سایت زنده پاسخ می‌دهد",
+            "دمو Vercel"
+          ],
+          "screenshot": "/sisters/taranom.jpg",
+          "ready": true
         },
         {
           "id": "dual-protocol",
@@ -604,7 +1503,28 @@
           "repo": "https://github.com/SBZ-EDU/dual-diagnosis-protocol",
           "website": "https://sosa123454321-dual-diagnosis-protocol.static.hf.space/",
           "status": "live",
-          "role": "آموزش بالینی NICE/APA — جایگزین پزشک نیست"
+          "role": "آموزش بالینی NICE/APA — جایگزین پزشک نیست",
+          "description": "پروتکل آموزشی تشخیص دوگانه؛ جایگزین پزشک نیست.",
+          "tags": [
+            "آموزش",
+            "آزمون",
+            "RAG",
+            "زنده"
+          ],
+          "score": 78,
+          "stage": "نزدیک به آماده",
+          "stageId": "almost",
+          "nextSteps": [
+            "فرم لید نمایشگاه اضافه کن",
+            "پکیج قیمت فارسی بنویس",
+            "به LeadFair وصل کن"
+          ],
+          "scoreWhy": [
+            "آدرس عمومی دارد",
+            "سایت زنده پاسخ می‌دهد"
+          ],
+          "screenshot": "/sisters/dual-protocol.jpg",
+          "ready": true
         },
         {
           "id": "dual-rag",
@@ -614,7 +1534,30 @@
           "repo": "https://github.com/SBZ-EDU/dual-diagnosis-rag",
           "website": null,
           "status": "repo",
-          "role": "دستیار بالینی RAG + نوت‌بوک Colab"
+          "role": "دستیار بالینی RAG + نوت‌بوک Colab",
+          "description": "RAG بالینی بدون Space پایدار.",
+          "tags": [
+            "آموزش",
+            "آزمون",
+            "RAG",
+            "بدون سایت"
+          ],
+          "score": 28,
+          "stage": "ایده / نیاز به ساخت",
+          "stageId": "idea",
+          "nextSteps": [
+            "لندینگ عمومی روی Pages بساز",
+            "آدرس قابل کلیک بده",
+            "صفحه فارسی با CTA تماس",
+            "نسخه دمو را دیپلوی کن",
+            "فرم واتساپ/تماس بگذار"
+          ],
+          "scoreWhy": [
+            "سایت عمومی ندارد",
+            "فقط مخزن/نمونه"
+          ],
+          "screenshot": "/sisters/dual-rag.svg",
+          "ready": false
         },
         {
           "id": "azmonyar",
@@ -624,7 +1567,30 @@
           "repo": "https://github.com/Websites-by-AI/all-master-exams-plattform-based-of-education-Hub",
           "website": null,
           "status": "repo",
-          "role": "پلتفرم آزمون کارشناسی ارشد مهندسی"
+          "role": "پلتفرم آزمون کارشناسی ارشد مهندسی",
+          "description": "پلتفرم آزمون ارشد مهندسی.",
+          "tags": [
+            "آموزش",
+            "آزمون",
+            "RAG",
+            "بدون سایت"
+          ],
+          "score": 28,
+          "stage": "ایده / نیاز به ساخت",
+          "stageId": "idea",
+          "nextSteps": [
+            "لندینگ عمومی روی Pages بساز",
+            "آدرس قابل کلیک بده",
+            "صفحه فارسی با CTA تماس",
+            "نسخه دمو را دیپلوی کن",
+            "فرم واتساپ/تماس بگذار"
+          ],
+          "scoreWhy": [
+            "سایت عمومی ندارد",
+            "فقط مخزن/نمونه"
+          ],
+          "screenshot": "/sisters/azmonyar.svg",
+          "ready": false
         },
         {
           "id": "rooish",
@@ -634,7 +1600,30 @@
           "repo": "https://github.com/Heroku-elasa/Rooish-Entrepreneurship-Center",
           "website": null,
           "status": "repo",
-          "role": "شتاب‌دهنده سبزوار — آموزش و شتاب استارتاپ"
+          "role": "شتاب‌دهنده سبزوار — آموزش و شتاب استارتاپ",
+          "description": "شتاب‌دهنده رویش سبزوار.",
+          "tags": [
+            "آموزش",
+            "آزمون",
+            "RAG",
+            "بدون سایت"
+          ],
+          "score": 28,
+          "stage": "ایده / نیاز به ساخت",
+          "stageId": "idea",
+          "nextSteps": [
+            "لندینگ عمومی روی Pages بساز",
+            "آدرس قابل کلیک بده",
+            "صفحه فارسی با CTA تماس",
+            "نسخه دمو را دیپلوی کن",
+            "فرم واتساپ/تماس بگذار"
+          ],
+          "scoreWhy": [
+            "سایت عمومی ندارد",
+            "فقط مخزن/نمونه"
+          ],
+          "screenshot": "/sisters/rooish.svg",
+          "ready": false
         }
       ]
     },
@@ -659,7 +1648,29 @@
           "repo": "https://github.com/Heroku-elasa/Green-Hope-Project---Planting-Trees-with-Artificial-Intelligence",
           "website": "https://green-hope-fire-jugle-pages.pages.dev",
           "status": "live",
-          "role": "برنامه کاشت درخت، گرنت و گزارش سبز"
+          "role": "برنامه کاشت درخت، گرنت و گزارش سبز",
+          "description": "کاشت درخت و گرنت سبز.",
+          "tags": [
+            "محیط‌زیست",
+            "پاکسازی",
+            "آب",
+            "زنده"
+          ],
+          "score": 84,
+          "stage": "نزدیک به آماده",
+          "stageId": "almost",
+          "nextSteps": [
+            "فرم لید نمایشگاه اضافه کن",
+            "پکیج قیمت فارسی بنویس",
+            "به LeadFair وصل کن"
+          ],
+          "scoreWhy": [
+            "آدرس عمومی دارد",
+            "سایت زنده پاسخ می‌دهد",
+            "هاست کلادفلر"
+          ],
+          "screenshot": "/sisters/green-hope.jpg",
+          "ready": true
         },
         {
           "id": "green-hope-pages",
@@ -669,7 +1680,29 @@
           "repo": "https://github.com/Websites-by-AI/green-hope-fire-jugle-pages",
           "website": "https://green-hope-fire-jugle-pages.pages.dev",
           "status": "live",
-          "role": "همان امید سبز روی کلادفلر Pages"
+          "role": "همان امید سبز روی کلادفلر Pages",
+          "description": "همان امید سبز روی Cloudflare Pages.",
+          "tags": [
+            "محیط‌زیست",
+            "پاکسازی",
+            "آب",
+            "زنده"
+          ],
+          "score": 84,
+          "stage": "نزدیک به آماده",
+          "stageId": "almost",
+          "nextSteps": [
+            "فرم لید نمایشگاه اضافه کن",
+            "پکیج قیمت فارسی بنویس",
+            "به LeadFair وصل کن"
+          ],
+          "scoreWhy": [
+            "آدرس عمومی دارد",
+            "سایت زنده پاسخ می‌دهد",
+            "هاست کلادفلر"
+          ],
+          "screenshot": "/sisters/green-hope.jpg",
+          "ready": true
         },
         {
           "id": "smartwaste-env",
@@ -679,7 +1712,29 @@
           "repo": "https://github.com/Heroku-elasa/SmartWaste-AI---Intelligent-Waste-Management-number-2",
           "website": "https://smartwaste.pages.dev",
           "status": "live",
-          "role": "جمع‌آوری و تحلیل پسماند — پاکسازی محیط سالن"
+          "role": "جمع‌آوری و تحلیل پسماند — پاکسازی محیط سالن",
+          "description": "پسماند هوشمند در حوزه محیط‌زیست.",
+          "tags": [
+            "محیط‌زیست",
+            "پاکسازی",
+            "آب",
+            "زنده"
+          ],
+          "score": 84,
+          "stage": "نزدیک به آماده",
+          "stageId": "almost",
+          "nextSteps": [
+            "فرم لید نمایشگاه اضافه کن",
+            "پکیج قیمت فارسی بنویس",
+            "به LeadFair وصل کن"
+          ],
+          "scoreWhy": [
+            "آدرس عمومی دارد",
+            "سایت زنده پاسخ می‌دهد",
+            "هاست کلادفلر"
+          ],
+          "screenshot": "/sisters/smartwaste.jpg",
+          "ready": true
         },
         {
           "id": "water-bankruptcy",
@@ -689,7 +1744,30 @@
           "repo": "https://github.com/Heroku-elasa/iran-Water-Bankruptcy-Management",
           "website": null,
           "status": "repo",
-          "role": "داشبورد آبخوان و مدیریت کم‌آبی"
+          "role": "داشبورد آبخوان و مدیریت کم‌آبی",
+          "description": "داشبورد کم‌آبی و آبخوان ایران.",
+          "tags": [
+            "محیط‌زیست",
+            "پاکسازی",
+            "آب",
+            "بدون سایت"
+          ],
+          "score": 28,
+          "stage": "ایده / نیاز به ساخت",
+          "stageId": "idea",
+          "nextSteps": [
+            "لندینگ عمومی روی Pages بساز",
+            "آدرس قابل کلیک بده",
+            "صفحه فارسی با CTA تماس",
+            "نسخه دمو را دیپلوی کن",
+            "فرم واتساپ/تماس بگذار"
+          ],
+          "scoreWhy": [
+            "سایت عمومی ندارد",
+            "فقط مخزن/نمونه"
+          ],
+          "screenshot": "/sisters/water-bankruptcy.svg",
+          "ready": false
         },
         {
           "id": "ecoai",
@@ -699,7 +1777,30 @@
           "repo": "https://github.com/Heroku-elasa/Findexpert.iro-ecoAI-Environmental-Assistant",
           "website": null,
           "status": "repo",
-          "role": "گزارش پایداری و پیش‌نویس پروژه سبز"
+          "role": "گزارش پایداری و پیش‌نویس پروژه سبز",
+          "description": "گزارش پایداری و پیشنهاد پروژه سبز.",
+          "tags": [
+            "محیط‌زیست",
+            "پاکسازی",
+            "آب",
+            "بدون سایت"
+          ],
+          "score": 28,
+          "stage": "ایده / نیاز به ساخت",
+          "stageId": "idea",
+          "nextSteps": [
+            "لندینگ عمومی روی Pages بساز",
+            "آدرس قابل کلیک بده",
+            "صفحه فارسی با CTA تماس",
+            "نسخه دمو را دیپلوی کن",
+            "فرم واتساپ/تماس بگذار"
+          ],
+          "scoreWhy": [
+            "سایت عمومی ندارد",
+            "فقط مخزن/نمونه"
+          ],
+          "screenshot": "/sisters/ecoai.svg",
+          "ready": false
         },
         {
           "id": "wildfire",
@@ -709,7 +1810,30 @@
           "repo": "https://github.com/Websites-by-AI/Wildfires-SatelliteVu-AWS-Disaster-Response-Hackathon",
           "website": null,
           "status": "repo",
-          "role": "مدل ماهواره‌ای آتش‌سوزی جنگل — هکاتون AWS"
+          "role": "مدل ماهواره‌ای آتش‌سوزی جنگل — هکاتون AWS",
+          "description": "مدل ماهواره‌ای گسترش آتش جنگل.",
+          "tags": [
+            "محیط‌زیست",
+            "پاکسازی",
+            "آب",
+            "بدون سایت"
+          ],
+          "score": 28,
+          "stage": "ایده / نیاز به ساخت",
+          "stageId": "idea",
+          "nextSteps": [
+            "لندینگ عمومی روی Pages بساز",
+            "آدرس قابل کلیک بده",
+            "صفحه فارسی با CTA تماس",
+            "نسخه دمو را دیپلوی کن",
+            "فرم واتساپ/تماس بگذار"
+          ],
+          "scoreWhy": [
+            "سایت عمومی ندارد",
+            "فقط مخزن/نمونه"
+          ],
+          "screenshot": "/sisters/wildfire.svg",
+          "ready": false
         }
       ]
     },
@@ -732,7 +1856,29 @@
           "repo": "https://github.com/Heroku-elasa/Civicavita-AB---Global-Health-Humanitarian-Science",
           "website": null,
           "status": "repo",
-          "role": "سلامت جهانی و علم بشردوستانه — فقط حوزه اجتماعی، بات/غرفه وصل نیست"
+          "role": "سلامت جهانی و علم بشردوستانه — فقط حوزه اجتماعی، بات/غرفه وصل نیست",
+          "description": "سلامت بشردوستانه — فقط حوزه اجتماعی.",
+          "tags": [
+            "اجتماعی",
+            "تندرستی",
+            "بدون سایت"
+          ],
+          "score": 28,
+          "stage": "ایده / نیاز به ساخت",
+          "stageId": "idea",
+          "nextSteps": [
+            "لندینگ عمومی روی Pages بساز",
+            "آدرس قابل کلیک بده",
+            "صفحه فارسی با CTA تماس",
+            "نسخه دمو را دیپلوی کن",
+            "فرم واتساپ/تماس بگذار"
+          ],
+          "scoreWhy": [
+            "سایت عمومی ندارد",
+            "فقط مخزن/نمونه"
+          ],
+          "screenshot": "/sisters/civicavita.svg",
+          "ready": false
         },
         {
           "id": "janpanah",
@@ -742,7 +1888,29 @@
           "repo": "https://github.com/Heroku-elasa/Green-Hope-Project---Animal-Rescue-AI",
           "website": null,
           "status": "repo",
-          "role": "پناهگاه حیوانات، گرنت و تطبیق زیستگاه"
+          "role": "پناهگاه حیوانات، گرنت و تطبیق زیستگاه",
+          "description": "پناهگاه و نجات حیوان.",
+          "tags": [
+            "اجتماعی",
+            "تندرستی",
+            "بدون سایت"
+          ],
+          "score": 28,
+          "stage": "ایده / نیاز به ساخت",
+          "stageId": "idea",
+          "nextSteps": [
+            "لندینگ عمومی روی Pages بساز",
+            "آدرس قابل کلیک بده",
+            "صفحه فارسی با CTA تماس",
+            "نسخه دمو را دیپلوی کن",
+            "فرم واتساپ/تماس بگذار"
+          ],
+          "scoreWhy": [
+            "سایت عمومی ندارد",
+            "فقط مخزن/نمونه"
+          ],
+          "screenshot": "/sisters/janpanah.svg",
+          "ready": false
         },
         {
           "id": "aura-wellness",
@@ -752,7 +1920,28 @@
           "repo": "https://github.com/Heroku-elasa/AURA-AI-Your-Partner-in-Wellness-Physique",
           "website": "https://aura-ai.pages.dev",
           "status": "live",
-          "role": "کوچ زیبایی، ورزش و تندرستی"
+          "role": "کوچ زیبایی، ورزش و تندرستی",
+          "description": "کوچ تندرستی و زیبایی آورا.",
+          "tags": [
+            "اجتماعی",
+            "تندرستی",
+            "زنده"
+          ],
+          "score": 84,
+          "stage": "نزدیک به آماده",
+          "stageId": "almost",
+          "nextSteps": [
+            "فرم لید نمایشگاه اضافه کن",
+            "پکیج قیمت فارسی بنویس",
+            "به LeadFair وصل کن"
+          ],
+          "scoreWhy": [
+            "آدرس عمومی دارد",
+            "سایت زنده پاسخ می‌دهد",
+            "هاست کلادفلر"
+          ],
+          "screenshot": "/sisters/aura-wellness.jpg",
+          "ready": true
         },
         {
           "id": "aura-music",
@@ -762,7 +1951,29 @@
           "repo": "https://github.com/Heroku-elasa/AURA-AI-Music-Studio",
           "website": null,
           "status": "repo",
-          "role": "ایده موسیقی، روند و مشاوره تولید"
+          "role": "ایده موسیقی، روند و مشاوره تولید",
+          "description": "استودیو ایده موسیقی آورا.",
+          "tags": [
+            "اجتماعی",
+            "تندرستی",
+            "بدون سایت"
+          ],
+          "score": 28,
+          "stage": "ایده / نیاز به ساخت",
+          "stageId": "idea",
+          "nextSteps": [
+            "لندینگ عمومی روی Pages بساز",
+            "آدرس قابل کلیک بده",
+            "صفحه فارسی با CTA تماس",
+            "نسخه دمو را دیپلوی کن",
+            "فرم واتساپ/تماس بگذار"
+          ],
+          "scoreWhy": [
+            "سایت عمومی ندارد",
+            "فقط مخزن/نمونه"
+          ],
+          "screenshot": "/sisters/aura-music.svg",
+          "ready": false
         },
         {
           "id": "aura-sport",
@@ -772,7 +1983,29 @@
           "repo": "https://github.com/Heroku-elasa/sport-coach-by-AURA-AI-Wellness-Physique-number-",
           "website": null,
           "status": "repo",
-          "role": "برنامه تمرین و تحلیل بدن"
+          "role": "برنامه تمرین و تحلیل بدن",
+          "description": "مربی ورزش آورا.",
+          "tags": [
+            "اجتماعی",
+            "تندرستی",
+            "بدون سایت"
+          ],
+          "score": 28,
+          "stage": "ایده / نیاز به ساخت",
+          "stageId": "idea",
+          "nextSteps": [
+            "لندینگ عمومی روی Pages بساز",
+            "آدرس قابل کلیک بده",
+            "صفحه فارسی با CTA تماس",
+            "نسخه دمو را دیپلوی کن",
+            "فرم واتساپ/تماس بگذار"
+          ],
+          "scoreWhy": [
+            "سایت عمومی ندارد",
+            "فقط مخزن/نمونه"
+          ],
+          "screenshot": "/sisters/aura-sport.svg",
+          "ready": false
         },
         {
           "id": "sahar-aura",
@@ -782,7 +2015,29 @@
           "repo": "https://github.com/Heroku-elasa/Sahar-shablon-gallery-live-cosmetic-test-AURA-AI-Wellness-Physique-number--for",
           "website": null,
           "status": "repo",
-          "role": "تست آرایشی زنده روی برند آورا"
+          "role": "تست آرایشی زنده روی برند آورا",
+          "description": "گالری شابلون و تست آرایشی.",
+          "tags": [
+            "اجتماعی",
+            "تندرستی",
+            "بدون سایت"
+          ],
+          "score": 28,
+          "stage": "ایده / نیاز به ساخت",
+          "stageId": "idea",
+          "nextSteps": [
+            "لندینگ عمومی روی Pages بساز",
+            "آدرس قابل کلیک بده",
+            "صفحه فارسی با CTA تماس",
+            "نسخه دمو را دیپلوی کن",
+            "فرم واتساپ/تماس بگذار"
+          ],
+          "scoreWhy": [
+            "سایت عمومی ندارد",
+            "فقط مخزن/نمونه"
+          ],
+          "screenshot": "/sisters/sahar-aura.svg",
+          "ready": false
         },
         {
           "id": "media-compassion",
@@ -792,9 +2047,32 @@
           "repo": "https://github.com/Websites-by-AI/Media-compassion-analyzer",
           "website": null,
           "status": "repo",
-          "role": "تحلیل لحن و سوگیری ویدیوی یوتیوب"
+          "role": "تحلیل لحن و سوگیری ویدیوی یوتیوب",
+          "description": "تحلیل لحن و مهربانی رسانه.",
+          "tags": [
+            "اجتماعی",
+            "تندرستی",
+            "بدون سایت"
+          ],
+          "score": 28,
+          "stage": "ایده / نیاز به ساخت",
+          "stageId": "idea",
+          "nextSteps": [
+            "لندینگ عمومی روی Pages بساز",
+            "آدرس قابل کلیک بده",
+            "صفحه فارسی با CTA تماس",
+            "نسخه دمو را دیپلوی کن",
+            "فرم واتساپ/تماس بگذار"
+          ],
+          "scoreWhy": [
+            "سایت عمومی ندارد",
+            "فقط مخزن/نمونه"
+          ],
+          "screenshot": "/sisters/media-compassion.svg",
+          "ready": false
         }
       ]
     }
-  ]
+  ],
+  "scoringNote": "امتیاز آمادگی استفاده ۰–۱۰۰ از روی زنده بودن سایت، دامنه، و نوع هاست حساب شده (۱۲ اوت ۲۰۲۶). مخزن گیت‌هاب در صفحه عمومی نشان داده نمی‌شود."
 }
