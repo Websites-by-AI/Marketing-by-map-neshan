@@ -136,6 +136,17 @@ Docs: Adv-seo-2 `HUGGINGFACE_UPLOAD.md`
 
 ---
 
+## 4.5 Agent memory (no Obsidian install)
+
+Do **not** install Obsidian for this product. Obsidian is a local desktop viewer and has no API the agent can call.
+
+Free low-memory option already in this repo:
+
+- `GET https://neshan-m.exhibition2world.ir/api/memory` — give this URL to the next agent
+- `/memory` human page
+- `memory/*.md` optional Obsidian-compatible vault
+- `POST /api/memory` appends a note (durable only if Cloudflare KV `AGENT_MEMORY` is bound)
+
 ## 5. What this site is missing today
 
 Current neshan-m site has:

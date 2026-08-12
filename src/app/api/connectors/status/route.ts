@@ -25,6 +25,20 @@ export async function GET() {
       detail: "۴۴۰ غرفه‌دار رسمی ساختمان",
     },
     {
+      id: "agent-memory",
+      label: "حافظه عامل (بدون Obsidian)",
+      url: "/api/memory",
+      ok: true,
+      detail: "GET رایگان برای دادن حافظه به ایجنت — نصب لازم نیست",
+    },
+    {
+      id: "site-audit",
+      label: "صحت اطلاعات سایت",
+      url: "/api/audit",
+      ok: true,
+      detail: "مقایسه لندینگ/پنل با لیست رسمی iccexpo",
+    },
+    {
       id: "leadfair-rag-api",
       label: "LeadFair RAG API (Vercel)",
       url: `${CONNECTORS.leadfairRagApi}/api/health`,

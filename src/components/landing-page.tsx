@@ -38,8 +38,8 @@ export default function LandingPage() {
           <nav className="hidden items-center gap-5 text-[13px] font-bold text-slate-200 md:flex">
             <a href="#exhibitors">غرفه‌داران</a>
             <Link href="/connect">اتصال‌گر API</Link>
-            <a href="#modules">ماژول‌ها</a>
-            <a href="#seo">سئو</a>
+            <Link href="/audit">صحت اطلاعات</Link>
+            <Link href="/memory">حافظه</Link>
             <Link href="/panel" className="rounded-xl bg-[#ee6748] px-4 py-2 text-white">
               ورود به داشبورد
             </Link>
@@ -62,7 +62,8 @@ export default function LandingPage() {
               ۴۴۰ غرفه‌دار نمایشگاه بین‌المللی ساختمان، روی یک نقشه برای لید دیجیتال
             </h1>
             <p className="mt-4 max-w-xl text-[15px] leading-8 text-slate-200">
-              لیست رسمی اتاق تعاون استخراج شده است. بیشتر غرفه‌ها هنوز سایت ثبت‌شده ندارند — همین‌جا اولویت‌بندی، پرامپت ساخت سایت و اتصال به ماژول سئو و Hugging Face انجام می‌شود.
+              لیست رسمی اتاق تعاون استخراج شده است. پین نقشه مرکز تقریبی سالن است نه GPS غرفه.
+              «بدون سایت ثبت‌شده» یعنی دامنه در iccexpo نبود — نه اینکه شرکت قطعاً وب‌سایت ندارد.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link href="/panel" className="rounded-2xl bg-[#ee6748] px-5 py-3 text-[14px] font-extrabold">
@@ -70,6 +71,9 @@ export default function LandingPage() {
               </Link>
               <Link href="/connect" className="rounded-2xl bg-white/10 px-5 py-3 text-[14px] font-extrabold ring-1 ring-white/20">
                 پروژه اتصال‌گر API
+              </Link>
+              <Link href="/audit" className="rounded-2xl bg-white/10 px-5 py-3 text-[14px] font-extrabold ring-1 ring-white/20">
+                بررسی صحت اطلاعات
               </Link>
             </div>
           </div>
@@ -185,6 +189,8 @@ export default function LandingPage() {
           <p>دیدبان محلی • IRAN CONFAIR ۱۴۰۵ • محل دائمی نمایشگاه‌های بین‌المللی تهران</p>
           <div className="flex gap-3 font-bold">
             <Link href="/panel">داشبورد</Link>
+            <Link href="/audit">صحت</Link>
+            <Link href="/memory">حافظه عامل</Link>
             <a href="/api/exhibition">API JSON</a>
             <a href="https://github.com/Websites-by-AI/Marketing-by-map-neshan">GitHub</a>
           </div>

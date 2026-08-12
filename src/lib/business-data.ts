@@ -27,6 +27,11 @@ export type BusinessRecord = {
   socialLinks: string[];
   source: string;
   lastChecked: string | null;
+  activity?: string | null;
+  halls?: string[];
+  booths?: string[];
+  websiteSource?: "official-list" | "known-manual" | null;
+  returningExhibitor?: boolean;
 };
 
 type DatabaseBusiness = typeof businesses.$inferSelect;
@@ -118,7 +123,7 @@ ${!hasOnlineOrder ? "- فروشگاه/منو آنلاین + پرداخت آنل�
 - صفحه خدمات/محصولات/منو، گالری تصاویر واقعی
 - صفحه درباره ما و داستان کسب‌وکار محلی
 - صفحه تماس با نقشه نشان/گوگل مپ قابل کلیک، فرم تماس، واتساپ و دکمه تماس
-- بلاگ سئو محلی (مثلا: بهترین ${category} در سعادت‌آباد)
+- بلاگ سئو محلی (مثلا: بهترین ${category} در تهران)
 - سئو کامل: title، meta description، schema LocalBusiness، OG، sitemap، robots
 - سرعت: Lighthouse بالای 90، تصاویر بهینه، فونت فارسی Vazirmatn
 - اتصال به سرچ کنسول، اینستاگرام، و آنالیتیکس

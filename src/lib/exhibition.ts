@@ -20,9 +20,14 @@ export const exhibitionMeta = {
   source: exhibitionPayload.source,
   scrapedAt: exhibitionPayload.scrapedAt,
   count: exhibitionPayload.count,
+  organizer: "اتاق تعاون ایران",
+  gregorianOpen: "2026-08-18",
+  gregorianClose: "2026-08-21",
+  jalali: "۱۴۰۵/۰۵/۲۷ تا ۱۴۰۵/۰۵/۳۰",
 };
 
-const knownWebsites: Record<string, string> = {
+/** Manual overlays — NOT from the official iccexpo list. */
+export const knownWebsites: Record<string, string> = {
   "صنعت شیرآلات قهرمان": "ghahreman.com",
   لورچ: "lorch.ir",
   وینوپلاستیک: "vinoplastic.com",
@@ -35,12 +40,36 @@ const knownWebsites: Record<string, string> = {
   "سندیکا صنعت برق ایران": "ieis.ir",
 };
 
-const knownPhones: Record<string, string> = {
+/** Only confirmed overlaps with the old Dowintech / namayeshgahha door-window archive. */
+export const knownPhones: Record<string, string> = {
   "آبنوس جام کرج": "02634706969",
   "آکپا ایران کیش": "04132466095",
 };
 
+export const returningExhibitorNames = new Set(Object.keys(knownPhones));
+
 export const exhibitionCompanies = exhibitionPayload.companies as ExhibitionCompany[];
+
+export const exhibitionHallPresets = (() => {
+  const map = new Map<string, { label: string; lat: number; lng: number; count: number; description: string }>();
+  for (const company of exhibitionCompanies) {
+    const hall = company.halls[0] ?? "نمایشگاه بین‌المللی تهران";
+    const current = map.get(hall);
+    if (current) {
+      current.count += 1;
+      current.description = `${current.count} غرفه`;
+    } else {
+      map.set(hall, {
+        label: hall,
+        lat: company.latitude,
+        lng: company.longitude,
+        count: 1,
+        description: "۱ غرفه",
+      });
+    }
+  }
+  return [...map.values()].sort((a, b) => b.count - a.count);
+})();
 
 export function exhibitionToBusinessRecords(): BusinessRecord[] {
   return exhibitionCompanies.map((company, index) => {
@@ -48,6 +77,7 @@ export function exhibitionToBusinessRecords(): BusinessRecord[] {
     const hall = company.halls[0] ?? "نمایشگاه بین‌المللی تهران";
     const booth = company.booths.join("، ");
     const address = `تهران، محل دائمی نمایشگاه‌های بین‌المللی، ${hall}${booth ? `، غرفه ${booth}` : ""}`;
+    const returning = returningExhibitorNames.has(company.name);
     return {
       id: -2000 - index,
       neshanId: `icc26:${company.booths[0] ?? index}`,
@@ -62,7 +92,9 @@ export function exhibitionToBusinessRecords(): BusinessRecord[] {
       websiteTitle: website ? company.name : null,
       websiteFound: Boolean(website),
       websiteStatus: website ? "listed" : "not_found",
-      websiteQuality: website ? "سایت شناسایی شد - نیاز به بررسی" : "بدون سایت ثبت‌شده در لیست",
+      websiteQuality: website
+        ? "سایت از دانش قبلی اضافه شد — در لیست رسمی نبود"
+        : "بدون سایت در لیست رسمی iccexpo",
       websitePrompt: null,
       qualityScore: website ? 42 : 0,
       digitalMaturity: website ? 2 : 1,
@@ -75,6 +107,11 @@ export function exhibitionToBusinessRecords(): BusinessRecord[] {
       socialLinks: [],
       source: "IRAN CONFAIR 1405",
       lastChecked: exhibitionMeta.scrapedAt,
+      activity: company.activity,
+      halls: company.halls,
+      booths: company.booths,
+      websiteSource: website ? "known-manual" : null,
+      returningExhibitor: returning,
     };
   });
 }
@@ -97,3 +134,12 @@ export function promptForExhibitor(record: BusinessRecord) {
 }
 
 export const exhibitionBusinesses = exhibitionToBusinessRecords();
+
+export const exhibitionStats = {
+  officialCount: exhibitionBusinesses.length,
+  withKnownWebsite: exhibitionBusinesses.filter((row) => row.websiteFound).length,
+  withoutListedWebsite: exhibitionBusinesses.filter((row) => !row.websiteFound).length,
+  withPhone: exhibitionBusinesses.filter((row) => row.phone).length,
+  returning: exhibitionBusinesses.filter((row) => row.returningExhibitor).length,
+  halls: exhibitionHallPresets.length,
+};

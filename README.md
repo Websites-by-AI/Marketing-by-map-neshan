@@ -20,10 +20,27 @@
 - تاریخ رویداد: ۲۷ تا ۳۰ مرداد ۱۴۰۵ / ۱۸ تا ۲۱ اوت ۲۰۲۶
 - خروجی: `data/iranconfair-26.csv` و `/api/exhibition`
 
+## صحت اطلاعات و حافظه عامل
+
+صفحه بررسی: https://neshan-m.exhibition2world.ir/audit  
+API بررسی: `/api/audit`
+
+**Obsidian نصب لازم نیست.** حافظه رایگان و کم‌حجم همین سایت است:
+
+- صفحه: https://neshan-m.exhibition2world.ir/memory
+- API برای ایجنت: https://neshan-m.exhibition2world.ir/api/memory
+- ولت مارک‌داون اختیاری: پوشه `memory/`
+
+اگر بعداً Obsidian خواستید همان پوشه را باز کنید. ایجنت نمی‌تواند برنامه دسکتاپ شما را بخواند؛ باید API را بگیرد.
+
+پین نقشه = مرکز تقریبی سالن است، نه GPS غرفه. «بدون سایت» یعنی دامنه در لیست رسمی نبود.
+
 ## زنده روی Cloudflare
 
 - https://neshan-m.exhibition2world.ir
 - https://neshan-m.elasa2next.workers.dev
+- https://neshan-m.exhibition2world.ir/audit
+- https://neshan-m.exhibition2world.ir/memory
 
 دیپلوی Worker با OpenNext:
 

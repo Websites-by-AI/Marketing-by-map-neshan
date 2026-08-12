@@ -13,7 +13,7 @@ import {
   type BusinessRecord,
   type RelatedBusiness,
 } from "@/lib/business-data";
-import { exhibitionMeta, promptForExhibitor } from "@/lib/exhibition";
+import { exhibitionHallPresets, exhibitionMeta, promptForExhibitor } from "@/lib/exhibition";
 import relatedModules from "@/data/related-modules.json";
 import {
   AlertTriangle,
@@ -65,7 +65,7 @@ const navItems = [
   { label: "نمای کلی", icon: LayoutDashboard, id: "overview" },
   { label: "نمایشگاه ساختمان", icon: Building2, id: "exhibition" },
   { label: "ماژول‌های مرتبط", icon: Sparkles, id: "modules" },
-  { label: "نقشه خیابانی", icon: MapPinned, id: "map" },
+  { label: "نقشه سالن‌ها", icon: MapPinned, id: "map" },
   { label: "شبکه ارتباطی", icon: Network, id: "network" },
   { label: "بحرانی‌ها", icon: CircleAlert, id: "critical" },
   { label: "پنل ادمین", icon: Database, id: "admin" },
@@ -153,6 +153,8 @@ export default function MarketIntelligenceDashboard({
     defaultSource === "exhibition" ? { lat: 35.7905, lng: 51.4085 } : { lat: 35.785, lng: 51.385 },
   );
   const [remoteRelated, setRemoteRelated] = useState<{ id: number; items: RelatedBusiness[] } | null>(null);
+  const isExhibition = dataSource === "exhibition";
+  const mapPresets = isExhibition ? exhibitionHallPresets.slice(0, 8) : [...tehranPresets];
 
   const visibleRecords = useMemo(
     () =>
@@ -173,7 +175,7 @@ export default function MarketIntelligenceDashboard({
   const criticalRecords = useMemo(
     () =>
       records
-        .filter((r) => !r.websiteFound || r.qualityScore < 50 || r.leadScore >= 85)
+        .filter((r) => !r.websiteFound || r.qualityScore < 50)
         .sort((a, b) => b.leadScore - a.leadScore),
     [records],
   );
@@ -193,21 +195,30 @@ export default function MarketIntelligenceDashboard({
       .sort((a, b) => b.critical - a.critical);
   }, [records]);
 
-  const densityAnalysis = useMemo(
-    () =>
-      tehranPresets.map((p) => {
-        const within = records.filter(
-          (r) => r.latitude && r.longitude && distanceKm({ lat: p.lat, lng: p.lng }, { lat: r.latitude!, lng: r.longitude! }) * 1000 <= 900,
-        );
+  const densityAnalysis = useMemo(() => {
+    if (dataSource === "exhibition") {
+      return exhibitionHallPresets.slice(0, 6).map((p) => {
+        const within = records.filter((r) => (r.halls ?? []).includes(p.label) || r.address.includes(p.label));
         return {
           preset: p,
-          total: within.length,
+          total: within.length || p.count,
           noSite: within.filter((r) => !r.websiteFound).length,
           critical: within.filter((r) => !r.websiteFound || r.qualityScore < 50).length,
         };
-      }),
-    [records],
-  );
+      });
+    }
+    return tehranPresets.map((p) => {
+      const within = records.filter(
+        (r) => r.latitude && r.longitude && distanceKm({ lat: p.lat, lng: p.lng }, { lat: r.latitude!, lng: r.longitude! }) * 1000 <= 900,
+      );
+      return {
+        preset: p,
+        total: within.length,
+        noSite: within.filter((r) => !r.websiteFound).length,
+        critical: within.filter((r) => !r.websiteFound || r.qualityScore < 50).length,
+      };
+    });
+  }, [records, dataSource]);
 
   const clusters = useMemo(() => buildLocalNetworkClusters(records), [records]);
   const computedRelated = useMemo(
@@ -365,6 +376,11 @@ export default function MarketIntelligenceDashboard({
         </div>
       </div>
       <div className="mt-auto rounded-xl border border-white/10 bg-white/5 p-3">
+        <div className="mb-3 flex gap-2 text-[10px] font-bold">
+          <a href="/audit" className="rounded-lg bg-white/10 px-2 py-1 text-white">صحت</a>
+          <a href="/memory" className="rounded-lg bg-white/10 px-2 py-1 text-white">حافظه</a>
+          <a href="/connect" className="rounded-lg bg-white/10 px-2 py-1 text-white">API</a>
+        </div>
         <p className="text-[11px] font-bold text-white">خروجی شبکه + پرامپت</p>
         <p className="mt-1 text-[10px] leading-5 text-slate-400">
           هر کسب‌وکار مشکل‌دار با همسایگانش لینک می‌شود و پیشنهاد اتصال خدماتی تولید می‌شود.
@@ -486,17 +502,17 @@ export default function MarketIntelligenceDashboard({
           </section>
 
           <section id="overview" className="grid grid-cols-2 gap-3 xl:grid-cols-4">
-            <MetricCard label="کل کسب‌وکارها در نقشه" value={faNumber.format(records.length)} hint={dataSource === "exhibition" ? "نمایشگاه ۱۴۰۵" : "غرب تهران"} icon={Building2} accent="navy" />
+            <MetricCard label={isExhibition ? "غرفه‌دار رسمی ۱۴۰۵" : "کل کسب‌وکارها در نقشه"} value={faNumber.format(records.length)} hint={isExhibition ? "لیست iccexpo" : "غرب تهران"} icon={Building2} accent="navy" />
             <MetricCard
-              label="مشکل‌دار (بدون سایت/ضعیف)"
+              label={isExhibition ? "بدون دامنه در لیست رسمی" : "مشکل‌دار (بدون سایت/ضعیف)"}
               value={faNumber.format(criticalRecords.length)}
-              hint="نیاز فوری"
+              hint={isExhibition ? "نه لزوماً بی‌سایت واقعی" : "نیاز فوری"}
               trend={`${Math.round((criticalRecords.length / Math.max(1, records.length)) * 100)}٪`}
               icon={CircleAlert}
               accent="orange"
             />
-            <MetricCard label="خوشه‌های همسایگی مرتبط" value={faNumber.format(clusters.length)} hint="اتصال خدمات" icon={Network} accent="violet" />
-            <MetricCard label="میانگین فاصله اتصال" value={`~${faNumber.format(avgDistance)}m`} hint="در یک خیابان" icon={Link2} accent="teal" />
+            <MetricCard label={isExhibition ? "سالن / فضای باز" : "خوشه‌های همسایگی مرتبط"} value={faNumber.format(isExhibition ? exhibitionHallPresets.length : clusters.length)} hint={isExhibition ? "پین تقریبی سالن" : "اتصال خدمات"} icon={Network} accent="violet" />
+            <MetricCard label={isExhibition ? "دامنه دستی شناخته‌شده" : "میانگین فاصله اتصال"} value={isExhibition ? faNumber.format(records.filter((r) => r.websiteFound).length) : `~${faNumber.format(avgDistance)}m`} hint={isExhibition ? "از دانش قبلی نه iccexpo" : "در یک خیابان"} icon={Link2} accent="teal" />
           </section>
 
 
@@ -507,7 +523,7 @@ export default function MarketIntelligenceDashboard({
                   <Building2 size={18} className="text-[#ee6748]" /> غرفه‌داران IRAN CONFAIR ۱۴۰۵
                 </h3>
                 <p className="mt-1 text-[10px] text-slate-400">
-                  {exhibitionMeta.dates} • {exhibitionMeta.venue} • منبع: iccexpo.com
+                  {exhibitionMeta.dates} • {exhibitionMeta.venue} • منبع: iccexpo.com • پین نقشه تقریبی سالن است
                 </p>
               </div>
               <div className="flex flex-wrap gap-2">
@@ -632,12 +648,16 @@ export default function MarketIntelligenceDashboard({
               <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
                 <div>
                   <h3 className="flex items-center gap-2 text-[14px] font-extrabold">
-                    <MapPinned size={18} className="text-teal-600" /> نقشه خیابانی - مشکلات قرمز + خطوط ارتباط خدماتی
+                    <MapPinned size={18} className="text-teal-600" /> {isExhibition ? "نقشه سالن‌های نمایشگاه — پین تقریبی است" : "نقشه خیابانی - مشکلات قرمز + خطوط ارتباط خدماتی"}
                   </h3>
-                  <p className="mt-1 text-[10px] text-slate-400">یک پین را انتخاب کنید تا همسایه‌های هم‌خیابان و پرامپت ساخت سایت باز شود.</p>
+                  <p className="mt-1 text-[10px] text-slate-400">
+                    {isExhibition
+                      ? "مختصات مرکز سالن است با افست چند متری، نه GPS دقیق غرفه. سعادت‌آباد مربوط به حالت نمونه تهران است."
+                      : "یک پین را انتخاب کنید تا همسایه‌های هم‌خیابان و پرامپت ساخت سایت باز شود."}
+                  </p>
                 </div>
                 <div className="flex flex-wrap gap-1.5">
-                  {tehranPresets.slice(0, 4).map((p) => (
+                  {mapPresets.slice(0, 8).map((p) => (
                     <button
                       key={p.label}
                       type="button"
@@ -941,10 +961,21 @@ export default function MarketIntelligenceDashboard({
                   <div className="rounded-xl bg-violet-50 p-4">
                     <h5 className="text-[12px] font-bold text-violet-900">ایده‌های اتصال بین خدمات</h5>
                     <ul className="mt-2 space-y-2 text-[11px] leading-5 text-violet-800">
-                      <li>• کافه بی‌سایت + باشگاه با سایت در ۱۲۰م: کد تخفیف مشترک + بک‌لینک محلی</li>
-                      <li>• ۳ سالن زیبایی بدون رزرو در میدان کاج: سیستم رزرو مشترک</li>
-                      <li>• کلینیک + داروخانه + آزمایشگاه هم‌خیابان: زنجیره سلامت</li>
-                      <li>• رستوران بدون سفارش آنلاین + سوپرمارکت با پیک: اتصال سرویس تحویل</li>
+                      {isExhibition ? (
+                        <>
+                          <li>• سالن ۸ و ۹ لوله و اتصالات: کاتالوگ مشترک + لندینگ محصول</li>
+                          <li>• سالن ۳۸B درب و پنجره: فقط ۲ بازگشتی تأییدشده تلفن دارند</li>
+                          <li>• بانک‌ها و سندیکا امتیاز لید پایین‌تر می‌گیرند — مشتری سایت نیستند</li>
+                          <li>• دامنه دستی را سایت رسمی فرض نکن تا هویت‌سنجی شود</li>
+                        </>
+                      ) : (
+                        <>
+                          <li>• کافه بی‌سایت + باشگاه با سایت در ۱۲۰م: کد تخفیف مشترک + بک‌لینک محلی</li>
+                          <li>• ۳ سالن زیبایی بدون رزرو در میدان کاج: سیستم رزرو مشترک</li>
+                          <li>• کلینیک + داروخانه + آزمایشگاه هم‌خیابان: زنجیره سلامت</li>
+                          <li>• رستوران بدون سفارش آنلاین + سوپرمارکت با پیک: اتصال سرویس تحویل</li>
+                        </>
+                      )}
                     </ul>
                     <a href="/api/related" target="_blank" rel="noreferrer" className="mt-3 inline-flex rounded-lg bg-white px-3 py-1.5 text-[10px] font-bold text-violet-700 ring-1 ring-violet-200">
                       مشاهده API شبکه JSON

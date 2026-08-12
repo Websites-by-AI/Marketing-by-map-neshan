@@ -13,7 +13,7 @@ export async function GET(request: Request) {
   });
 
   if (format === "csv") {
-    const header = ["نام", "دسته", "فعالیت_نمایشگاه", "آدرس_غرفه", "lat", "lng", "وبسایت", "امتیاز_لید"];
+    const header = ["نام", "دسته", "فعالیت_رسمی", "سالن", "غرفه", "آدرس_غرفه", "lat", "lng", "وبسایت", "منبع_سایت", "امتیاز_لید"];
     const lines = [header.map((value) => `"${value}"`).join(",")];
     for (const item of items) {
       const links = buildMapLinks(item);
@@ -21,11 +21,14 @@ export async function GET(request: Request) {
         [
           item.name,
           item.category,
-          item.address,
+          item.activity ?? "",
+          (item.halls ?? []).join(" | "),
+          (item.booths ?? []).join(" | "),
           item.address,
           String(item.latitude ?? ""),
           String(item.longitude ?? ""),
           item.website ?? "",
+          item.websiteSource ?? "",
           String(item.leadScore),
         ]
           .map((value) => `"${value.replace(/"/g, '""')}"`)

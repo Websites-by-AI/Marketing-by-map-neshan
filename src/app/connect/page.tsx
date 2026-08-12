@@ -58,6 +58,8 @@ export default function ConnectPage() {
           <div className="flex gap-3 text-[13px] font-bold">
             <Link href="/">خانه</Link>
             <Link href="/panel">داشبورد</Link>
+            <Link href="/audit">صحت</Link>
+            <Link href="/memory">حافظه</Link>
           </div>
         </div>
       </header>
