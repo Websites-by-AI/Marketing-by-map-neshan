@@ -13,6 +13,7 @@ import {
   type BusinessRecord,
   type RelatedBusiness,
 } from "@/lib/business-data";
+import { exhibitionMeta, promptForExhibitor } from "@/lib/exhibition";
 import {
   AlertTriangle,
   BarChart3,
@@ -50,14 +51,18 @@ const faDate = new Intl.DateTimeFormat("fa-IR", { month: "short", day: "numeric"
 
 type Props = {
   initialRecords: BusinessRecord[];
+  tehranRecords?: BusinessRecord[];
+  exhibitionRecords?: BusinessRecord[];
   mode?: "live" | "demo";
   hasNeshanKey?: boolean;
+  defaultSource?: "exhibition" | "tehran";
 };
 type FilterKey = "all" | "critical" | "no-website" | "needs-work" | "high-lead";
 type AdminTab = "categories" | "prompts" | "export" | "pipeline" | "network";
 
 const navItems = [
   { label: "نمای کلی", icon: LayoutDashboard, id: "overview" },
+  { label: "نمایشگاه ساختمان", icon: Building2, id: "exhibition" },
   { label: "نقشه خیابانی", icon: MapPinned, id: "map" },
   { label: "شبکه ارتباطی", icon: Network, id: "network" },
   { label: "بحرانی‌ها", icon: CircleAlert, id: "critical" },
@@ -115,8 +120,18 @@ function MetricCard({
   );
 }
 
-export default function MarketIntelligenceDashboard({ initialRecords, mode = "demo", hasNeshanKey = false }: Props) {
-  const [records, setRecords] = useState<BusinessRecord[]>(initialRecords.length ? initialRecords : demoBusinesses);
+export default function MarketIntelligenceDashboard({
+  initialRecords,
+  tehranRecords = demoBusinesses,
+  exhibitionRecords = [],
+  mode = "demo",
+  hasNeshanKey = false,
+  defaultSource = "exhibition",
+}: Props) {
+  const [dataSource, setDataSource] = useState<"exhibition" | "tehran">(defaultSource);
+  const [records, setRecords] = useState<BusinessRecord[]>(
+    initialRecords.length ? initialRecords : exhibitionRecords.length ? exhibitionRecords : tehranRecords,
+  );
   const [activeNav, setActiveNav] = useState("نمای کلی");
   const [mobileOpen, setMobileOpen] = useState(false);
   const [search, setSearch] = useState("");
@@ -132,7 +147,9 @@ export default function MarketIntelligenceDashboard({ initialRecords, mode = "de
   const [term, setTerm] = useState("رستوران");
   const [latitude, setLatitude] = useState("35.7850");
   const [longitude, setLongitude] = useState("51.3850");
-  const [mapCenter, setMapCenter] = useState<{ lat: number; lng: number }>({ lat: 35.785, lng: 51.385 });
+  const [mapCenter, setMapCenter] = useState<{ lat: number; lng: number }>(
+    defaultSource === "exhibition" ? { lat: 35.7905, lng: 51.4085 } : { lat: 35.785, lng: 51.385 },
+  );
   const [remoteRelated, setRemoteRelated] = useState<{ id: number; items: RelatedBusiness[] } | null>(null);
 
   const visibleRecords = useMemo(
@@ -241,6 +258,12 @@ export default function MarketIntelligenceDashboard({ initialRecords, mode = "de
     }
   }
 
+  function openBusiness(record: BusinessRecord) {
+    const next = record.websitePrompt ? record : { ...record, websitePrompt: promptForExhibitor(record) };
+    setSelected(next);
+    if (next.latitude && next.longitude) setMapCenter({ lat: next.latitude, lng: next.longitude });
+  }
+
   async function analyzeSelectedWebsite() {
     if (!selected) return;
     setIsAnalyzing(true);
@@ -343,10 +366,10 @@ export default function MarketIntelligenceDashboard({ initialRecords, mode = "de
           هر کسب‌وکار مشکل‌دار با همسایگانش لینک می‌شود و پیشنهاد اتصال خدماتی تولید می‌شود.
         </p>
         <div className="mt-3 grid grid-cols-2 gap-2">
-          <a href="/api/export?format=csv" className="rounded-lg bg-white/10 py-1.5 text-center text-[10px] font-bold text-white">
+          <a href={dataSource === "exhibition" ? "/api/exhibition?format=csv" : "/api/export?format=csv"} className="rounded-lg bg-white/10 py-1.5 text-center text-[10px] font-bold text-white">
             CSV
           </a>
-          <a href="/api/export?format=json" className="rounded-lg bg-[#ee6748] py-1.5 text-center text-[10px] font-bold text-white">
+          <a href={dataSource === "exhibition" ? "/api/exhibition" : "/api/export?format=json"} className="rounded-lg bg-[#ee6748] py-1.5 text-center text-[10px] font-bold text-white">
             JSON
           </a>
         </div>
@@ -383,10 +406,32 @@ export default function MarketIntelligenceDashboard({ initialRecords, mode = "de
                   {mode === "live" ? "داده زنده" : "حالت نمونه"}
                 </span>
                 {!hasNeshanKey && <span className="hidden rounded-full bg-slate-100 px-2 py-0.5 text-[9px] font-bold text-slate-500 sm:inline">بدون کلید نشان</span>}
+                <span className="hidden rounded-full bg-[#fff0eb] px-2 py-0.5 text-[9px] font-bold text-[#c63c1f] sm:inline">
+                  {dataSource === "exhibition" ? "IRAN CONFAIR ۱۴۰۵" : "نمونه غرب تهران"}
+                </span>
               </div>
-              <h1 className="truncate text-[14px] font-extrabold text-[#162b43] sm:text-[15px]">نقشه مشکلات + شبکه کسب‌وکارهای مرتبط</h1>
+              <h1 className="truncate text-[14px] font-extrabold text-[#162b43] sm:text-[15px]">
+                {dataSource === "exhibition" ? "غرفه‌داران نمایشگاه بین‌المللی ساختمان" : "نقشه مشکلات + شبکه کسب‌وکارهای مرتبط"}
+              </h1>
             </div>
-            <a href="/api/export?format=csv" className="hidden items-center gap-1.5 rounded-xl border bg-white px-3 py-2 text-[11px] font-bold sm:flex">
+            <button
+              type="button"
+              onClick={() => {
+                if (dataSource === "exhibition") {
+                  setDataSource("tehran");
+                  setRecords(tehranRecords);
+                  setMapCenter({ lat: 35.785, lng: 51.385 });
+                } else {
+                  setDataSource("exhibition");
+                  setRecords(exhibitionRecords.length ? exhibitionRecords : records);
+                  setMapCenter({ lat: 35.7905, lng: 51.4085 });
+                }
+              }}
+              className="hidden rounded-xl border bg-white px-3 py-2 text-[11px] font-bold sm:inline"
+            >
+              {dataSource === "exhibition" ? "نمونه تهران" : "نمایشگاه ۱۴۰۵"}
+            </button>
+            <a href={dataSource === "exhibition" ? "/api/exhibition?format=csv" : "/api/export?format=csv"} className="hidden items-center gap-1.5 rounded-xl border bg-white px-3 py-2 text-[11px] font-bold sm:flex">
               <Download size={14} /> خروجی
             </a>
             <button type="button" onClick={() => setIsCollectionOpen(true)} className="rounded-xl bg-[#ee6748] px-3 py-2 text-[11px] font-bold text-white sm:px-4">
@@ -411,25 +456,33 @@ export default function MarketIntelligenceDashboard({ initialRecords, mode = "de
           <section className="mb-6 overflow-hidden rounded-3xl border border-slate-200 bg-[linear-gradient(135deg,#10263d_0%,#1b3d5c_58%,#ee6748_160%)] p-5 text-white shadow-sm sm:p-7">
             <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
               <div className="max-w-2xl">
-                <p className="text-[11px] font-bold tracking-wide text-orange-200">هوش بازار محلی روی نقشه نشان</p>
-                <h2 className="mt-2 text-[22px] font-extrabold leading-9 sm:text-[28px]">کسب‌وکارهای غرب تهران را پیدا کنید، مشکل دیجیتال‌شان را ببینید و پکیج همکاری بسازید.</h2>
+                <p className="text-[11px] font-bold tracking-wide text-orange-200">
+                  {dataSource === "exhibition" ? exhibitionMeta.alias : "هوش بازار محلی روی نقشه نشان"}
+                </p>
+                <h2 className="mt-2 text-[22px] font-extrabold leading-9 sm:text-[28px]">
+                  {dataSource === "exhibition"
+                    ? `${faNumber.format(exhibitionRecords.length || records.length)} غرفه‌دار نمایشگاه ساختمان آماده پیگیری دیجیتال`
+                    : "کسب‌وکارهای غرب تهران را پیدا کنید، مشکل دیجیتال‌شان را ببینید و پکیج همکاری بسازید."}
+                </h2>
                 <p className="mt-3 max-w-xl text-[12px] leading-6 text-slate-200">
-                  جمع‌آوری از نشان، امتیاز لید، شبکه همسایگی و پرامپت ساخت سایت — همه در یک داشبورد. الان با داده نمونه سعادت‌آباد، میدان کاج، شهرک غرب و پونک آماده است.
+                  {dataSource === "exhibition"
+                    ? `${exhibitionMeta.event} از ${exhibitionMeta.dates} در ${exhibitionMeta.venue}. لیست از سایت رسمی اتاق تعاون استخراج شده و برای لیدسازی سایت و سئو محلی امتیازدهی شده است.`
+                    : "جمع‌آوری از نشان، امتیاز لید، شبکه همسایگی و پرامپت ساخت سایت — همه در یک داشبورد."}
                 </p>
               </div>
               <div className="flex flex-wrap gap-2">
-                <button type="button" onClick={() => setIsCollectionOpen(true)} className="rounded-xl bg-[#ee6748] px-4 py-2.5 text-[12px] font-bold">
-                  شروع جمع‌آوری
+                <button type="button" onClick={() => scrollTo(dataSource === "exhibition" ? "exhibition" : "map")} className="rounded-xl bg-[#ee6748] px-4 py-2.5 text-[12px] font-bold">
+                  {dataSource === "exhibition" ? "لیست غرفه‌داران" : "رفتن به نقشه"}
                 </button>
-                <button type="button" onClick={() => scrollTo("map")} className="rounded-xl bg-white/10 px-4 py-2.5 text-[12px] font-bold ring-1 ring-white/20">
-                  رفتن به نقشه
-                </button>
+                <a href="/api/exhibition?format=csv" className="rounded-xl bg-white/10 px-4 py-2.5 text-[12px] font-bold ring-1 ring-white/20">
+                  دانلود CSV نمایشگاه
+                </a>
               </div>
             </div>
           </section>
 
           <section id="overview" className="grid grid-cols-2 gap-3 xl:grid-cols-4">
-            <MetricCard label="کل کسب‌وکارها در نقشه" value={faNumber.format(records.length)} hint="غرب تهران" icon={Building2} accent="navy" />
+            <MetricCard label="کل کسب‌وکارها در نقشه" value={faNumber.format(records.length)} hint={dataSource === "exhibition" ? "نمایشگاه ۱۴۰۵" : "غرب تهران"} icon={Building2} accent="navy" />
             <MetricCard
               label="مشکل‌دار (بدون سایت/ضعیف)"
               value={faNumber.format(criticalRecords.length)}
@@ -440,6 +493,37 @@ export default function MarketIntelligenceDashboard({ initialRecords, mode = "de
             />
             <MetricCard label="خوشه‌های همسایگی مرتبط" value={faNumber.format(clusters.length)} hint="اتصال خدمات" icon={Network} accent="violet" />
             <MetricCard label="میانگین فاصله اتصال" value={`~${faNumber.format(avgDistance)}m`} hint="در یک خیابان" icon={Link2} accent="teal" />
+          </section>
+
+
+          <section id="exhibition" className="mt-6 scroll-mt-24 rounded-2xl border border-slate-200 bg-white shadow-sm">
+            <div className="flex flex-col gap-3 border-b p-4 lg:flex-row lg:items-center lg:justify-between">
+              <div>
+                <h3 className="flex items-center gap-2 text-[14px] font-extrabold">
+                  <Building2 size={18} className="text-[#ee6748]" /> غرفه‌داران IRAN CONFAIR ۱۴۰۵
+                </h3>
+                <p className="mt-1 text-[10px] text-slate-400">
+                  {exhibitionMeta.dates} • {exhibitionMeta.venue} • منبع: iccexpo.com
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                <a href="/api/exhibition?format=csv" className="rounded-xl bg-[#0f172a] px-3 py-2 text-[11px] font-bold text-white">دانلود CSV</a>
+                <a href="/api/exhibition" target="_blank" rel="noreferrer" className="rounded-xl border px-3 py-2 text-[11px] font-bold">JSON</a>
+              </div>
+            </div>
+            <div className="grid gap-3 p-4 sm:grid-cols-2 xl:grid-cols-3">
+              {visibleRecords.slice(0, 18).map((r) => (
+                <button key={r.id} type="button" onClick={() => openBusiness(r)} className="rounded-xl border bg-slate-50 p-3 text-right hover:border-[#ee6748]/40">
+                  <div className="flex items-start justify-between gap-2">
+                    <span className="text-[12px] font-extrabold text-[#162b43]">{r.name}</span>
+                    <span className={`rounded-full px-2 py-0.5 text-[9px] font-bold ring-1 ${qualityStyle(r)}`}>{r.websiteFound ? "سایت" : "بی‌سایت"}</span>
+                  </div>
+                  <p className="mt-1 text-[10px] text-slate-500">{r.category}</p>
+                  <p className="mt-1 truncate text-[10px] text-slate-400">{r.address}</p>
+                  <p className="mt-2 text-[10px] font-bold text-[#ee6748]">لید {faNumber.format(r.leadScore)}</p>
+                </button>
+              ))}
+            </div>
           </section>
 
           <section className="mt-4 grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
@@ -500,7 +584,7 @@ export default function MarketIntelligenceDashboard({ initialRecords, mode = "de
               <BusinessMap
                 businesses={visibleRecords}
                 center={mapCenter}
-                onSelectBusiness={setSelected}
+                onSelectBusiness={openBusiness}
                 highlightedId={selected?.id ?? null}
                 relatedIds={related.map((r) => r.id)}
                 showConnections
@@ -897,7 +981,7 @@ export default function MarketIntelligenceDashboard({ initialRecords, mode = "de
                     <h4 className="text-[13px] font-bold">خروجی نهایی</h4>
                     <p className="mt-1 text-[11px] text-slate-500">CSV شامل ستون‌های اتصال، لینک گوگل/نشان و پرامپت</p>
                     <div className="mt-4 grid grid-cols-2 gap-3">
-                      <a href="/api/export?format=csv" className="rounded-xl bg-[#0f172a] p-4 text-white">
+                      <a href={dataSource === "exhibition" ? "/api/exhibition?format=csv" : "/api/export?format=csv"} className="rounded-xl bg-[#0f172a] p-4 text-white">
                         <div className="text-[13px] font-bold">CSV - لینک‌ها + شبکه</div>
                         <p className="mt-2 text-[10px] opacity-80">آماده اکسل، لینک‌ها کلیک‌شو</p>
                       </a>
@@ -935,7 +1019,7 @@ export default function MarketIntelligenceDashboard({ initialRecords, mode = "de
                 <Route size={18} className="text-[#ee6748]" /> مدل‌های همکاری
               </h3>
               <div className="flex gap-2">
-                <a href="/api/export?format=csv" className="rounded-xl border bg-white px-3 py-2 text-[11px] font-bold">
+                <a href={dataSource === "exhibition" ? "/api/exhibition?format=csv" : "/api/export?format=csv"} className="rounded-xl border bg-white px-3 py-2 text-[11px] font-bold">
                   CSV
                 </a>
                 <a href="/api/related" target="_blank" rel="noreferrer" className="rounded-xl bg-[#ee6748] px-3 py-2 text-[11px] font-bold text-white">

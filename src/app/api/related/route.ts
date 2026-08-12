@@ -8,6 +8,7 @@ import {
   toBusinessRecord,
   type BusinessRecord,
 } from "@/lib/business-data";
+import { exhibitionBusinesses } from "@/lib/exhibition";
 
 export const dynamic = "force-dynamic";
 
@@ -21,7 +22,7 @@ async function loadRecords(): Promise<BusinessRecord[]> {
       // demo fallback
     }
   }
-  return demoBusinesses;
+  return exhibitionBusinesses.length ? exhibitionBusinesses : demoBusinesses;
 }
 
 export async function GET(request: Request) {
