@@ -5,9 +5,24 @@ import Link from "next/link";
 import { FormEvent, useEffect, useState } from "react";
 
 type StatusItem = { id: string; label: string; url: string; ok: boolean; detail: string };
+type ConnItem = {
+  id: string;
+  group: string;
+  name: string;
+  connected: boolean;
+  mode: string;
+  detail: string;
+  url?: string;
+};
 
 export default function ConnectPage() {
   const [status, setStatus] = useState<StatusItem[]>([]);
+  const [connections, setConnections] = useState<{
+    summary?: { connected: number; disconnected: number };
+    database?: { live?: boolean; reason?: string };
+    kv?: { bound?: boolean; notes?: number };
+    items?: ConnItem[];
+  }>({});
   const [query, setQuery] = useState("لوله");
   const [searchResult, setSearchResult] = useState<unknown>(null);
   const [seoName, setSeoName] = useState("لورچ");
@@ -20,6 +35,10 @@ export default function ConnectPage() {
       .then((r) => r.json())
       .then((data) => setStatus(data.items ?? []))
       .catch(() => setStatus([]));
+    fetch("/api/connections")
+      .then((r) => r.json())
+      .then((data) => setConnections(data))
+      .catch(() => setConnections({}));
   }, []);
 
   async function onSearch(e: FormEvent) {
