@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import MarketIntelligenceDashboard from "@/components/market-intelligence-dashboard";
 import { db } from "@/db";
 import { businesses } from "@/db/schema";
@@ -8,7 +7,7 @@ import { desc } from "drizzle-orm";
 
 export const dynamic = "force-dynamic";
 
-export default async function HomePage() {
+export default async function PanelPage() {
   let liveRecords: BusinessRecord[] = [];
   let mode: "live" | "demo" = "demo";
 
@@ -39,10 +38,4 @@ export default async function HomePage() {
       defaultSource="exhibition"
     />
   );
-=======
-import LandingPage from "@/components/landing-page";
-
-export default function HomePage() {
-  return <LandingPage />;
->>>>>>> 03aa7cc (Add a public landing page and move the dashboard to /panel)
 }

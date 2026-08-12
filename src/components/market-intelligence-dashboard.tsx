@@ -313,7 +313,9 @@ export default function MarketIntelligenceDashboard({
           <span className="h-4 w-4 rounded-full border-2 border-white" />
         </div>
         <div>
-          <p className="text-[16px] font-extrabold text-white">دیدبان محلی</p>
+          <a href="/" className="text-[16px] font-extrabold text-white">
+            دیدبان محلی
+          </a>
           <p className="text-[10px] tracking-wide text-slate-400">NETWORK • MAP • NESHAN</p>
         </div>
       </div>
