@@ -1,5 +1,5 @@
 {
-  "note": "سایت‌های کلادفلر مرتبط با همکاری گروه دیدبان و مخازن SBZ-EDU. NEGINJAM-COMPANY و civicavita اینجا نیستند. ترنم فقط به‌عنوان آکادمی جدا در JSON خواهرها آمده.",
+  "note": "سایت‌های کلادفلر مرتبط با همکاری گروه دیدبان، SBZ-EDU و Heroku-elasa. Civicavita بات/غرفه نیست.",
   "items": [
     {
       "id": "neshan-m",
@@ -112,6 +112,30 @@
       "kind": "pages",
       "sister": "insurance",
       "role": "استارتاپ دوم بیمه/خدمات وابسته"
+    },
+    {
+      "id": "green-hope",
+      "label": "امید سبز | کاشت درخت",
+      "url": "https://green-hope-fire-jugle-pages.pages.dev",
+      "kind": "pages",
+      "sister": "environment",
+      "role": "حوزه محیط‌زیست — کاشت درخت با AI"
+    },
+    {
+      "id": "smartwaste",
+      "label": "EcoSmart پسماند",
+      "url": "https://smartwaste.pages.dev",
+      "kind": "pages",
+      "sister": "environment",
+      "role": "پاکسازی / پسماند هوشمند"
+    },
+    {
+      "id": "aura",
+      "label": "آورا تندرستی",
+      "url": "https://aura-ai.pages.dev",
+      "kind": "pages",
+      "sister": "social",
+      "role": "حوزه اجتماعی — تندرستی و ورزش"
     }
   ]
 }

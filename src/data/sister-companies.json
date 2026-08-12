@@ -1,17 +1,41 @@
 {
   "holding": "گروه دیدبان",
-  "tagline": "ده حوزه همکاری — در هر حوزه دو یا چند استارتاپ واقعی از SBZ-EDU و Websites-by-AI",
-  "note": "لیست از مخازن عمومی https://github.com/SBZ-EDU?tab=repositories و سازمان Websites-by-AI ساخته شده (بررسی ۱۲ مرداد ۱۴۰۵ / ۱۲ اوت ۲۰۲۶). هر حوزه چند برند جدا است، نه یک سایت. بات تلگرام/بله شاهرخ، نگین‌جام و civicavita وصل نمی‌شوند. فروش و پیام فقط با رضایت انسان.",
+  "tagline": "دوازده حوزه همکاری — استارتاپ‌های SBZ-EDU، Websites-by-AI و Heroku-elasa؛ محیط‌زیست و اجتماعی جدا از غرفه نمایشگاه",
+  "note": "لیست از مخازن عمومی SBZ-EDU، سازمان Websites-by-AI و https://github.com/Heroku-elasa ساخته شده (بررسی ۱۲ اوت ۲۰۲۶). حوزه‌های محیط‌زیست و اجتماعی برای پروژه‌هایی است که در ده حوزه قبلی جا نمی‌گرفتند. بعضی مخازن Heroku-elasa همان برند حوزه‌های قبلی‌اند (وکیل، املاک، پسماند، حسابرسی). Civicavita فقط در حوزه اجتماعی است نه CRM غرفه. بات تلگرام/بله وصل نمی‌شود. فروش و پیام فقط با رضایت انسان.",
   "sources": {
     "sbzEdu": "https://github.com/SBZ-EDU?tab=repositories",
-    "org": "https://github.com/orgs/Websites-by-AI/repositories"
+    "org": "https://github.com/orgs/Websites-by-AI/repositories",
+    "herokuElasa": "https://github.com/Heroku-elasa?tab=repositories"
   },
   "excluded": [
-    { "name": "g2ray", "reason": "فورک پروکسی آموزشی — استارتاپ همکاری نیست" },
-    { "name": "Opensource-onlive-body-avatar-app", "reason": "آرشیو ۲۰۲۰" },
-    { "name": "NEGINJAM-COMPANY / neginejam-event-service", "reason": "بات و محصول جدا؛ جشن‌ساز SBZ-EDU جداگانه در حوزه وب آمده" },
-    { "name": "Civicavita-AB", "reason": "سلامت بشردوستانه — خارج از همکاری نمایشگاه" },
-    { "name": "Chatre_daneah3", "reason": "مخزن خالی است" }
+    {
+      "name": "g2ray",
+      "reason": "فورک پروکسی آموزشی — استارتاپ همکاری نیست"
+    },
+    {
+      "name": "Opensource-onlive-body-avatar-app",
+      "reason": "آرشیو ۲۰۲۰"
+    },
+    {
+      "name": "NEGINJAM-COMPANY / neginejam-event-service",
+      "reason": "بات و محصول جدا؛ جشن‌ساز SBZ-EDU جداگانه در حوزه وب آمده"
+    },
+    {
+      "name": "Chatre_daneah3",
+      "reason": "مخزن خالی است"
+    },
+    {
+      "name": "ZNU-AI-Innovation-Center",
+      "reason": "مخزن Heroku-elasa بدون README/محتوا"
+    },
+    {
+      "name": "armanlawfirm…crupted",
+      "reason": "کپی خراب آرمان روی Heroku-elasa"
+    },
+    {
+      "name": "Heroku buildpacks / Glype / 2016 forks",
+      "reason": "زیرساخت قدیمی Heroku — استارتاپ محصول نیست"
+    }
   ],
   "checkedAt": "2026-08-12",
   "items": [
@@ -127,6 +151,26 @@
           "website": null,
           "status": "repo",
           "role": "CRM معرف و پیگیری فروش — محتوای فعلی مخزن رتبه برتر است"
+        },
+        {
+          "id": "elecon",
+          "name": "الکُن | فروش صنعت برق",
+          "brand": "Elecon-based-of-helius-num2",
+          "owner": "Heroku-elasa",
+          "repo": "https://github.com/Heroku-elasa/Elecon-based-of-helius-num2",
+          "website": null,
+          "status": "repo",
+          "role": "B2B برق — پیش‌بینی فروش و ناهنجاری"
+        },
+        {
+          "id": "hourtash",
+          "name": "آزمایشگاه هورتش",
+          "brand": "Hour-Tash-Laboratory",
+          "owner": "Heroku-elasa",
+          "repo": "https://github.com/Heroku-elasa/Hour-Tash-Laboratory-Advanced-Analysis-Services-base-do-site",
+          "website": null,
+          "status": "repo",
+          "role": "آزمایش غذا و کشاورزی — خدمات B2B غرفه‌دار"
         }
       ]
     },
@@ -182,6 +226,16 @@
           "website": null,
           "status": "missing",
           "role": "دستیار حسابرسی — مخزن در ۱۲ اوت ۲۰۲۶ از API گیت‌هاب ۴۰۴ بود"
+        },
+        {
+          "id": "steel-hesabras",
+          "name": "حسابرس‌یار استیل‌آنلاین",
+          "brand": "Steel-Online---AI-Assitance-online",
+          "owner": "Heroku-elasa",
+          "repo": "https://github.com/Heroku-elasa/Steel-Online---AI-Assitance-online",
+          "website": null,
+          "status": "repo",
+          "role": "نسخه Heroku-elasa دستیار حسابرسی (جایگزین مخزن ۴۰۴ HesabrasYar)"
         }
       ]
     },
@@ -215,6 +269,16 @@
           "website": "https://huggingface.co/spaces/sosa123454321/Bussiness-plan-maker",
           "status": "hf-sleeping",
           "role": "پیش‌نویس طرح برای وام سرمایه در گردش — سایت اختصاصی وام هنوز روی کلادفلر نیست"
+        },
+        {
+          "id": "realty-heroku",
+          "name": "املاک AI (Heroku-elasa)",
+          "brand": "realty-state-ai-wizard",
+          "owner": "Heroku-elasa",
+          "repo": "https://github.com/Heroku-elasa/realty-state-ai-wizard",
+          "website": null,
+          "status": "repo",
+          "role": "همان ویزارد املاک روی حساب Heroku-elasa"
         }
       ]
     },
@@ -282,6 +346,26 @@
           "website": null,
           "status": "repo",
           "role": "فقط نوت‌بوک RAG اتصال نمایشگاه — README ندارد"
+        },
+        {
+          "id": "dadgar-legal",
+          "name": "دادگر AI / دستیار حقوقی",
+          "brand": "Legal-Desitar-Dadgar-AI",
+          "owner": "Heroku-elasa",
+          "repo": "https://github.com/Heroku-elasa/Legal-Desitar-with-its-own-modules-offering-Dadgar-AI---Intelligent-Legal-Assistant",
+          "website": null,
+          "status": "repo",
+          "role": "پیش‌نویس سند و جستجوی وکیل — نسخه Heroku-elasa"
+        },
+        {
+          "id": "arman-heroku",
+          "name": "آرمان لاو (Heroku-elasa)",
+          "brand": "armanlawfirm.ir",
+          "owner": "Heroku-elasa",
+          "repo": "https://github.com/Heroku-elasa/armanlawfirm.ir-based-of-adl-pendar-based-of-dadgar-AI-with-insurance-armanlawfirm.ir",
+          "website": "https://armanlawfirm.ir",
+          "status": "live",
+          "role": "کپی مخزن وکیل+بیمه روی Heroku-elasa"
         }
       ]
     },
@@ -365,7 +449,8 @@
       "price": "بر اساس وزن/مسیر",
       "website": "https://digifair-cloudflare-full-fa.elasa2next.workers.dev",
       "extraSites": [
-        "https://huggingface.co/spaces/sosa123454321/Expo-connector1"
+        "https://huggingface.co/spaces/sosa123454321/Expo-connector1",
+        "https://smartwaste.pages.dev"
       ],
       "startups": [
         {
@@ -394,9 +479,9 @@
           "brand": "SmartWaste-AI",
           "owner": "Websites-by-AI",
           "repo": "https://github.com/Websites-by-AI/SmartWaste-AI---Intelligent-Waste-Management-number-2",
-          "website": null,
-          "status": "repo",
-          "role": "استارتاپ سوم لجستیک: مدیریت پسماند سالن"
+          "website": "https://smartwaste.pages.dev",
+          "status": "live",
+          "role": "پسماند هوشمند EcoSmart — زنده روی Pages؛ نسخه سازمان و Heroku-elasa یکی است"
         }
       ]
     },
@@ -440,6 +525,16 @@
           "website": null,
           "status": "repo",
           "role": "همان محصول روی سازمان"
+        },
+        {
+          "id": "karyab",
+          "name": "کاریاب AI | رزومه‌ساز",
+          "brand": "Job-resume-maker-like-tealhq.com",
+          "owner": "Heroku-elasa",
+          "repo": "https://github.com/Heroku-elasa/Job-resume-maker-like-tealhq.com",
+          "website": null,
+          "status": "repo",
+          "role": "رزومه لینکدین + ردیاب شغل برای متخصص ایرانی"
         }
       ]
     },
@@ -530,6 +625,174 @@
           "website": null,
           "status": "repo",
           "role": "پلتفرم آزمون کارشناسی ارشد مهندسی"
+        },
+        {
+          "id": "rooish",
+          "name": "مرکز کارآفرینی رویش",
+          "brand": "Rooish-Entrepreneurship-Center",
+          "owner": "Heroku-elasa",
+          "repo": "https://github.com/Heroku-elasa/Rooish-Entrepreneurship-Center",
+          "website": null,
+          "status": "repo",
+          "role": "شتاب‌دهنده سبزوار — آموزش و شتاب استارتاپ"
+        }
+      ]
+    },
+    {
+      "slug": "environment",
+      "name": "دیدبان محیط‌زیست",
+      "en": "Environment / cleaning",
+      "role": "پاکسازی، پسماند، آب، درخت",
+      "for": "سالن نمایشگاه، شهر، منابع آب، جنگل",
+      "offer": "پسماند هوشمند سالن + کاشت درخت + گزارش محیط‌زیست + ورشکستگی آبی",
+      "price": "پروژه‌ای",
+      "website": "https://green-hope-fire-jugle-pages.pages.dev",
+      "extraSites": [
+        "https://smartwaste.pages.dev"
+      ],
+      "startups": [
+        {
+          "id": "green-hope",
+          "name": "امید سبز | کاشت درخت",
+          "brand": "Green-Hope-Project---Planting-Trees",
+          "owner": "Heroku-elasa",
+          "repo": "https://github.com/Heroku-elasa/Green-Hope-Project---Planting-Trees-with-Artificial-Intelligence",
+          "website": "https://green-hope-fire-jugle-pages.pages.dev",
+          "status": "live",
+          "role": "برنامه کاشت درخت، گرنت و گزارش سبز"
+        },
+        {
+          "id": "green-hope-pages",
+          "name": "امید سبز Pages (سازمان)",
+          "brand": "green-hope-fire-jugle-pages",
+          "owner": "Websites-by-AI",
+          "repo": "https://github.com/Websites-by-AI/green-hope-fire-jugle-pages",
+          "website": "https://green-hope-fire-jugle-pages.pages.dev",
+          "status": "live",
+          "role": "همان امید سبز روی کلادفلر Pages"
+        },
+        {
+          "id": "smartwaste-env",
+          "name": "EcoSmart پسماند",
+          "brand": "SmartWaste-AI",
+          "owner": "Heroku-elasa",
+          "repo": "https://github.com/Heroku-elasa/SmartWaste-AI---Intelligent-Waste-Management-number-2",
+          "website": "https://smartwaste.pages.dev",
+          "status": "live",
+          "role": "جمع‌آوری و تحلیل پسماند — پاکسازی محیط سالن"
+        },
+        {
+          "id": "water-bankruptcy",
+          "name": "ورشکستگی آبی ایران",
+          "brand": "iran-Water-Bankruptcy-Management",
+          "owner": "Heroku-elasa",
+          "repo": "https://github.com/Heroku-elasa/iran-Water-Bankruptcy-Management",
+          "website": null,
+          "status": "repo",
+          "role": "داشبورد آبخوان و مدیریت کم‌آبی"
+        },
+        {
+          "id": "ecoai",
+          "name": "ecoAI دستیار محیط‌زیست",
+          "brand": "Findexpert.iro-ecoAI-Environmental-Assistant",
+          "owner": "Heroku-elasa",
+          "repo": "https://github.com/Heroku-elasa/Findexpert.iro-ecoAI-Environmental-Assistant",
+          "website": null,
+          "status": "repo",
+          "role": "گزارش پایداری و پیش‌نویس پروژه سبز"
+        },
+        {
+          "id": "wildfire",
+          "name": "پیش‌بینی گسترش آتش",
+          "brand": "Wildfires-SatelliteVu",
+          "owner": "Websites-by-AI",
+          "repo": "https://github.com/Websites-by-AI/Wildfires-SatelliteVu-AWS-Disaster-Response-Hackathon",
+          "website": null,
+          "status": "repo",
+          "role": "مدل ماهواره‌ای آتش‌سوزی جنگل — هکاتون AWS"
+        }
+      ]
+    },
+    {
+      "slug": "social",
+      "name": "دیدبان اجتماعی",
+      "en": "Social / civic",
+      "role": "سلامت اجتماعی، پناهگاه، رسانه، تندرستی",
+      "for": "سازمان مردم‌نهاد، پناهگاه حیوان، رسانه، باشگاه",
+      "offer": "ابزار اجتماعی جدا از غرفه نمایشگاه — Civicavita اینجا برند اجتماعی است نه CRM غرفه",
+      "price": "پروژه‌ای",
+      "website": "https://aura-ai.pages.dev",
+      "extraSites": [],
+      "startups": [
+        {
+          "id": "civicavita",
+          "name": "Civicavita AB",
+          "brand": "Civicavita-AB---Global-Health-Humanitarian-Science",
+          "owner": "Heroku-elasa",
+          "repo": "https://github.com/Heroku-elasa/Civicavita-AB---Global-Health-Humanitarian-Science",
+          "website": null,
+          "status": "repo",
+          "role": "سلامت جهانی و علم بشردوستانه — فقط حوزه اجتماعی، بات/غرفه وصل نیست"
+        },
+        {
+          "id": "janpanah",
+          "name": "جان‌پناه | نجات حیوان",
+          "brand": "Green-Hope-Project---Animal-Rescue-AI",
+          "owner": "Heroku-elasa",
+          "repo": "https://github.com/Heroku-elasa/Green-Hope-Project---Animal-Rescue-AI",
+          "website": null,
+          "status": "repo",
+          "role": "پناهگاه حیوانات، گرنت و تطبیق زیستگاه"
+        },
+        {
+          "id": "aura-wellness",
+          "name": "آورا تندرستی",
+          "brand": "AURA-AI-Your-Partner-in-Wellness-Physique",
+          "owner": "Heroku-elasa",
+          "repo": "https://github.com/Heroku-elasa/AURA-AI-Your-Partner-in-Wellness-Physique",
+          "website": "https://aura-ai.pages.dev",
+          "status": "live",
+          "role": "کوچ زیبایی، ورزش و تندرستی"
+        },
+        {
+          "id": "aura-music",
+          "name": "آورا استودیو موسیقی",
+          "brand": "AURA-AI-Music-Studio",
+          "owner": "Heroku-elasa",
+          "repo": "https://github.com/Heroku-elasa/AURA-AI-Music-Studio",
+          "website": null,
+          "status": "repo",
+          "role": "ایده موسیقی، روند و مشاوره تولید"
+        },
+        {
+          "id": "aura-sport",
+          "name": "آورا مربی ورزش",
+          "brand": "sport-coach-by-AURA-AI",
+          "owner": "Heroku-elasa",
+          "repo": "https://github.com/Heroku-elasa/sport-coach-by-AURA-AI-Wellness-Physique-number-",
+          "website": null,
+          "status": "repo",
+          "role": "برنامه تمرین و تحلیل بدن"
+        },
+        {
+          "id": "sahar-aura",
+          "name": "گالری شابلون سحر / آورا",
+          "brand": "Sahar-shablon-gallery-AURA",
+          "owner": "Heroku-elasa",
+          "repo": "https://github.com/Heroku-elasa/Sahar-shablon-gallery-live-cosmetic-test-AURA-AI-Wellness-Physique-number--for",
+          "website": null,
+          "status": "repo",
+          "role": "تست آرایشی زنده روی برند آورا"
+        },
+        {
+          "id": "media-compassion",
+          "name": "تحلیل‌گر مهربانی رسانه",
+          "brand": "Media-compassion-analyzer",
+          "owner": "Websites-by-AI",
+          "repo": "https://github.com/Websites-by-AI/Media-compassion-analyzer",
+          "website": null,
+          "status": "repo",
+          "role": "تحلیل لحن و سوگیری ویدیوی یوتیوب"
         }
       ]
     }

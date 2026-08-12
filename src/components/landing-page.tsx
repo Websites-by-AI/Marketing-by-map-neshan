@@ -81,7 +81,7 @@ export default function LandingPage() {
                 جزئیات نمایشگاه نفت
               </Link>
               <Link href="/sisters" className="rounded-2xl bg-white/10 px-5 py-3 text-[14px] font-extrabold ring-1 ring-white/20">
-                ۱۰ حوزه · چند استارتاپ
+                ۱۲ حوزه · محیط و اجتماعی
               </Link>
             </div>
           </div>
@@ -221,7 +221,11 @@ export default function LandingPage() {
             <a className="font-bold text-[#ee6748]" href="https://github.com/Websites-by-AI/" target="_blank" rel="noreferrer">
               Websites-by-AI
             </a>
-            : در هر حوزه چند استارتاپ. بات نگین‌جام و civicavita وصل نیستند.
+            {" "}و{" "}
+            <a className="font-bold text-[#ee6748]" href="https://github.com/Heroku-elasa?tab=repositories" target="_blank" rel="noreferrer">
+              Heroku-elasa
+            </a>
+            : دوازده حوزه شامل محیط‌زیست و اجتماعی. Civicavita فقط اجتماعی است، بات وصل نیست.
           </p>
           <div className="mt-6">
             <CooperationNetwork />

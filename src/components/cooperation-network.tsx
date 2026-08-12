@@ -1,11 +1,22 @@
 import cloudflareSites from "@/data/cloudflare-sites.json";
 import network from "@/data/cooperation-network.json";
 
-const accounts = "accounts" in network ? network.accounts : { sbzEdu: "https://github.com/SBZ-EDU?tab=repositories", org: "https://github.com/Websites-by-AI/" };
+const accounts =
+  "accounts" in network
+    ? network.accounts
+    : {
+        sbzEdu: "https://github.com/SBZ-EDU?tab=repositories",
+        org: "https://github.com/Websites-by-AI/",
+        herokuElasa: "https://github.com/Heroku-elasa?tab=repositories",
+      };
 
 export default function CooperationNetwork() {
   const sbz = network.github.filter((repo) => ("owner" in repo ? repo.owner : "") === "SBZ-EDU");
-  const org = network.github.filter((repo) => ("owner" in repo ? repo.owner : "Websites-by-AI") !== "SBZ-EDU");
+  const heroku = network.github.filter((repo) => ("owner" in repo ? repo.owner : "") === "Heroku-elasa");
+  const org = network.github.filter((repo) => {
+    const owner = "owner" in repo ? repo.owner : "Websites-by-AI";
+    return owner !== "SBZ-EDU" && owner !== "Heroku-elasa";
+  });
 
   return (
     <div className="space-y-5">
@@ -19,6 +30,11 @@ export default function CooperationNetwork() {
         سازمان:{" "}
         <a className="font-bold text-[#ee6748]" href={accounts.org} target="_blank" rel="noreferrer">
           Websites-by-AI
+        </a>
+        {" · "}
+        Heroku-elasa:{" "}
+        <a className="font-bold text-[#ee6748]" href={"herokuElasa" in accounts ? accounts.herokuElasa : "https://github.com/Heroku-elasa?tab=repositories"} target="_blank" rel="noreferrer">
+          github.com/Heroku-elasa
         </a>
       </p>
 

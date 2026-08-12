@@ -12,7 +12,7 @@ export async function GET() {
     ...sisters,
     fieldCount: sisters.items.length,
     startupCount,
-    source: "https://github.com/SBZ-EDU?tab=repositories",
+    sources: sisters.sources,
     cloudflareSites,
     network,
     cooperationModels,

@@ -96,7 +96,7 @@ export default function OilPage() {
             نمونه جستجو
           </a>
           <Link href="/sisters" className="rounded-xl bg-[#ee6748] px-4 py-2 text-[13px] font-extrabold text-white">
-            ۱۰ شرکت خواهر
+            ۱۲ حوزه همکاری
           </Link>
         </section>
       </main>

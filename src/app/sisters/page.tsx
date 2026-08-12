@@ -24,6 +24,7 @@ function statusClass(status: string) {
 }
 
 export default function SistersPage() {
+  const fieldCount = sisters.items.length;
   const startupCount = sisters.items.reduce((sum, item) => sum + item.startups.length, 0);
 
   return (
@@ -33,7 +34,7 @@ export default function SistersPage() {
           <div>
             <p className="text-sm font-extrabold">{sisters.holding}</p>
             <p className="text-[11px] text-slate-300">
-              ۱۰ حوزه · {fa.format(startupCount)} استارتاپ · منبع SBZ-EDU
+              {fa.format(fieldCount)} حوزه · {fa.format(startupCount)} استارتاپ · SBZ-EDU + Heroku-elasa
             </p>
           </div>
           <nav className="flex gap-3 text-[13px] font-bold">
@@ -56,7 +57,12 @@ export default function SistersPage() {
             <a className="rounded-full bg-white/10 px-3 py-1" href={sisters.sources.org} target="_blank" rel="noreferrer">
               Websites-by-AI
             </a>
-            <span className="rounded-full bg-[#ee6748] px-3 py-1">{fa.format(startupCount)} استارتاپ در ۱۰ حوزه</span>
+            <a className="rounded-full bg-white/10 px-3 py-1" href={sisters.sources.herokuElasa} target="_blank" rel="noreferrer">
+              Heroku-elasa
+            </a>
+            <span className="rounded-full bg-[#ee6748] px-3 py-1">
+              {fa.format(startupCount)} استارتاپ در {fa.format(fieldCount)} حوزه
+            </span>
           </div>
         </section>
 

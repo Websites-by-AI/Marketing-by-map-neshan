@@ -70,17 +70,28 @@
       "sisters",
       "cooperation"
     ],
-    "body": "نمایشگاه نفت: داده ۱۷۳۰ شرکت از دوره ۲۹ (اردیبهشت ۱۴۰۳). API next-exhibition پیش‌بینی ۳۰ است و رسمی نیست.\nصفحه /oil و GET /api/oil\n۱۷ نام دقیق مشترک با ساختمان.\n۱۰ حوزه همکاری، در هر حوزه ۲+ استارتاپ از SBZ-EDU و Websites-by-AI (۳۶ برند، ۱۲ اوت ۲۰۲۶). مهاجرت: سایت نمایشگاه + شاهرخ Pages — بات وصل نیست.\nصفحه /sisters و /api/sisters"
+    "body": "نمایشگاه نفت: داده ۱۷۳۰ شرکت از دوره ۲۹. /oil و /api/oil\n۱۲ حوزه همکاری (۱۰ غرفه + محیط‌زیست + اجتماعی) از SBZ-EDU و Websites-by-AI و Heroku-elasa. ۵۷ استارتاپ در ۱۲ اوت ۲۰۲۶.\nCivicavita فقط حوزه اجتماعی است نه CRM غرفه. بات وصل نیست.\n/sisters و /api/sisters"
   },
   {
     "id": "07-sbz-edu-startups",
-    "title": "استارتاپ‌های SBZ-EDU در هر حوزه",
+    "title": "استارتاپ‌ها در ۱۲ حوزه + Heroku-elasa",
     "updatedAt": "2026-08-12",
     "tags": [
       "sbz-edu",
       "sisters",
       "cooperation"
     ],
-    "body": "منبع: https://github.com/SBZ-EDU?tab=repositories + سازمان Websites-by-AI\nدر هر حوزه چند استارتاپ است نه یکی.\nوب: دیدبان محلی + جشن‌ساز Pages + Clinic Signal + Adv-seo\nفروش: LeadFair + لیدفر + Chatredash/رتبه برتر\nمالی: Business-plan HF (خطا/خواب) + املاک AI + حسابرس‌یار ۴۰۴\nوام: املاک AI + طرح کسب‌وکار — سایت اختصاصی وام نیست\nحقوقی: آرمان + دفتر اسناد ۶۶۲ (notary-662-sbz.pages.dev) + حق‌یار + Arman2\nمهاجرت: immigration.exhibition2world.ir + shahrokh-immigration.pages.dev (بات نه)\nبیمه: آرمان + Eternal-Path Pages\nلجستیک: دیجی‌فیر CF/Vercel + SmartWaste\nمنابع انسانی: Findexpert2 (۵۲۲) + چتر دانش کارنامه\nآموزش: نوت‌بوک + دیجی‌آموزش + VibeLab + ترنم + dual-diagnosis + آزمون‌یار\nحذف‌شده: g2ray، آواتار ۲۰۲۰، NEGINJAM-COMPANY، civicavita، Chatre_daneah3 خالی"
+    "body": "منبع: https://github.com/SBZ-EDU?tab=repositories + سازمان Websites-by-AI\nدر هر حوزه چند استارتاپ است نه یکی.\nوب: دیدبان محلی + جشن‌ساز Pages + Clinic Signal + Adv-seo\nفروش: LeadFair + لیدفر + Chatredash/رتبه برتر\nمالی: Business-plan HF (خطا/خواب) + املاک AI + حسابرس‌یار ۴۰۴\nوام: املاک AI + طرح کسب‌وکار — سایت اختصاصی وام نیست\nحقوقی: آرمان + دفتر اسناد ۶۶۲ (notary-662-sbz.pages.dev) + حق‌یار + Arman2\nمهاجرت: immigration.exhibition2world.ir + shahrokh-immigration.pages.dev (بات نه)\nبیمه: آرمان + Eternal-Path Pages\nلجستیک: دیجی‌فیر CF/Vercel + SmartWaste\nمنابع انسانی: Findexpert2 (۵۲۲) + چتر دانش کارنامه\nآموزش: نوت‌بوک + دیجی‌آموزش + VibeLab + ترنم + dual-diagnosis + آزمون‌یار\nحذف‌شده: g2ray، آواتار ۲۰۲۰، NEGINJAM-COMPANY، civicavita، Chatre_daneah3 خالی\nمنبع سوم: https://github.com/Heroku-elasa?tab=repositories\nحوزه محیط‌زیست: امید سبز Pages، EcoSmart، ورشکستگی آبی، ecoAI، آتش‌سوزی جنگل\nحوزه اجتماعی: Civicavita، جان‌پناه، آورا تندرستی/موسیقی، تحلیل مهربانی رسانه\nهمچنین روی حوزه‌های قبلی: دادگر حقوقی، حسابرس استیل‌آنلاین، کاریاب رزومه، الکُن برق، هورتش، رویش سبزوار، املاک Heroku-elasa\nحذف: بیلدپک‌های ۲۰۱۶، Glype، آرمان خراب، ZNU خالی"
+  },
+  {
+    "id": "08-heroku-elasa",
+    "title": "حساب Heroku-elasa",
+    "updatedAt": "2026-08-12",
+    "tags": [
+      "heroku-elasa",
+      "environment",
+      "social"
+    ],
+    "body": "۴۳ مخزن عمومی. محصول‌های ۲۰۲۵–۲۰۲۶ به همکاری اضافه شدند. فورک‌های قدیمی Heroku/Glype استارتاپ نیستند.\nزنده: green-hope-fire-jugle-pages.pages.dev ، smartwaste.pages.dev ، aura-ai.pages.dev"
   }
 ]

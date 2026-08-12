@@ -1,8 +1,9 @@
 {
-  "note": "شبکه همکاری: کلادفلر زنده + گیت‌هاب SBZ-EDU و Websites-by-AI + Hugging Face. در هر حوزه چند استارتاپ است. بات نگین‌جام، civicavita و g2ray اینجا نیستند.",
+  "note": "شبکه همکاری: کلادفلر + SBZ-EDU + Websites-by-AI + Heroku-elasa + Hugging Face. دوازده حوزه؛ محیط‌زیست و اجتماعی برای پروژه‌هایی که در ده حوزه غرفه جا نمی‌گرفتند. بات نگین‌جام و g2ray نیستند. Civicavita فقط حوزه اجتماعی است.",
   "accounts": {
     "sbzEdu": "https://github.com/SBZ-EDU?tab=repositories",
-    "org": "https://github.com/Websites-by-AI/"
+    "org": "https://github.com/Websites-by-AI/",
+    "herokuElasa": "https://github.com/Heroku-elasa?tab=repositories"
   },
   "github": [
     {
@@ -206,6 +207,132 @@
       "url": "https://github.com/Websites-by-AI/HesabrasYar---Intelligent-Audit-Assistant-",
       "role": "حسابرسی — مخزن در اوت ۲۰۲۶ از API گیت‌هاب ۴۰۴ بود",
       "sister": "finance",
+      "owner": "Websites-by-AI"
+    },
+    {
+      "name": "Green-Hope-Project-trees",
+      "url": "https://github.com/Heroku-elasa/Green-Hope-Project---Planting-Trees-with-Artificial-Intelligence",
+      "role": "امید سبز — کاشت درخت با AI",
+      "sister": "environment",
+      "owner": "Heroku-elasa"
+    },
+    {
+      "name": "Green-Hope-Animal-Rescue",
+      "url": "https://github.com/Heroku-elasa/Green-Hope-Project---Animal-Rescue-AI",
+      "role": "جان‌پناه — نجات حیوان",
+      "sister": "social",
+      "owner": "Heroku-elasa"
+    },
+    {
+      "name": "iran-Water-Bankruptcy-Management",
+      "url": "https://github.com/Heroku-elasa/iran-Water-Bankruptcy-Management",
+      "role": "داشبورد ورشکستگی آبی ایران",
+      "sister": "environment",
+      "owner": "Heroku-elasa"
+    },
+    {
+      "name": "Findexpert-ecoAI",
+      "url": "https://github.com/Heroku-elasa/Findexpert.iro-ecoAI-Environmental-Assistant",
+      "role": "دستیار گزارش محیط‌زیست",
+      "sister": "environment",
+      "owner": "Heroku-elasa"
+    },
+    {
+      "name": "SmartWaste-AI-Heroku",
+      "url": "https://github.com/Heroku-elasa/SmartWaste-AI---Intelligent-Waste-Management-number-2",
+      "role": "پسماند هوشمند EcoSmart",
+      "sister": "environment",
+      "owner": "Heroku-elasa"
+    },
+    {
+      "name": "Civicavita-AB",
+      "url": "https://github.com/Heroku-elasa/Civicavita-AB---Global-Health-Humanitarian-Science",
+      "role": "سلامت بشردوستانه — فقط اجتماعی",
+      "sister": "social",
+      "owner": "Heroku-elasa"
+    },
+    {
+      "name": "AURA-AI-Wellness",
+      "url": "https://github.com/Heroku-elasa/AURA-AI-Your-Partner-in-Wellness-Physique",
+      "role": "آورا تندرستی",
+      "sister": "social",
+      "owner": "Heroku-elasa"
+    },
+    {
+      "name": "AURA-AI-Music-Studio",
+      "url": "https://github.com/Heroku-elasa/AURA-AI-Music-Studio",
+      "role": "استودیو موسیقی آورا",
+      "sister": "social",
+      "owner": "Heroku-elasa"
+    },
+    {
+      "name": "Elecon-helius",
+      "url": "https://github.com/Heroku-elasa/Elecon-based-of-helius-num2",
+      "role": "فروش هوشمند صنعت برق",
+      "sister": "seller",
+      "owner": "Heroku-elasa"
+    },
+    {
+      "name": "Rooish-Entrepreneurship-Center",
+      "url": "https://github.com/Heroku-elasa/Rooish-Entrepreneurship-Center",
+      "role": "شتاب‌دهنده رویش سبزوار",
+      "sister": "academy",
+      "owner": "Heroku-elasa"
+    },
+    {
+      "name": "Job-resume-maker",
+      "url": "https://github.com/Heroku-elasa/Job-resume-maker-like-tealhq.com",
+      "role": "کاریاب — رزومه‌ساز",
+      "sister": "hr",
+      "owner": "Heroku-elasa"
+    },
+    {
+      "name": "Steel-Online-Hesabras",
+      "url": "https://github.com/Heroku-elasa/Steel-Online---AI-Assitance-online",
+      "role": "حسابرس‌یار نسخه استیل‌آنلاین",
+      "sister": "finance",
+      "owner": "Heroku-elasa"
+    },
+    {
+      "name": "Hour-Tash-Laboratory",
+      "url": "https://github.com/Heroku-elasa/Hour-Tash-Laboratory-Advanced-Analysis-Services-base-do-site",
+      "role": "آزمایشگاه هورتش",
+      "sister": "seller",
+      "owner": "Heroku-elasa"
+    },
+    {
+      "name": "Dadgar-AI-Legal-Desitar",
+      "url": "https://github.com/Heroku-elasa/Legal-Desitar-with-its-own-modules-offering-Dadgar-AI---Intelligent-Legal-Assistant",
+      "role": "دادگر — دستیار حقوقی",
+      "sister": "lawyer",
+      "owner": "Heroku-elasa"
+    },
+    {
+      "name": "realty-state-ai-wizard",
+      "url": "https://github.com/Heroku-elasa/realty-state-ai-wizard",
+      "role": "املاک AI روی Heroku-elasa",
+      "sister": "loan",
+      "owner": "Heroku-elasa"
+    },
+    {
+      "name": "green-hope-fire-jugle-pages",
+      "url": "https://github.com/Websites-by-AI/green-hope-fire-jugle-pages",
+      "role": "امید سبز روی Cloudflare Pages",
+      "sister": "environment",
+      "owner": "Websites-by-AI"
+    },
+    {
+      "name": "Media-compassion-analyzer",
+      "url": "https://github.com/Websites-by-AI/Media-compassion-analyzer",
+      "role": "تحلیل مهربانی رسانه",
+      "sister": "social",
+      "owner": "Websites-by-AI"
+    },
+    {
+      "name": "Wildfires-SatelliteVu",
+      "url": "https://github.com/Websites-by-AI/Wildfires-SatelliteVu-AWS-Disaster-Response-Hackathon",
+      "role": "پیش‌بینی آتش‌سوزی جنگل",
+      "sister": "environment",
       "owner": "Websites-by-AI"
     }
   ],
