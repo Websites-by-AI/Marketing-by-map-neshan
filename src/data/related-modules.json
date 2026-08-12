@@ -1,0 +1,51 @@
+{
+  "seoVendors": [
+    { "rank": 1, "name": "سئوف", "score": 88, "phone": "02166902605", "website": "https://seof.ir" },
+    { "rank": 2, "name": "تهران سایت", "score": 84, "phone": "02177711200", "website": "https://tehransite.com" },
+    { "rank": 3, "name": "وب‌سیما", "score": 82, "phone": "02178358", "website": "https://websima.com" },
+    { "rank": 4, "name": "سئوکار", "score": 80, "phone": "02148000019", "website": "https://seokar.com" },
+    { "rank": 5, "name": "دی‌ام‌روم", "score": 79, "phone": "02166948816", "website": "https://dmroom.agency" },
+    { "rank": 6, "name": "سئو۲۴", "score": 76, "phone": "02186086864", "website": "https://www.seo24.ir" },
+    { "rank": 7, "name": "سئودو", "score": 75, "phone": "02122905759", "website": "https://seodo.agency" },
+    { "rank": 8, "name": "ایران وب لایف", "score": 74, "phone": "02188770451", "website": "https://www.iranweblife.com" },
+    { "rank": 9, "name": "HDM", "score": 73, "phone": "02188690818", "website": "https://hdmarketing.org" },
+    { "rank": 10, "name": "سئو تهران", "score": 71, "phone": "02191018037", "website": "https://seotehran.ir" }
+  ],
+  "returningFromOldExhibition": [
+    { "name": "آبنوس جام کرج", "phone": "02634706969", "oldCategory": "شیشه", "booth": "سالن ۳۸B / ۳۸۲۳۹" },
+    { "name": "آکپا ایران کیش", "phone": "04132466095", "oldCategory": "پروفیل آلومینیوم", "booth": "سالن ۴۴A / ۴۴۱۲" }
+  ],
+  "oldExhibitionSample": [
+    "MRD",
+    "Persian door",
+    "mecaco",
+    "zibogroup",
+    "آبایان پروفیل",
+    "آبنوس جام کرج",
+    "آتا پلیمر صنعت ارس",
+    "آدوپن پلاستیک پرشین (وین‌تک)",
+    "آذر ماشین",
+    "آذین در",
+    "آراز پروفیل",
+    "آرتا پروفیل پیشرو صنعت جهان",
+    "آرتین آلومین",
+    "آکپا ایران کیش"
+  ],
+  "githubModules": [
+    { "name": "Adv-seo-2 / Clinic Signal", "url": "https://github.com/Websites-by-AI/Adv-seo-2", "role": "موتور لید، ایمپورت نمایشگاه، آدیت سئو، پیام" },
+    { "name": "Adv-seo", "url": "https://github.com/Websites-by-AI/Adv-seo", "role": "نسخه اول داشبورد سئو — adv-seo.vercel.app" },
+    { "name": "seo-liderfer / Leadfar", "url": "https://github.com/Websites-by-AI/seo-liderfer", "role": "صف اولویت P1–P3 و کانال‌های پیام" },
+    { "name": "SEO-wordpress-automation", "url": "https://github.com/Websites-by-AI/SEO-wordpress-automation", "role": "اتوماسیون وردپرس بعد از فروش سایت" },
+    { "name": "Marketing-by-map-neshan", "url": "https://github.com/Websites-by-AI/Marketing-by-map-neshan", "role": "این سایت — نقشه + غرفه‌داران ۱۴۰۵" }
+  ],
+  "huggingFace": [
+    { "id": "SoSa123456/clinic-lead-agent", "priority": "A", "url": "https://huggingface.co/spaces/SoSa123456/clinic-lead-agent", "app": "https://sosa123456-clinic-lead-agent.hf.space", "role": "سیستم عامل لید — باید Docker شود نه Static" },
+    { "id": "SoSa123456/Seocontent", "priority": "A", "url": "https://huggingface.co/spaces/SoSa123456/Seocontent", "app": "https://sosa123456-seocontent.hf.space", "role": "تولید محتوای سئو برای لندینگ غرفه‌دار" },
+    { "id": "SoSa123456/Exhibition-connector-rag1-fixed", "priority": "A", "url": "https://huggingface.co/spaces/SoSa123456/Exhibition-connector-rag1-fixed", "app": "https://sosa123456-exhibition-connector-rag1-fixed.hf.space", "role": "RAG اتصال نمایشگاه‌ها و لیست‌های قدیمی" },
+    { "id": "SoSa123456/Exhibition-connector-rag1-static", "priority": "A", "url": "https://huggingface.co/spaces/SoSa123456/Exhibition-connector-rag1-static", "app": "", "role": "رابط استاتیک RAG نمایشگاه" },
+    { "id": "SoSa123456/Exhibition-connector-rag2-static", "priority": "A", "url": "https://huggingface.co/spaces/SoSa123456/Exhibition-connector-rag2-static", "app": "", "role": "نسخه دوم RAG نمایشگاه" },
+    { "id": "SoSa123456/radio-script-maker", "priority": "B", "url": "https://huggingface.co/spaces/SoSa123456/radio-script-maker", "app": "", "role": "اسکریپت تبلیغ رادیویی فارسی" },
+    { "id": "SoSa123456/Text2Video-Zero", "priority": "B", "url": "https://huggingface.co/spaces/SoSa123456/Text2Video-Zero", "app": "", "role": "ویدیو کوتاه محصول (با تایید انسانی)" },
+    { "id": "SoSa123456/m3hrdadfi-wav2vec2-large-xlsr-persian-v3", "priority": "B", "url": "https://huggingface.co/spaces/SoSa123456/m3hrdadfi-wav2vec2-large-xlsr-persian-v3", "app": "", "role": "تبدیل گفتار غرفه به متن" }
+  ]
+}

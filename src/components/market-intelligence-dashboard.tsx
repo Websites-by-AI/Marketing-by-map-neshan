@@ -14,6 +14,7 @@ import {
   type RelatedBusiness,
 } from "@/lib/business-data";
 import { exhibitionMeta, promptForExhibitor } from "@/lib/exhibition";
+import relatedModules from "@/data/related-modules.json";
 import {
   AlertTriangle,
   BarChart3,
@@ -63,6 +64,7 @@ type AdminTab = "categories" | "prompts" | "export" | "pipeline" | "network";
 const navItems = [
   { label: "نمای کلی", icon: LayoutDashboard, id: "overview" },
   { label: "نمایشگاه ساختمان", icon: Building2, id: "exhibition" },
+  { label: "ماژول‌های مرتبط", icon: Sparkles, id: "modules" },
   { label: "نقشه خیابانی", icon: MapPinned, id: "map" },
   { label: "شبکه ارتباطی", icon: Network, id: "network" },
   { label: "بحرانی‌ها", icon: CircleAlert, id: "critical" },
@@ -522,6 +524,70 @@ export default function MarketIntelligenceDashboard({
                   <p className="mt-1 truncate text-[10px] text-slate-400">{r.address}</p>
                   <p className="mt-2 text-[10px] font-bold text-[#ee6748]">لید {faNumber.format(r.leadScore)}</p>
                 </button>
+              ))}
+            </div>
+          </section>
+
+          <section id="modules" className="mt-6 scroll-mt-24 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+            <div className="flex flex-wrap items-end justify-between gap-3">
+              <div>
+                <h3 className="flex items-center gap-2 text-[14px] font-extrabold">
+                  <Sparkles size={18} className="text-violet-600" /> ماژول‌های مرتبط: Adv-seo-2 + Hugging Face + لیست قدیمی
+                </h3>
+                <p className="mt-1 text-[10px] text-slate-400">
+                  این نقشه باید به موتور لید Adv-seo-2 و RAG نمایشگاه وصل شود — نه اینکه همه چیز را از صفر بسازد.
+                </p>
+              </div>
+              <a href="/api/modules" target="_blank" rel="noreferrer" className="rounded-xl bg-[#0f172a] px-3 py-2 text-[11px] font-bold text-white">
+                JSON ماژول‌ها
+              </a>
+            </div>
+
+            <div className="mt-4 grid gap-3 lg:grid-cols-3">
+              <article className="rounded-xl border bg-slate-50 p-3">
+                <h4 className="text-[12px] font-extrabold">بازگشتی از نمایشگاه قدیمی در و پنجره</h4>
+                <p className="mt-1 text-[10px] text-slate-500">از ۲۰۰ شرکت آرشیو Dowintech فقط این‌ها امسال هم غرفه دارند.</p>
+                <div className="mt-2 space-y-2">
+                  {relatedModules.returningFromOldExhibition.map((row) => (
+                    <div key={row.name} className="rounded-lg bg-white p-2 text-[11px]">
+                      <div className="font-bold">{row.name}</div>
+                      <div className="text-[10px] text-slate-500">{row.booth} • {row.phone}</div>
+                    </div>
+                  ))}
+                </div>
+                <p className="mt-2 text-[10px] text-slate-400">نمونه آرشیو: {relatedModules.oldExhibitionSample.slice(0, 6).join("، ")}</p>
+              </article>
+
+              <article className="rounded-xl border bg-violet-50 p-3">
+                <h4 className="text-[12px] font-extrabold text-violet-900">لیست آژانس سئو تهران</h4>
+                <div className="mt-2 max-h-[220px] space-y-1 overflow-auto">
+                  {relatedModules.seoVendors.map((v) => (
+                    <a key={v.name} href={v.website} target="_blank" rel="noreferrer" className="flex justify-between rounded bg-white px-2 py-1.5 text-[10px]">
+                      <span className="font-bold">{v.rank}. {v.name}</span>
+                      <span className="text-slate-500">{v.score} • {v.phone}</span>
+                    </a>
+                  ))}
+                </div>
+              </article>
+
+              <article className="rounded-xl border bg-[#fff8f4] p-3">
+                <h4 className="text-[12px] font-extrabold">Hugging Face اولویت A</h4>
+                <div className="mt-2 space-y-1">
+                  {relatedModules.huggingFace.filter((s) => s.priority === "A").map((s) => (
+                    <a key={s.id} href={s.url} target="_blank" rel="noreferrer" className="block rounded bg-white px-2 py-1.5 text-[10px]">
+                      <div className="font-bold">{s.id.replace("SoSa123456/", "")}</div>
+                      <div className="text-slate-500">{s.role}</div>
+                    </a>
+                  ))}
+                </div>
+              </article>
+            </div>
+
+            <div className="mt-3 flex flex-wrap gap-2">
+              {relatedModules.githubModules.map((g) => (
+                <a key={g.url} href={g.url} target="_blank" rel="noreferrer" className="rounded-full bg-slate-100 px-3 py-1 text-[10px] font-bold text-slate-700">
+                  {g.name}
+                </a>
               ))}
             </div>
           </section>

@@ -35,6 +35,11 @@ const knownWebsites: Record<string, string> = {
   "سندیکا صنعت برق ایران": "ieis.ir",
 };
 
+const knownPhones: Record<string, string> = {
+  "آبنوس جام کرج": "02634706969",
+  "آکپا ایران کیش": "04132466095",
+};
+
 export const exhibitionCompanies = exhibitionPayload.companies as ExhibitionCompany[];
 
 export function exhibitionToBusinessRecords(): BusinessRecord[] {
@@ -52,7 +57,7 @@ export function exhibitionToBusinessRecords(): BusinessRecord[] {
       city: "تهران",
       latitude: company.latitude,
       longitude: company.longitude,
-      phone: null,
+      phone: knownPhones[company.name] ?? null,
       website,
       websiteTitle: website ? company.name : null,
       websiteFound: Boolean(website),
