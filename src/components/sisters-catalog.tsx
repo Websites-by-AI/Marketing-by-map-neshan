@@ -40,7 +40,7 @@ export default function SistersCatalog() {
           <nav className="flex gap-3 text-[13px] font-bold">
             <a href="/">خانه</a>
             <a href="/oil">نفت</a>
-            <a href="/panel/sisters">پنل ادمین</a>
+            <a href="/sisters/admin">پنل ادمین</a>
           </nav>
         </div>
       </header>

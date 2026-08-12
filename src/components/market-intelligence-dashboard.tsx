@@ -382,7 +382,7 @@ export default function MarketIntelligenceDashboard({
           <a href="/audit" className="rounded-lg bg-white/10 px-2 py-1 text-white">صحت</a>
           <a href="/memory" className="rounded-lg bg-white/10 px-2 py-1 text-white">حافظه</a>
           <a href="/connect" className="rounded-lg bg-white/10 px-2 py-1 text-white">API</a>
-          <a href="/panel/sisters" className="rounded-lg bg-[#ee6748] px-2 py-1 text-white">ادمین خواهرها</a>
+          <a href="/sisters/admin" className="rounded-lg bg-[#ee6748] px-2 py-1 text-white">ادمین خواهرها</a>
         </div>
         <p className="text-[11px] font-bold text-white">خروجی شبکه + پرامپت</p>
         <p className="mt-1 text-[10px] leading-5 text-slate-400">
@@ -1157,7 +1157,7 @@ export default function MarketIntelligenceDashboard({
                 </div>
                 <div className="flex gap-2 text-[11px] font-bold">
                   <a href="/sisters" className="rounded-lg bg-[#10263d] px-3 py-1.5 text-white">کاتالوگ</a>
-                  <a href="/panel/sisters" className="rounded-lg bg-[#ee6748] px-3 py-1.5 text-white">ادمین + سورس</a>
+                  <a href="/sisters/admin" className="rounded-lg bg-[#ee6748] px-3 py-1.5 text-white">ادمین + سورس</a>
                   <a href="/oil" className="rounded-lg border px-3 py-1.5">نفت {faNumber.format(oilExhibitionMeta.companies)}</a>
                 </div>
               </div>
