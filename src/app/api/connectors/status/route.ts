@@ -97,13 +97,21 @@ export async function GET() {
       ok: telegram.ok && telegram.snippet.includes("exhibition_ai_bot"),
       detail: telegram.snippet.includes("username") ? "بات زنده است" : telegram.snippet.slice(0, 140),
     },
+    ...cloudflareSites.items.map((site, index) => ({
+      id: `cf-${site.id}`,
+      label: `کلادفلر · ${site.label}`,
+      url: site.url,
+      ok: cfProbes[index]?.ok ?? false,
+      detail: `${site.role} · ${site.kind}${cfProbes[index]?.ok ? "" : ` · ${(cfProbes[index]?.snippet ?? "").slice(0, 80)}`}`,
+    })),
   ];
 
   return Response.json({
     ok: true,
     project: "exhibition-connector-hub",
     generatedAt: new Date().toISOString(),
-    note: "فقط APIهای مربوط به نمایشگاه/سئو/RAG اینجا وصل می‌شوند. بات‌های مهاجرت و نگین‌جام جدا هستند.",
+    note: "APIهای نمایشگاه/سئو/RAG + سایت‌های کلادفلر مرتبط با مدل همکاری.",
+    cloudflare: cloudflareSites,
     items,
   });
 }
