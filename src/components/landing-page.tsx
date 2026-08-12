@@ -37,6 +37,7 @@ export default function LandingPage() {
           </div>
           <nav className="hidden items-center gap-5 text-[13px] font-bold text-slate-200 md:flex">
             <a href="#exhibitors">غرفه‌داران</a>
+            <Link href="/connect">اتصال‌گر API</Link>
             <a href="#modules">ماژول‌ها</a>
             <a href="#seo">سئو</a>
             <Link href="/panel" className="rounded-xl bg-[#ee6748] px-4 py-2 text-white">
@@ -67,9 +68,9 @@ export default function LandingPage() {
               <Link href="/panel" className="rounded-2xl bg-[#ee6748] px-5 py-3 text-[14px] font-extrabold">
                 باز کردن داشبورد نقشه
               </Link>
-              <a href="/api/exhibition?format=csv" className="rounded-2xl bg-white/10 px-5 py-3 text-[14px] font-extrabold ring-1 ring-white/20">
-                دانلود CSV غرفه‌داران
-              </a>
+              <Link href="/connect" className="rounded-2xl bg-white/10 px-5 py-3 text-[14px] font-extrabold ring-1 ring-white/20">
+                پروژه اتصال‌گر API
+              </Link>
             </div>
           </div>
           <div className="grid grid-cols-2 gap-3 self-end">

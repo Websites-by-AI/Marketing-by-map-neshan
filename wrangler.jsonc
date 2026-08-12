@@ -19,5 +19,9 @@
   ],
   "observability": {
     "enabled": true
+  },
+  "vars": {
+    "LEADFAIR_RAG_API": "https://vercel-app-amber-five.vercel.app",
+    "LEADFAIR_SEO_URL": "https://master.leadfair.pages.dev/seo-lead"
   }
 }
