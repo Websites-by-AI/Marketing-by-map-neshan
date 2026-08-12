@@ -1,6 +1,7 @@
 import { db } from "@/db";
 import { businesses, collectionRuns } from "@/db/schema";
 import { collectFromDemoCatalog, generateWebsitePrompt, toBusinessRecord, type BusinessRecord } from "@/lib/business-data";
+import { appendCollectionRun, listCollectionRuns } from "@/lib/persist";
 import { eq } from "drizzle-orm";
 
 export const dynamic = "force-dynamic";
@@ -38,14 +39,24 @@ export async function POST(request: Request) {
 
   if (!apiKey || !db) {
     const items = collectFromDemoCatalog(term, latitude, longitude);
+    const saved = await appendCollectionRun({
+      term,
+      latitude,
+      longitude,
+      status: "demo",
+      count: items.length,
+      source: "demo",
+    });
     return Response.json({
-      runId: null,
+      runId: saved.run.id,
+      persisted: saved.persisted,
+      persist: saved.persisted ? "kv" : "none",
       count: items.length,
       items,
       source: "demo",
       message: apiKey
-        ? "دیتابیس در دسترس نیست؛ نتایج نمونه بر اساس مختصات و عبارت جست‌وجو آماده شد."
-        : "کلید نشان تنظیم نشده؛ نتایج نمونه غرب تهران بر اساس مختصات و عبارت جست‌وجو آماده شد.",
+        ? "پستگرس نیست؛ نتایج نمونه آماده شد و تاریخچه روی KV ذخیره شد."
+        : "کلید نشان تنظیم نشده؛ نتایج نمونه غرب تهران آماده شد و تاریخچه روی KV ذخیره شد.",
     });
   }
 
@@ -143,6 +154,15 @@ export async function POST(request: Request) {
       .set({ status: "completed", resultsCount: saved.length, completedAt: new Date() })
       .where(eq(collectionRuns.id, run.id));
 
+    await appendCollectionRun({
+      id: `pg-${run.id}`,
+      term,
+      latitude,
+      longitude,
+      status: "completed",
+      count: saved.length,
+      source: "neshan",
+    });
     return Response.json({ runId: run.id, count: saved.length, items: saved, source: "neshan" });
   } catch (error) {
     const message = error instanceof Error ? error.message : "خطای ناشناخته در دریافت داده از نشان";
@@ -152,6 +172,16 @@ export async function POST(request: Request) {
       .where(eq(collectionRuns.id, run.id));
 
     const fallback = collectFromDemoCatalog(term, latitude, longitude);
+    await appendCollectionRun({
+      id: `pg-${run.id}`,
+      term,
+      latitude,
+      longitude,
+      status: "failed",
+      count: fallback.length,
+      source: "demo-fallback",
+      error: message,
+    });
     return Response.json(
       {
         message: `${message} — نتایج نمونه به‌عنوان جایگزین بارگذاری شد.`,
@@ -163,4 +193,14 @@ export async function POST(request: Request) {
       { status: 200 },
     );
   }
+}
+
+export async function GET() {
+  const payload = await listCollectionRuns();
+  return Response.json({
+    ok: true,
+    persist: payload.kvBound ? "kv" : "none",
+    count: payload.runs.length,
+    runs: payload.runs,
+  });
 }

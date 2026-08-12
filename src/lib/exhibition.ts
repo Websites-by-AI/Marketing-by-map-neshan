@@ -1,4 +1,6 @@
+import cohort from "@/data/iranconfair-cohort.json";
 import exhibitionPayload from "@/data/iranconfair-26.json";
+import verifiedWebsites from "@/data/verified-websites.json";
 import { generateWebsitePrompt, type BusinessRecord } from "@/lib/business-data";
 
 export type ExhibitionCompany = {
@@ -52,13 +54,24 @@ export const knownWebsites: Record<string, string> = {
   "حامی آلیاژ آسیا": "hamiransteel.com",
 };
 
+type WebsiteSource = "known-manual" | "oil-overlap" | "verified-fetch";
+
+export const websiteSources: Record<string, WebsiteSource> = Object.fromEntries(
+  Object.entries(verifiedWebsites.items).map(([name, row]) => [name, row.source as WebsiteSource]),
+);
+
 /** Only confirmed overlaps with the old Dowintech / namayeshgahha door-window archive. */
 export const knownPhones: Record<string, string> = {
   "آبنوس جام کرج": "02634706969",
   "آکپا ایران کیش": "04132466095",
 };
 
-export const returningExhibitorNames = new Set(Object.keys(knownPhones));
+export const phoneConfirmedReturning = new Set(Object.keys(knownPhones));
+
+/** Official 25th∩26th names when the cohort file is filled; otherwise only phone-confirmed Dowintech overlaps. */
+export const returningExhibitorNames = new Set(
+  cohort.returning.length ? cohort.returning : cohort.dowintechPhoneConfirmed,
+);
 
 export const exhibitionCompanies = exhibitionPayload.companies as ExhibitionCompany[];
 
@@ -105,7 +118,7 @@ export function exhibitionToBusinessRecords(): BusinessRecord[] {
       websiteFound: Boolean(website),
       websiteStatus: website ? "listed" : "not_found",
       websiteQuality: website
-        ? "سایت از دانش قبلی اضافه شد — در لیست رسمی نبود"
+        ? `سایت overlay (${websiteSources[company.name] ?? "known-manual"}) — در لیست رسمی iccexpo نبود`
         : "بدون سایت در لیست رسمی iccexpo",
       websitePrompt: null,
       qualityScore: website ? 42 : 0,
@@ -122,7 +135,7 @@ export function exhibitionToBusinessRecords(): BusinessRecord[] {
       activity: company.activity,
       halls: company.halls,
       booths: company.booths,
-      websiteSource: website ? "known-manual" : null,
+      websiteSource: website ? (websiteSources[company.name] ?? "known-manual") : null,
       returningExhibitor: returning,
     };
   });
@@ -153,5 +166,8 @@ export const exhibitionStats = {
   withoutListedWebsite: exhibitionBusinesses.filter((row) => !row.websiteFound).length,
   withPhone: exhibitionBusinesses.filter((row) => row.phone).length,
   returning: exhibitionBusinesses.filter((row) => row.returningExhibitor).length,
+  returningFrom25: cohort.returning.length,
+  newVs25: cohort.newIn26.length,
+  droppedAfter25: cohort.droppedAfter25.length,
   halls: exhibitionHallPresets.length,
 };

@@ -83,13 +83,16 @@ export default function LandingPage() {
               <Link href="/sisters" className="rounded-2xl bg-white/10 px-5 py-3 text-[14px] font-extrabold ring-1 ring-white/20">
                 ۱۲ حوزه · محیط و اجتماعی
               </Link>
+              <Link href="/cohort" className="rounded-2xl bg-white/10 px-5 py-3 text-[14px] font-extrabold ring-1 ring-white/20">
+                دوره ۲۵ در برابر ۲۶
+              </Link>
             </div>
           </div>
           <div className="grid grid-cols-2 gap-3 self-end">
             {[
               [fa.format(exhibitionMeta.count), "غرفه‌دار رسمی ۱۴۰۵"],
               [fa.format(noSite), "بدون سایت ثبت‌شده"],
-              [fa.format(relatedModules.returningFromOldExhibition.length), "بازگشتی از نمایشگاه قدیمی"],
+              [fa.format(relatedModules.returningFromOldExhibition.length), "تلفن قطعی Dowintech"],
               [fa.format(relatedModules.seoVendors.length), "آژانس سئو همکار"],
             ].map(([value, label]) => (
               <article key={label} className="rounded-2xl border border-white/10 bg-white/5 p-4">
@@ -281,6 +284,8 @@ export default function LandingPage() {
             <Link href="/oil">نفت</Link>
             <Link href="/sisters">خواهرها</Link>
             <Link href="/audit">صحت</Link>
+            <Link href="/cohort">دوره ۲۵</Link>
+            <Link href="/connect">اتصال‌گر</Link>
             <Link href="/memory">حافظه عامل</Link>
             <a href="/api/exhibition">API JSON</a>
             <a href="https://github.com/Websites-by-AI/Marketing-by-map-neshan">GitHub</a>

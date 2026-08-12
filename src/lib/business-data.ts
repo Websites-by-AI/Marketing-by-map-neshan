@@ -30,7 +30,7 @@ export type BusinessRecord = {
   activity?: string | null;
   halls?: string[];
   booths?: string[];
-  websiteSource?: "official-list" | "known-manual" | null;
+  websiteSource?: "official-list" | "known-manual" | "oil-overlap" | "verified-fetch" | null;
   returningExhibitor?: boolean;
 };
 

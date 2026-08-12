@@ -31,6 +31,8 @@ export default function AuditPage() {
           <nav className="flex gap-3 text-[13px] font-bold">
             <Link href="/">خانه</Link>
             <Link href="/panel">داشبورد</Link>
+            <Link href="/cohort">دوره ۲۵</Link>
+            <Link href="/connect">اتصال‌گر</Link>
             <Link href="/memory">حافظه</Link>
           </nav>
         </div>

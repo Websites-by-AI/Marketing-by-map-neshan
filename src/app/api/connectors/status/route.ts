@@ -1,5 +1,5 @@
 import cloudflareSites from "@/data/cloudflare-sites.json";
-import { CONNECTORS, probe } from "@/lib/connectors";
+import { CONNECTORS, classifyHfHubPage, probe } from "@/lib/connectors";
 
 export const dynamic = "force-dynamic";
 
@@ -88,7 +88,7 @@ export async function GET() {
       label: "HF leadfair-ai-iran-confair-1405",
       url: CONNECTORS.hfLeadfair,
       ok: false,
-      detail: hfLeadfair.snippet.includes("paused") || hfLeadfair.status === 503 ? "Space روی HF متوقف است (سهمیه CPU)" : hfLeadfair.snippet.slice(0, 120),
+      detail: classifyHfHubPage(hfLeadfair.snippet, hfLeadfair.status).reason,
     },
     {
       id: "telegram-exhibition",

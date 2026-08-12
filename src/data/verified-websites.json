@@ -1,0 +1,102 @@
+{
+  "note": "دامنه‌هایی که با fetch مستقیم تأیید شدند یا از همپوشانی نفت با هویت نام‌مانند آمده‌اند. lorch.ir قبلاً پارک‌شده دیده شد — نگه داشته می‌شود ولی کیفیت پایین است. daboosanat.com برای مخزن فولاد رافع اضافه نشده (brand-mismatch).",
+  "checkedAt": "2026-08-12",
+  "items": {
+    "صنعت شیرآلات قهرمان": {
+      "website": "ghahreman.com",
+      "source": "known-manual"
+    },
+    "لورچ": {
+      "website": "lorch.ir",
+      "source": "known-manual"
+    },
+    "وینوپلاستیک": {
+      "website": "vinoplastic.com",
+      "source": "known-manual"
+    },
+    "گیتی کالا ایرانیان": {
+      "website": "gitipasand.com",
+      "source": "known-manual"
+    },
+    "مجتمع پلاستیک طبرستان": {
+      "website": "tabarestan.co.ir",
+      "source": "known-manual"
+    },
+    "آکپا ایران کیش": {
+      "website": "akpa.ir",
+      "source": "known-manual"
+    },
+    "بانک گردشگری": {
+      "website": "tourismbank.ir",
+      "source": "known-manual"
+    },
+    "بانک قرض الحسنه مهر ایران": {
+      "website": "qmb.ir",
+      "source": "known-manual"
+    },
+    "صندوق نوآوری و شکوفایی ریاست جمهوری": {
+      "website": "inif.ir",
+      "source": "known-manual"
+    },
+    "سندیکا صنعت برق ایران": {
+      "website": "ieis.ir",
+      "source": "known-manual"
+    },
+    "صنایع سیم وکابل مشهد": {
+      "website": "mashadcable.ir",
+      "source": "oil-overlap"
+    },
+    "شرکت مهران سرد": {
+      "website": "mehrangrp.com",
+      "source": "oil-overlap"
+    },
+    "ازن آب": {
+      "website": "ozoneab.com",
+      "source": "oil-overlap"
+    },
+    "دانش بنیان صنایع ماشین سازی پایابرش ویژن": {
+      "website": "payaboresh.com",
+      "source": "oil-overlap"
+    },
+    "ژئوشبکه پارسیان": {
+      "website": "geoparsian.com",
+      "source": "oil-overlap"
+    },
+    "کارا ماشین آرنا": {
+      "website": "karamachinery.ir",
+      "source": "oil-overlap"
+    },
+    "گروه کارآفرینان صنایع داود": {
+      "website": "davoudcnc.com",
+      "source": "oil-overlap"
+    },
+    "پایا بسپار آریا": {
+      "website": "vispar.co",
+      "source": "oil-overlap"
+    },
+    "تانگیران": {
+      "website": "tanguiran.com",
+      "source": "oil-overlap"
+    },
+    "مجموعه بتن ایران": {
+      "website": "betoniran.com",
+      "source": "oil-overlap"
+    },
+    "پویش کامپوزیت یکتا": {
+      "website": "megatite.com",
+      "source": "oil-overlap"
+    },
+    "حامی آلیاژ آسیا": {
+      "website": "hamiransteel.com",
+      "source": "oil-overlap"
+    },
+    "شیرآلات بهشیر": {
+      "website": "behshir.com",
+      "source": "verified-fetch"
+    },
+    "نانو نخ و گرانول سیرجان": {
+      "website": "kourta.com",
+      "source": "verified-fetch"
+    }
+  }
+}

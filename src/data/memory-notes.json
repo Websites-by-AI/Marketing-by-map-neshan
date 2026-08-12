@@ -93,5 +93,17 @@
       "social"
     ],
     "body": "۴۳ مخزن عمومی. محصول‌های ۲۰۲۵–۲۰۲۶ به همکاری اضافه شدند. فورک‌های قدیمی Heroku/Glype استارتاپ نیستند.\nزنده: green-hope-fire-jugle-pages.pages.dev ، smartwaste.pages.dev ، aura-ai.pages.dev"
+  },
+  {
+    "id": "09-fixes",
+    "title": "رفع قطع‌ها: Postgres، HF غلط‌مثبت، دوره ۲۵، LeadFair دامنه",
+    "updatedAt": "2026-08-12",
+    "tags": [
+      "connect",
+      "database",
+      "leadfair",
+      "confair-25"
+    ],
+    "body": "Postgres همچنان قطع است (db=null). تاریخچه جمع‌آوری روی KV است.\nصفحه /connect گزارش ماژول‌ها را در HTML اولیه نشان می‌دهد و متن Postgres قطع دارد.\nHF leadfair-1405 دیگر به‌خاطر HTML ۲۰۰ وصل حساب نمی‌شود.\nدوره ۲۵: /cohort و /api/connectors/icc?edition=25.\nLeadFair: production_branch از main به master تغییر کرد چون همه دیپلوی‌ها روی master پیش‌نمایش بودند.\nتوکن‌های چت لو رفته‌اند — عوض شوند."
   }
 ]

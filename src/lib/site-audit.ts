@@ -83,7 +83,7 @@ export function buildSiteAudit() {
       id: "websites",
       status: "partial",
       title: "وب‌سایت غرفه‌ها",
-      detail: `لیست رسمی هیچ دامنه و تلفنی ندارد. ${exhibitionStats.withKnownWebsite} دامنه دستی از دانش قبلی اضافه شده (${knownSiteNames.join("، ")}). ${exhibitionStats.withoutListedWebsite} غرفه «بدون سایت در لیست رسمی» هستند — یعنی هنوز پیدا نشده، نه اینکه قطعاً سایت ندارند. ${missingKnown.length ? `نام دامنه بدون غرفه: ${missingKnown.join("، ")}` : "هر ۱۰ دامنه روی نام رسمی منطبق است."}`,
+      detail: `لیست رسمی هیچ دامنه و تلفنی ندارد. ${exhibitionStats.withKnownWebsite} دامنه overlay (دستی / نفت / fetch تأییدشده) است. ${exhibitionStats.withoutListedWebsite} غرفه «بدون سایت در لیست رسمی» هستند — یعنی هنوز پیدا نشده، نه اینکه قطعاً سایت ندارند. ${missingKnown.length ? `نام دامنه بدون غرفه ۲۶: ${missingKnown.join("، ")}` : "هر دامنه overlay روی نام رسمی ۲۶ منطبق است."}`,
     },
     {
       id: "phones",

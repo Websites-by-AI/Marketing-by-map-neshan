@@ -28,10 +28,10 @@
     {
       "id": "leadfair-ui",
       "label": "LeadFair UI",
-      "url": "https://master.leadfair.pages.dev/",
+      "url": "https://leadfair.exhibition2world.ir/",
       "kind": "pages",
       "sister": "seller",
-      "role": "اتصال‌گر هوشمند نمایشگاه"
+      "role": "اتصال‌گر هوشمند نمایشگاه — دامنه تولید"
     },
     {
       "id": "leadfair-seo",
@@ -50,12 +50,12 @@
       "role": "چت RAG و نقشه سالن"
     },
     {
-      "id": "leadfair-preview",
-      "label": "LeadFair Pages preview",
-      "url": "https://7965e77d.leadfair.pages.dev",
+      "id": "leadfair-pages",
+      "label": "LeadFair pages.dev",
+      "url": "https://leadfair.pages.dev",
       "kind": "pages",
       "sister": "seller",
-      "role": "دیپلوی زنده Pages (دامنه leadfair.exhibition2world.ir فعلاً ۴۰۴ است)"
+      "role": "دامنه تولید Pages بعد از production_branch=master"
     },
     {
       "id": "rag2-api",

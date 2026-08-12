@@ -1,6 +1,8 @@
 export const CONNECTORS = {
   leadfairRagApi: "https://vercel-app-amber-five.vercel.app",
   leadfairUi: "https://master.leadfair.pages.dev/",
+  leadfairProduction: "https://leadfair.exhibition2world.ir",
+  leadfairPagesApex: "https://leadfair.pages.dev",
   leadfairSeo: "https://master.leadfair.pages.dev/seo-lead",
   leadfairRagUi: "https://master.leadfair.pages.dev/rag/",
   hfLeadfair: "https://huggingface.co/spaces/sosa123454321/leadfair-ai-iran-confair-1405",
@@ -36,4 +38,22 @@ export async function probe(url: string, timeoutMs = 8000): Promise<{ ok: boolea
   } finally {
     clearTimeout(timer);
   }
+}
+
+/** Hub pages on huggingface.co/spaces/* return HTML 200 even when the Space is paused. */
+export function classifyHfHubPage(snippet: string, status: number) {
+  const text = snippet.toLowerCase();
+  if (text.includes("paused") || text.includes("this space is paused")) {
+    return { live: false, reason: "Space روی HF متوقف است" };
+  }
+  if (status === 403 || text.includes("quota") || text.includes("exceeded")) {
+    return { live: false, reason: "سهمیه CPU هاگینگ‌فیس" };
+  }
+  if (text.includes("runtime error") || text.includes("sleeping")) {
+    return { live: false, reason: "Space خواب/خطای اجرا" };
+  }
+  return {
+    live: false,
+    reason: "صفحه هاب HF است نه اپ در حال اجرا — HTML ۲۰۰ را وصل حساب نکن",
+  };
 }
