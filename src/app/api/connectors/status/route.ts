@@ -3,11 +3,12 @@ import { CONNECTORS, probe } from "@/lib/connectors";
 export const dynamic = "force-dynamic";
 
 export async function GET() {
-  const [ragHealth, ragSearch, seoPage, ragUi, hfLeadfair, telegram] = await Promise.all([
+  const [ragHealth, ragSearch, seoPage, ragUi, rag2, hfLeadfair, telegram] = await Promise.all([
     probe(`${CONNECTORS.leadfairRagApi}/api/health`),
     probe(`${CONNECTORS.leadfairRagApi}/api/search?q=%D9%84%D9%88%D9%84%D9%87&limit=1`),
     probe(CONNECTORS.leadfairSeo),
     probe(CONNECTORS.leadfairRagUi),
+    probe(CONNECTORS.hfRag2Live),
     probe(CONNECTORS.hfLeadfair),
     (async () => {
       const token = process.env.EXHIBITION_TELEGRAM_BOT_TOKEN?.trim();
@@ -65,6 +66,20 @@ export async function GET() {
       url: CONNECTORS.leadfairRagUi,
       ok: ragUi.ok,
       detail: ragUi.ok ? "اتصال‌گر هوشمند نمایشگاه" : ragUi.snippet,
+    },
+    {
+      id: "hf-rag2-static",
+      label: "HF RAG2 static frontend",
+      url: CONNECTORS.hfRag2Live,
+      ok: rag2.ok && rag2.status === 200,
+      detail: rag2.ok ? "فرانت استاتیک RAG2 زنده است" : rag2.snippet.slice(0, 120),
+    },
+    {
+      id: "hf-notebooks",
+      label: "نوت‌بوک‌های Colab RAG2",
+      url: CONNECTORS.hfRag2Notebooks,
+      ok: true,
+      detail: "۵ نوت‌بوک — تست زنده در /notebooks",
     },
     {
       id: "hf-leadfair-1405",

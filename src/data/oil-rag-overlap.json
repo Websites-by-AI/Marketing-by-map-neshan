@@ -1,0 +1,138 @@
+[
+  {
+    "name": "صنایع سیم وکابل مشهد",
+    "confairHalls": ["سالن ۴۱ همکف"],
+    "confairBooths": ["۴۱۰۲"],
+    "website": "mashadcable.ir",
+    "identity": "name-like",
+    "oilActivity": "توليد کننده انواع سیم و کابل"
+  },
+  {
+    "name": "مخزن فولاد رافع",
+    "confairHalls": ["سالن ۸ و ۹"],
+    "confairBooths": ["۸۲۰"],
+    "website": "daboosanat.com",
+    "identity": "brand-mismatch",
+    "oilActivity": "دیگ و بویلر — دامنه daboo با نام مخزن فولاد یکی نیست؛ فقط کاندید است"
+  },
+  {
+    "name": "شرکت مهران سرد",
+    "confairHalls": ["فضای باز ۳۱"],
+    "confairBooths": ["OP۳۱۰۴"],
+    "website": "mehrangrp.com",
+    "identity": "name-like",
+    "oilActivity": "ساندویچ پانل"
+  },
+  {
+    "name": "ازن آب",
+    "confairHalls": ["سالن ۳۸A"],
+    "confairBooths": ["۳۸۱۱۰"],
+    "website": "ozoneab.com",
+    "identity": "name-like",
+    "oilActivity": "تصفیه آب"
+  },
+  {
+    "name": "دانش بنیان صنایع ماشین سازی پایابرش ویژن",
+    "confairHalls": ["سالن ۵"],
+    "confairBooths": ["۵۲۶"],
+    "website": "payaboresh.com",
+    "identity": "name-like",
+    "oilActivity": "ماشین برش فلزات"
+  },
+  {
+    "name": "صدا نور گستران هوراند",
+    "confairHalls": ["سالن ۴۱ همکف"],
+    "confairBooths": ["۴۱۰۳"],
+    "website": null,
+    "identity": "none",
+    "oilActivity": "صوت و تصویر"
+  },
+  {
+    "name": "صندوق نوآوری و شکوفایی ریاست جمهوری",
+    "confairHalls": ["سالن ۴۱ بالا"],
+    "confairBooths": ["۴۱۳۲"],
+    "website": "inif.ir",
+    "identity": "already-known",
+    "oilActivity": "حمایت دانش‌بنیان"
+  },
+  {
+    "name": "پرتو تجارت رایکا",
+    "confairHalls": ["سالن ۴۴B"],
+    "confairBooths": ["۴۴۲۱۲.۲"],
+    "website": null,
+    "identity": "none",
+    "oilActivity": "لباسکار"
+  },
+  {
+    "name": "ژئوشبکه پارسیان",
+    "confairHalls": ["سالن ۳۵"],
+    "confairBooths": ["۳۵۲۵"],
+    "website": "geoparsian.com",
+    "identity": "name-like",
+    "oilActivity": "ژئوگرید"
+  },
+  {
+    "name": "کارا ماشین آرنا",
+    "confairHalls": ["فضای باز ۳۱"],
+    "confairBooths": ["OP۳۱۰۶"],
+    "website": "karamachinery.ir",
+    "identity": "name-like",
+    "oilActivity": "لیفتراک"
+  },
+  {
+    "name": "گروه کارآفرینان صنایع داود",
+    "confairHalls": ["فضای باز ۳۱"],
+    "confairBooths": ["OP۳۱۰۷"],
+    "website": "davoudcnc.com",
+    "identity": "name-like",
+    "oilActivity": "برش لیزر"
+  },
+  {
+    "name": "پایا بسپار آریا",
+    "confairHalls": ["سالن ۸ و ۹"],
+    "confairBooths": ["۸۲۷"],
+    "website": "vispar.co",
+    "identity": "brand-like",
+    "oilActivity": "لوله و شیرآلات پلیمری با برند ویسپار"
+  },
+  {
+    "name": "تانگیران",
+    "confairHalls": ["سالن ۴۰ همکف"],
+    "confairBooths": ["۴۰۰۳"],
+    "website": "tanguiran.com",
+    "identity": "name-like",
+    "oilActivity": "عایق لوله"
+  },
+  {
+    "name": "مجموعه بتن ایران",
+    "confairHalls": ["سالن ۴۰ همکف"],
+    "confairBooths": ["۴۰۰۴"],
+    "website": "betoniran.com",
+    "identity": "name-like",
+    "oilActivity": "افزودنی بتن"
+  },
+  {
+    "name": "پویش کامپوزیت یکتا",
+    "confairHalls": ["سالن ۳۱A"],
+    "confairBooths": ["۳۱۲۲"],
+    "website": "megatite.com",
+    "identity": "brand-like",
+    "oilActivity": "فایبرگلاس و چسب اپوکسی"
+  },
+  {
+    "name": "گروه صنعتی سانا عایق",
+    "confairHalls": ["سالن ۸ و ۹"],
+    "confairBooths": ["۸۱۳"],
+    "website": null,
+    "identity": "none",
+    "oilActivity": "عایق الاستومری"
+  },
+  {
+    "name": "حامی آلیاژ آسیا",
+    "confairHalls": ["سالن ۳۸A"],
+    "confairBooths": ["۳۸۱۰۲"],
+    "website": "hamiransteel.com",
+    "identity": "name-like",
+    "oilActivity": "فولاد آلیاژی"
+  }
+]

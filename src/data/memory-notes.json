@@ -3,35 +3,62 @@
     "id": "00-index",
     "title": "چطور این حافظه را به ایجنت بدهید",
     "updatedAt": "2026-08-12",
-    "tags": ["index", "agent", "api"],
+    "tags": [
+      "index",
+      "agent",
+      "api"
+    ],
     "body": "نیازی به نصب Obsidian نیست. Obsidian فقط پوشه مارک‌داون را روی کامپیوتر شما نشان می‌دهد.\n\nحافظه رایگان و کم‌حجم همین پروژه است:\n1) GET https://neshan-m.exhibition2world.ir/api/memory\n2) صفحه https://neshan-m.exhibition2world.ir/memory\n3) پوشه memory/ در گیت‌هاب (اگر بعداً Obsidian خواستید همان پوشه را باز کنید)\n\nبه ایجنت بعدی فقط بگویید: حافظه را از /api/memory بخوان.\nPOST /api/memory برای افزودن یادداشت جدید است (اگر KV وصل باشد ماندگار می‌ماند)."
   },
   {
     "id": "01-product",
     "title": "این محصول چیست",
     "updatedAt": "2026-08-12",
-    "tags": ["product", "neshan-m"],
-    "body": "نام محصول: دیدبان محلی / Marketing-by-map-neshan\nگیت‌هاب: https://github.com/Websites-by-AI/Marketing-by-map-neshan\nزنده: https://neshan-m.exhibition2world.ir\nورکر: neshan-m روی حساب Cloudflare 5b456a2b43bb367410c50b35b9e7f71f\nدامنه: neshan-m.exhibition2world.ir\n\nصفحات:\n/ لندینگ نمایشگاه\n/panel داشبورد نقشه\n/connect هاب API\n/audit صحت اطلاعات\n/memory حافظه عامل\n\nAPIها:\n/api/exhibition لیست ۴۴۰\n/api/exhibition?format=csv\n/api/modules\n/api/connectors/status|search|seo|notify\n/api/audit\n/api/memory\n\nدیتابیس روی ورکر خاموش است (db=null) تا pg باندل نشود. حالت نمایشگاه از JSON داخلی کار می‌کند.\nR2 روی حساب فعال نیست.\nبات‌های نگین‌جام، مهاجرت شاهرخ، دیجی‌آموزش را به این محصول وصل نکن."
+    "tags": [
+      "product",
+      "neshan-m"
+    ],
+    "body": "نام محصول: دیدبان محلی / Marketing-by-map-neshan\nگیت‌هاب: https://github.com/Websites-by-AI/Marketing-by-map-neshan\nزنده: https://neshan-m.exhibition2world.ir\nورکر: neshan-m روی حساب Cloudflare 5b456a2b43bb367410c50b35b9e7f71f\nدامنه: neshan-m.exhibition2world.ir\n\nصفحات:\n/ لندینگ نمایشگاه\n/panel داشبورد نقشه\n/connect هاب API\n/notebooks نوت‌بوک RAG2\n/audit صحت اطلاعات\n/memory حافظه عامل\n\nAPIها:\n/api/exhibition لیست ۴۴۰\n/api/exhibition?format=csv\n/api/modules\n/api/connectors/status|search|seo|notify|notebooks\n/api/audit\n/api/memory\n\nدیتابیس روی ورکر خاموش است (db=null) تا pg باندل نشود. حالت نمایشگاه از JSON داخلی کار می‌کند.\nR2 روی حساب فعال نیست.\nبات‌های نگین‌جام، مهاجرت شاهرخ، دیجی‌آموزش را به این محصول وصل نکن."
   },
   {
     "id": "02-exhibition-facts",
     "title": "حقایق تأییدشده نمایشگاه ۱۴۰۵",
     "updatedAt": "2026-08-12",
-    "tags": ["confair", "facts"],
+    "tags": [
+      "confair",
+      "facts"
+    ],
     "body": "رویداد: بیست و ششمین نمایشگاه بین‌المللی صنعت ساختمان (IRAN CONFAIR 2026)\nتاریخ: ۲۷ تا ۳۰ مرداد ۱۴۰۵ = ۱۸ تا ۲۱ اوت ۲۰۲۶\nمحل: محل دائمی نمایشگاه‌های بین‌المللی تهران\nبرگزارکننده: اتاق تعاون ایران\nمنبع لیست: https://iccexpo.com/fa/iranconfair/26/visitors/participants\nتعداد عمومی: ۴۴۰ شرکت یکتا — با فایل خام data/raw صفر اختلاف\nخبر ۱۰۰۰ ثبت‌نام: در لیست عمومی نیست\niranconfair.ir قبلاً فقط Nginx پیش‌فرض بود\n\nپین نقشه = مرکز تقریبی سالن + افست، نه GPS غرفه\nدسته صنعت = حدس از متن زمینه فعالیت\nامتیاز لید = هیوریستیک داخلی\nسایت رسمی لیست هیچ دامنه/تلفنی ندارد\n۱۰ دامنه دستی: قهرمان ghahreman.com، لورچ lorch.ir، وینوپلاستیک vinoplastic.com، گیتی کالا gitipasand.com، طبرستان tabarestan.co.ir، آکپا akpa.ir، بانک گردشگری tourismbank.ir، مهر ایران qmb.ir، صندوق نوآوری inif.ir، سندیکا ieis.ir\n۲ تلفن بازگشتی: آبنوس جام کرج 02634706969 سالن ۳۸B/۳۸۲۳۹ — آکپا ایران کیش 04132466095 سالن ۴۴A/۴۴۱۲\nاز ۲۰۰ نام قدیمی Dowintech فقط همین ۲ تا غرفه ۱۴۰۵ هستند."
   },
   {
     "id": "03-connectors",
     "title": "اتصال‌گرها و ماژول‌های مرتبط",
     "updatedAt": "2026-08-12",
-    "tags": ["api", "leadfair", "huggingface"],
-    "body": "API زنده واقعی: https://vercel-app-amber-five.vercel.app\nGET /api/health → exhibition-rag-vercel-api ، حدود ۱۷۳۰ شرکت (عمدتاً نفت + بعضی ساختمان)\nGET /api/search?q=\nGET /api/next-exhibition پیش‌بینی نفت است نه CONFAIR رسمی\nPOST /api/scrape قبلاً برای lorch.ir شکست خورد\nUI: https://master.leadfair.pages.dev/ و /seo-lead و /rag/\nPages /api/* API واقعی نیست (HTML اسپای).\n\nHugging Face:\nSoSa123456: clinic-lead-agent استاتیک خوش‌آمدگویی است نه Docker\nsosa123454321/leadfair-ai-iran-confair-1405 متوقف (سهمیه CPU)\nبقیه RAGها error/paused\nتوکن HF مال sosa123454321 است نه SoSa123456\n\nAdv-seo-2 موتور لید است. این سایت نقشه + لیست غرفه است.\nسئو آژانس‌ها غرفه‌دار نیستند.\nتلگرام فقط @exhibition_ai_bot — CHAT_ID هنوز نیست.\nBale exhibition_bot هنوز وصل نیست."
+    "tags": [
+      "api",
+      "leadfair",
+      "huggingface"
+    ],
+    "body": "API زنده واقعی: https://vercel-app-amber-five.vercel.app\nGET /api/health → exhibition-rag-vercel-api ، حدود ۱۷۳۰ شرکت (عمدتاً نفت + بعضی ساختمان)\nGET /api/search?q=\nGET /api/next-exhibition پیش‌بینی نفت است نه CONFAIR رسمی\nPOST /api/scrape قبلاً برای lorch.ir شکست خورد\nUI: https://master.leadfair.pages.dev/ و /seo-lead و /rag/\nPages /api/* API واقعی نیست (HTML اسپای).\n\nHugging Face:\nSoSa123456: clinic-lead-agent استاتیک خوش‌آمدگویی است نه Docker\nsosa123454321/leadfair-ai-iran-confair-1405 متوقف (سهمیه CPU)\nبقیه RAGها error/paused\nتوکن HF مال sosa123454321 است نه SoSa123456\n\nAdv-seo-2 موتور لید است. این سایت نقشه + لیست غرفه است.\nسئو آژانس‌ها غرفه‌دار نیستند.\nتلگرام فقط @exhibition_ai_bot — CHAT_ID هنوز نیست.\nBale exhibition_bot هنوز وصل نیست.\n\nنوت‌بوک‌های RAG2: https://huggingface.co/spaces/SoSa123456/Exhibition-connector-rag2-static/tree/main/notebooks\nفرانت زنده: https://sosa123456-exhibition-connector-rag2-static.static.hf.space/\nتست روی این سایت: /notebooks"
   },
   {
     "id": "04-guardrails",
     "title": "خط قرمزها",
     "updatedAt": "2026-08-12",
-    "tags": ["rules"],
+    "tags": [
+      "rules"
+    ],
     "body": "- ردیف‌های تاریخی Dowintech را غرفه‌دار ۱۴۰۵ نخوان مگر همپوشانی تأییدشده\n- صفحه‌ای که لود می‌شود لزوماً سایت رسمی شرکت نیست\n- SERP گوگل/بینگ را اسکرپ نکن\n- بدون رضایت و تأیید انسان پیامک/واتساپ/تلگرام نفرست\n- توکن را در گیت نگذار. توکن‌هایی که در چت آمده‌اند لو رفته‌اند و باید عوض شوند\n- Firebase / Railway / PostZen / بات‌های محصول دیگر را اینجا سیم نکن"
+  },
+  {
+    "id": "05-notebooks",
+    "title": "نوت‌بوک‌های RAG2 تست‌شده",
+    "updatedAt": "2026-08-12",
+    "tags": [
+      "huggingface",
+      "notebooks",
+      "rag"
+    ],
+    "body": "منبع: https://huggingface.co/spaces/SoSa123456/Exhibition-connector-rag2-static/tree/main/notebooks\nکپی در ریپو: notebooks/\nصفحه تست: /notebooks و GET /api/connectors/notebooks\n\nقابل اجرا بدون GPU:\n- rag_api_colab_test.ipynb : پریسماتک رتبه ۱. scrape پریسماتک ایمیل دارد. scrape لورچ https ۴۰۰.\n- rag_base_model_colab.ipynb : TF-IDF روی ۱۷۳۰ شرکت.\n\nفقط Colab/GPU: rag1/rag2 اصلی و llama_wandb.\nدیتاست نفت است. ۱۷ نام دقیق با ساختمان ۱۴۰۵ مشترک. دامنه نفت کاندید است."
   }
 ]

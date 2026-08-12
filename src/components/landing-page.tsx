@@ -38,6 +38,7 @@ export default function LandingPage() {
           <nav className="hidden items-center gap-5 text-[13px] font-bold text-slate-200 md:flex">
             <a href="#exhibitors">غرفه‌داران</a>
             <Link href="/connect">اتصال‌گر API</Link>
+            <Link href="/notebooks">نوت‌بوک RAG</Link>
             <Link href="/audit">صحت اطلاعات</Link>
             <Link href="/memory">حافظه</Link>
             <Link href="/panel" className="rounded-xl bg-[#ee6748] px-4 py-2 text-white">

@@ -38,6 +38,18 @@ export const knownWebsites: Record<string, string> = {
   "بانک قرض الحسنه مهر ایران": "qmb.ir",
   "صندوق نوآوری و شکوفایی ریاست جمهوری": "inif.ir",
   "سندیکا صنعت برق ایران": "ieis.ir",
+  "صنایع سیم وکابل مشهد": "mashadcable.ir",
+  "شرکت مهران سرد": "mehrangrp.com",
+  "ازن آب": "ozoneab.com",
+  "دانش بنیان صنایع ماشین سازی پایابرش ویژن": "payaboresh.com",
+  "ژئوشبکه پارسیان": "geoparsian.com",
+  "کارا ماشین آرنا": "karamachinery.ir",
+  "گروه کارآفرینان صنایع داود": "davoudcnc.com",
+  "پایا بسپار آریا": "vispar.co",
+  تانگیران: "tanguiran.com",
+  "مجموعه بتن ایران": "betoniran.com",
+  "پویش کامپوزیت یکتا": "megatite.com",
+  "حامی آلیاژ آسیا": "hamiransteel.com",
 };
 
 /** Only confirmed overlaps with the old Dowintech / namayeshgahha door-window archive. */
