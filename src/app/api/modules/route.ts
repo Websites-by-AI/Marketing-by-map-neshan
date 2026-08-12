@@ -1,3 +1,5 @@
+import cloudflareSites from "@/data/cloudflare-sites.json";
+import network from "@/data/cooperation-network.json";
 import related from "@/data/related-modules.json";
 import sisters from "@/data/sister-companies.json";
 import { cooperationModels } from "@/lib/business-data";

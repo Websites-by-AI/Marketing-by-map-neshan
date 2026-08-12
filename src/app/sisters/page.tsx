@@ -1,5 +1,5 @@
+import CooperationNetwork from "@/components/cooperation-network";
 import Link from "next/link";
-import cloudflareSites from "@/data/cloudflare-sites.json";
 import sisters from "@/data/sister-companies.json";
 import { cooperationModels } from "@/lib/business-data";
 

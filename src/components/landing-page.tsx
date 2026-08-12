@@ -1,3 +1,4 @@
+import CooperationNetwork from "@/components/cooperation-network";
 import Link from "next/link";
 import relatedModules from "@/data/related-modules.json";
 import sisterCompanies from "@/data/sister-companies.json";
@@ -170,6 +171,11 @@ export default function LandingPage() {
               <p className="mt-1 text-[12px] text-[#ee6748]">{item.role}</p>
               <p className="mt-2 text-[12px] leading-6 text-slate-600">{item.offer}</p>
               <p className="mt-2 text-[11px] font-black">{item.price}</p>
+              {item.website ? (
+                <a href={item.website} target="_blank" rel="noreferrer" className="mt-2 block truncate text-[11px] font-bold text-[#ee6748]">
+                  {item.website.replace(/^https?:\/\//, "")}
+                </a>
+              ) : null}
             </article>
           ))}
         </div>
@@ -192,17 +198,13 @@ export default function LandingPage() {
 
       <section id="modules" className="bg-white py-12">
         <div className="mx-auto max-w-6xl px-4">
-          <h2 className="text-[22px] font-black">ماژول‌های مرتبط — خراب نیست؛ باید وصل شود</h2>
+          <h2 className="text-[22px] font-black">شبکه همکاری: کلادفلر + گیت‌هاب + Hugging Face</h2>
           <p className="mt-2 max-w-3xl text-[14px] leading-7 text-slate-600">
-            فایل داشبورد منبع خراب ندارد. صفحه اول قبلاً مستقیم همان پنل فشرده بود و شلوغ به نظر می‌رسید. موتور لید در Adv-seo-2 و Hugging Face است؛ این سایت نقشه و لیست غرفه است.
+            سازمان <a className="font-bold text-[#ee6748]" href="https://github.com/Websites-by-AI/" target="_blank" rel="noreferrer">Websites-by-AI</a>
+            ، سایت‌های کلادفلر نمایشگاه، و اسپیس‌های RAG. نگین‌جام و تارانوم جدا هستند.
           </p>
-          <div className="mt-6 grid gap-3 md:grid-cols-2">
-            {relatedModules.githubModules.map((item) => (
-              <a key={item.url} href={item.url} target="_blank" rel="noreferrer" className="rounded-2xl border border-slate-200 bg-[#f7f8fb] p-4 hover:border-[#ee6748]/40">
-                <p className="text-[14px] font-extrabold">{item.name}</p>
-                <p className="mt-1 text-[12px] leading-6 text-slate-500">{item.role}</p>
-              </a>
-            ))}
+          <div className="mt-6">
+            <CooperationNetwork />
           </div>
           <div className="mt-6 grid gap-3 lg:grid-cols-3">
             <article className="rounded-2xl border bg-slate-50 p-4">
