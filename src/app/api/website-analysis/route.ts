@@ -1,4 +1,3 @@
-import { lookup } from "node:dns/promises";
 import { db } from "@/db";
 import { businesses } from "@/db/schema";
 import { demoBusinesses, generateWebsitePrompt, simulateWebsiteAnalysis, toBusinessRecord } from "@/lib/business-data";
@@ -6,28 +5,23 @@ import { eq } from "drizzle-orm";
 
 export const dynamic = "force-dynamic";
 
-function isPrivateAddress(address: string) {
-  const normalized = address.toLowerCase().replace(/^::ffff:/, "");
-  if (normalized === "::1" || normalized.startsWith("fc") || normalized.startsWith("fd") || normalized.startsWith("fe80:")) return true;
-  const parts = normalized.split(".").map(Number);
-  if (parts.length !== 4 || parts.some((part) => Number.isNaN(part))) return false;
-  const [a, b] = parts;
-  return a === 10 || a === 127 || a === 0 || (a === 169 && b === 254) || (a === 172 && b >= 16 && b <= 31) || (a === 192 && b === 168);
-}
-
-async function validatePublicUrl(value: string) {
+function validatePublicUrl(value: string) {
   const withProtocol = /^https?:\/\//i.test(value) ? value : `https://${value}`;
   const url = new URL(withProtocol);
   if (!/^https?:$/.test(url.protocol) || !url.hostname || url.username || url.password) {
     throw new Error("آدرس وب‌سایت معتبر نیست.");
   }
   const hostname = url.hostname.toLowerCase();
-  if (hostname === "localhost" || hostname.endsWith(".localhost")) {
+  if (
+    hostname === "localhost" ||
+    hostname.endsWith(".localhost") ||
+    hostname === "127.0.0.1" ||
+    hostname === "0.0.0.0" ||
+    hostname === "::1" ||
+    hostname.endsWith(".local") ||
+    hostname.endsWith(".internal")
+  ) {
     throw new Error("دامنه محلی قابل تحلیل نیست.");
-  }
-  const addresses = await lookup(hostname, { all: true, verbatim: true });
-  if (!addresses.length || addresses.some(({ address }) => isPrivateAddress(address))) {
-    throw new Error("دامنه باید به یک آدرس عمومی معتبر متصل باشد.");
   }
   return url;
 }
@@ -67,7 +61,7 @@ export async function POST(request: Request) {
   if (!business.website) return Response.json({ message: "برای این کسب‌وکار دامنه‌ای ثبت نشده است." }, { status: 400 });
 
   try {
-    const url = await validatePublicUrl(business.website);
+    const url = validatePublicUrl(business.website);
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 10_000);
     const response = await fetch(url, {

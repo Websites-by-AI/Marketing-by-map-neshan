@@ -12,6 +12,17 @@
 
 بدون `DATABASE_URL` و بدون `NESHAN_API_KEY` هم کامل اجرا می‌شود (حالت نمونه).
 
+## زنده روی Cloudflare
+
+- https://neshan-m.exhibition2world.ir
+- https://neshan-m.elasa2next.workers.dev
+
+دیپلوی Worker با OpenNext:
+
+```bash
+npm run deploy
+```
+
 ## اجرا
 
 ```bash

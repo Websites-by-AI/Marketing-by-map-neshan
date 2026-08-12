@@ -1,0 +1,23 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "neshan-m",
+  "main": ".open-next/worker.js",
+  "account_id": "5b456a2b43bb367410c50b35b9e7f71f",
+  "compatibility_date": "2026-08-12",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "preview_urls": true,
+  "workers_dev": true,
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "services": [
+    {
+      "binding": "WORKER_SELF_REFERENCE",
+      "service": "neshan-m"
+    }
+  ],
+  "observability": {
+    "enabled": true
+  }
+}

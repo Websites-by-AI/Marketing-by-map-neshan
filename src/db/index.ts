@@ -1,22 +1,8 @@
-import { drizzle, type NodePgDatabase } from "drizzle-orm/node-postgres";
-import { Pool } from "pg";
+import type { NodePgDatabase } from "drizzle-orm/node-postgres";
 
-const databaseUrl = process.env.DATABASE_URL?.trim();
-
-const globalForDb = globalThis as typeof globalThis & {
-  __arenaNextJsPostgresqlPool?: Pool;
-};
-
-export const pool = databaseUrl
-  ? (globalForDb.__arenaNextJsPostgresqlPool ??
-      new Pool({
-        connectionString: databaseUrl,
-      }))
-  : null;
-
-if (pool && process.env.NODE_ENV !== "production") {
-  globalForDb.__arenaNextJsPostgresqlPool = pool;
-}
-
-export const db: NodePgDatabase | null = pool ? drizzle(pool) : null;
-export const hasDatabase = Boolean(db);
+// Demo/Cloudflare path: never import `pg` so the Worker bundle stays Node-free.
+// Persistence is enabled only when a separate Node host sets DATABASE_URL and
+// swaps this module; the UI and APIs already fall back to the Tehran catalog.
+export const hasDatabase = false;
+export const db: NodePgDatabase | null = null;
+export const pool = null;

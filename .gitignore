@@ -24,6 +24,9 @@ yarn-error.log*
 # tooling
 .turbo
 .vercel
+.open-next
+.wrangler
+.dev.vars
 .idea
 .vscode
 *.tsbuildinfo
