@@ -12,6 +12,14 @@
 
 بدون `DATABASE_URL` و بدون `NESHAN_API_KEY` هم کامل اجرا می‌شود (حالت نمونه).
 
+## داده نمایشگاه ساختمان ۱۴۰۵
+
+لیست غرفه‌داران **بیست و ششمین نمایشگاه بین‌المللی صنعت ساختمان (IRAN CONFAIR)** از سایت رسمی اتاق تعاون استخراج شده است:
+
+- منبع: [iccexpo.com/fa/iranconfair/26/visitors/participants](https://iccexpo.com/fa/iranconfair/26/visitors/participants)
+- تاریخ رویداد: ۲۷ تا ۳۰ مرداد ۱۴۰۵ / ۱۸ تا ۲۱ اوت ۲۰۲۶
+- خروجی: `data/iranconfair-26.csv` و `/api/exhibition`
+
 ## زنده روی Cloudflare
 
 - https://neshan-m.exhibition2world.ir
