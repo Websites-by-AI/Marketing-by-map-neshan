@@ -1,6 +1,9 @@
 import Link from "next/link";
 import relatedModules from "@/data/related-modules.json";
+import sisterCompanies from "@/data/sister-companies.json";
+import { cooperationModels } from "@/lib/business-data";
 import { exhibitionBusinesses, exhibitionMeta } from "@/lib/exhibition";
+import { oilExhibitionMeta, oilStats } from "@/lib/oil-exhibition";
 
 const fa = new Intl.NumberFormat("fa-IR");
 
@@ -37,10 +40,10 @@ export default function LandingPage() {
           </div>
           <nav className="hidden items-center gap-5 text-[13px] font-bold text-slate-200 md:flex">
             <a href="#exhibitors">غرفه‌داران</a>
-            <Link href="/connect">اتصال‌گر API</Link>
-            <Link href="/notebooks">نوت‌بوک RAG</Link>
-            <Link href="/audit">صحت اطلاعات</Link>
-            <Link href="/memory">حافظه</Link>
+            <a href="#oil">نفت</a>
+            <a href="#sisters">خواهرها</a>
+            <Link href="/connect">اتصال‌گر</Link>
+            <Link href="/notebooks">نوت‌بوک</Link>
             <Link href="/panel" className="rounded-xl bg-[#ee6748] px-4 py-2 text-white">
               ورود به داشبورد
             </Link>
@@ -73,8 +76,11 @@ export default function LandingPage() {
               <Link href="/connect" className="rounded-2xl bg-white/10 px-5 py-3 text-[14px] font-extrabold ring-1 ring-white/20">
                 پروژه اتصال‌گر API
               </Link>
-              <Link href="/audit" className="rounded-2xl bg-white/10 px-5 py-3 text-[14px] font-extrabold ring-1 ring-white/20">
-                بررسی صحت اطلاعات
+              <Link href="/oil" className="rounded-2xl bg-white/10 px-5 py-3 text-[14px] font-extrabold ring-1 ring-white/20">
+                جزئیات نمایشگاه نفت
+              </Link>
+              <Link href="/sisters" className="rounded-2xl bg-white/10 px-5 py-3 text-[14px] font-extrabold ring-1 ring-white/20">
+                ۱۰ شرکت خواهر
               </Link>
             </div>
           </div>
@@ -126,6 +132,62 @@ export default function LandingPage() {
             </article>
           ))}
         </div>
+      </section>
+
+
+      <section id="oil" className="bg-[#10263d] py-12 text-white">
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="flex flex-wrap items-end justify-between gap-3">
+            <div>
+              <h2 className="text-[22px] font-black">نمایشگاه نفت هم اینجاست</h2>
+              <p className="mt-2 max-w-3xl text-[13px] leading-7 text-slate-300">
+                {oilExhibitionMeta.event} — داده پایه دوره ۲۹ ({oilExhibitionMeta.datasetJalali}): {fa.format(oilStats.companies)} شرکت، {fa.format(oilStats.halls)} سالن، {fa.format(oilStats.websites)} دامنه.
+                پیش‌بینی دوره ۳۰ رسمی نیست. فقط {fa.format(oilStats.overlapExact)} نام دقیقاً با ساختمان ۱۴۰۵ یکی است.
+              </p>
+            </div>
+            <Link href="/oil" className="rounded-xl bg-white/10 px-4 py-2 text-[13px] font-extrabold">
+              جزئیات نفت
+            </Link>
+          </div>
+          <div className="mt-5 flex flex-wrap gap-2">
+            {oilExhibitionMeta.topCategories.slice(0, 6).map((row) => (
+              <span key={row.name} className="rounded-full bg-white/10 px-3 py-1 text-[12px]">
+                {row.name} · {fa.format(row.count)}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="sisters" className="mx-auto max-w-6xl px-4 py-12">
+        <h2 className="text-[22px] font-black">{sisterCompanies.holding}</h2>
+        <p className="mt-2 max-w-3xl text-[14px] leading-7 text-slate-600">{sisterCompanies.tagline}. {sisterCompanies.note}</p>
+        <div className="mt-5 grid gap-3 sm:grid-cols-2 xl:grid-cols-5">
+          {sisterCompanies.items.map((item) => (
+            <article key={item.slug} className="rounded-2xl border bg-white p-4">
+              <p className="text-[10px] font-bold text-slate-400">{item.en}</p>
+              <h3 className="mt-1 text-[14px] font-extrabold">{item.name}</h3>
+              <p className="mt-1 text-[12px] text-[#ee6748]">{item.role}</p>
+              <p className="mt-2 text-[12px] leading-6 text-slate-600">{item.offer}</p>
+              <p className="mt-2 text-[11px] font-black">{item.price}</p>
+            </article>
+          ))}
+        </div>
+        <div className="mt-8 grid gap-3 md:grid-cols-2">
+          {cooperationModels.map((model) => (
+            <article key={model.slug} className={`rounded-2xl border p-4 ${model.color}`}>
+              <div className="flex justify-between text-[11px] font-bold">
+                <span>{model.tag}</span>
+                <span>{model.price}</span>
+              </div>
+              <h3 className="mt-2 text-[15px] font-extrabold">{model.title}</h3>
+              <p className="mt-2 text-[12px] leading-6">{model.desc}</p>
+            </article>
+          ))}
+        </div>
+        <Link href="/sisters" className="mt-4 inline-block text-[13px] font-extrabold text-[#ee6748]">
+          صفحه کامل مدل همکاری ←
+        </Link>
       </section>
 
       <section id="modules" className="bg-white py-12">
@@ -190,6 +252,8 @@ export default function LandingPage() {
           <p>دیدبان محلی • IRAN CONFAIR ۱۴۰۵ • محل دائمی نمایشگاه‌های بین‌المللی تهران</p>
           <div className="flex gap-3 font-bold">
             <Link href="/panel">داشبورد</Link>
+            <Link href="/oil">نفت</Link>
+            <Link href="/sisters">خواهرها</Link>
             <Link href="/audit">صحت</Link>
             <Link href="/memory">حافظه عامل</Link>
             <a href="/api/exhibition">API JSON</a>

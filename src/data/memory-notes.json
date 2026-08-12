@@ -18,7 +18,7 @@
       "product",
       "neshan-m"
     ],
-    "body": "نام محصول: دیدبان محلی / Marketing-by-map-neshan\nگیت‌هاب: https://github.com/Websites-by-AI/Marketing-by-map-neshan\nزنده: https://neshan-m.exhibition2world.ir\nورکر: neshan-m روی حساب Cloudflare 5b456a2b43bb367410c50b35b9e7f71f\nدامنه: neshan-m.exhibition2world.ir\n\nصفحات:\n/ لندینگ نمایشگاه\n/panel داشبورد نقشه\n/connect هاب API\n/notebooks نوت‌بوک RAG2\n/audit صحت اطلاعات\n/memory حافظه عامل\n\nAPIها:\n/api/exhibition لیست ۴۴۰\n/api/exhibition?format=csv\n/api/modules\n/api/connectors/status|search|seo|notify|notebooks\n/api/audit\n/api/memory\n\nدیتابیس روی ورکر خاموش است (db=null) تا pg باندل نشود. حالت نمایشگاه از JSON داخلی کار می‌کند.\nR2 روی حساب فعال نیست.\nبات‌های نگین‌جام، مهاجرت شاهرخ، دیجی‌آموزش را به این محصول وصل نکن."
+    "body": "نام محصول: دیدبان محلی / Marketing-by-map-neshan\nگیت‌هاب: https://github.com/Websites-by-AI/Marketing-by-map-neshan\nزنده: https://neshan-m.exhibition2world.ir\nورکر: neshan-m روی حساب Cloudflare 5b456a2b43bb367410c50b35b9e7f71f\nدامنه: neshan-m.exhibition2world.ir\n\nصفحات:\n/ لندینگ نمایشگاه\n/panel داشبورد نقشه\n/connect هاب API\n/oil نفت\n/sisters خواهرها\n/notebooks نوت‌بوک RAG2\n/audit صحت اطلاعات\n/memory حافظه عامل\n\nAPIها:\n/api/exhibition لیست ۴۴۰\n/api/exhibition?format=csv\n/api/modules\n/api/connectors/status|search|seo|notify|notebooks\n/api/audit\n/api/memory\n\nدیتابیس روی ورکر خاموش است (db=null) تا pg باندل نشود. حالت نمایشگاه از JSON داخلی کار می‌کند.\nR2 روی حساب فعال نیست.\nبات‌های نگین‌جام، مهاجرت شاهرخ، دیجی‌آموزش را به این محصول وصل نکن."
   },
   {
     "id": "02-exhibition-facts",
@@ -60,5 +60,16 @@
       "rag"
     ],
     "body": "منبع: https://huggingface.co/spaces/SoSa123456/Exhibition-connector-rag2-static/tree/main/notebooks\nکپی در ریپو: notebooks/\nصفحه تست: /notebooks و GET /api/connectors/notebooks\n\nقابل اجرا بدون GPU:\n- rag_api_colab_test.ipynb : پریسماتک رتبه ۱. scrape پریسماتک ایمیل دارد. scrape لورچ https ۴۰۰.\n- rag_base_model_colab.ipynb : TF-IDF روی ۱۷۳۰ شرکت.\n\nفقط Colab/GPU: rag1/rag2 اصلی و llama_wandb.\nدیتاست نفت است. ۱۷ نام دقیق با ساختمان ۱۴۰۵ مشترک. دامنه نفت کاندید است."
+  },
+  {
+    "id": "06-oil-sisters",
+    "title": "نفت + مدل همکاری + ۱۰ خواهر",
+    "updatedAt": "2026-08-12",
+    "tags": [
+      "oil",
+      "sisters",
+      "cooperation"
+    ],
+    "body": "نمایشگاه نفت: داده ۱۷۳۰ شرکت از دوره ۲۹ (اردیبهشت ۱۴۰۳). API next-exhibition پیش‌بینی ۳۰ است و رسمی نیست. تقویم‌های متفرقه ۱۴۰۵ یکی اردیبهشت یکی شهریور گفته‌اند.\nصفحه /oil و GET /api/oil\n۱۷ نام دقیق مشترک با ساختمان.\n۱۰ شرکت خواهر گروه دیدبان: وب، فروش، مالی، وام، حقوقی، مهاجرت، بیمه، لجستیک، منابع انسانی، آموزش. مهاجرت سرویس گروه است نه بات محصول دیگر.\nمدل همکاری: لندینگ غرفه / کاتالوگ نفت / بسته دو نمایشگاه / بسته خواهرها.\nصفحه /sisters و /api/sisters"
   }
 ]

@@ -15,6 +15,8 @@ import {
 } from "@/lib/business-data";
 import { exhibitionHallPresets, exhibitionMeta, promptForExhibitor } from "@/lib/exhibition";
 import relatedModules from "@/data/related-modules.json";
+import sisterCompanies from "@/data/sister-companies.json";
+import { oilExhibitionMeta } from "@/lib/oil-exhibition";
 import {
   AlertTriangle,
   BarChart3,
@@ -1145,6 +1147,27 @@ export default function MarketIntelligenceDashboard({
                   </ul>
                 </article>
               ))}
+            </div>
+            <div className="mt-6 rounded-2xl border border-slate-200 bg-white p-4">
+              <div className="flex flex-wrap items-end justify-between gap-2">
+                <div>
+                  <h4 className="text-[14px] font-extrabold">{sisterCompanies.holding} — ده شرکت خواهر</h4>
+                  <p className="mt-1 text-[11px] text-slate-500">{sisterCompanies.note}</p>
+                </div>
+                <div className="flex gap-2 text-[11px] font-bold">
+                  <a href="/sisters" className="rounded-lg bg-[#10263d] px-3 py-1.5 text-white">خواهرها</a>
+                  <a href="/oil" className="rounded-lg border px-3 py-1.5">نفت {faNumber.format(oilExhibitionMeta.companies)}</a>
+                </div>
+              </div>
+              <div className="mt-3 grid gap-2 sm:grid-cols-2 xl:grid-cols-5">
+                {sisterCompanies.items.map((item) => (
+                  <div key={item.slug} className="rounded-xl bg-slate-50 p-3">
+                    <p className="text-[10px] font-bold text-slate-400">{item.en}</p>
+                    <p className="text-[12px] font-extrabold">{item.name}</p>
+                    <p className="mt-1 text-[10px] leading-5 text-slate-500">{item.role}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </section>
         </main>
