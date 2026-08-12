@@ -1,77 +1,212 @@
 {
-  "note": "شبکه همکاری نمایشگاه: کلادفلر زنده + گیت‌هاب Websites-by-AI + Hugging Face. محصول‌های نگین‌جام، تارانوم، civicavita اینجا نیستند.",
+  "note": "شبکه همکاری: کلادفلر زنده + گیت‌هاب SBZ-EDU و Websites-by-AI + Hugging Face. در هر حوزه چند استارتاپ است. بات نگین‌جام، civicavita و g2ray اینجا نیستند.",
+  "accounts": {
+    "sbzEdu": "https://github.com/SBZ-EDU?tab=repositories",
+    "org": "https://github.com/Websites-by-AI/"
+  },
   "github": [
+    {
+      "name": "celebration-design-by-ai",
+      "url": "https://github.com/SBZ-EDU/celebration-design-by-ai",
+      "role": "جشن‌ساز — سایت رویداد روی Pages",
+      "sister": "web",
+      "owner": "SBZ-EDU"
+    },
+    {
+      "name": "shahrokh-immigration-turkey",
+      "url": "https://github.com/SBZ-EDU/shahrokh-immigration-turkey",
+      "role": "مهاجرت شاهرخ — ایران به استانبول (سایت، نه بات)",
+      "sister": "immigration",
+      "owner": "SBZ-EDU"
+    },
+    {
+      "name": "Notary-662-Cloudflare",
+      "url": "https://github.com/SBZ-EDU/Notary-662-Cloudflare",
+      "role": "دفتر اسناد ۶۶۲ تهران روی کلادفلر",
+      "sister": "lawyer",
+      "owner": "SBZ-EDU"
+    },
+    {
+      "name": "dual-diagnosis-rag",
+      "url": "https://github.com/SBZ-EDU/dual-diagnosis-rag",
+      "role": "RAG بالینی تشخیص دوگانه",
+      "sister": "academy",
+      "owner": "SBZ-EDU"
+    },
+    {
+      "name": "dual-diagnosis-protocol",
+      "url": "https://github.com/SBZ-EDU/dual-diagnosis-protocol",
+      "role": "پروتکل آموزشی بالینی — استاتیک",
+      "sister": "academy",
+      "owner": "SBZ-EDU"
+    },
+    {
+      "name": "taranom2psychology2school",
+      "url": "https://github.com/SBZ-EDU/taranom2psychology2school",
+      "role": "ترنم مهر — کنکور و روانشناسی",
+      "sister": "academy",
+      "owner": "SBZ-EDU"
+    },
+    {
+      "name": "Chattre-danesh-karname2",
+      "url": "https://github.com/SBZ-EDU/Chattre-danesh-karname2",
+      "role": "چتر دانش — کارنامه کنکور وکالت",
+      "sister": "hr",
+      "owner": "SBZ-EDU"
+    },
+    {
+      "name": "Arman2",
+      "url": "https://github.com/SBZ-EDU/Arman2",
+      "role": "نوت‌بوک RAG آرمان / اتصال نمایشگاه",
+      "sister": "lawyer",
+      "owner": "SBZ-EDU"
+    },
     {
       "name": "Marketing-by-map-neshan",
       "url": "https://github.com/Websites-by-AI/Marketing-by-map-neshan",
       "role": "این سایت — نقشه + غرفه ۱۴۰۵ + همکاری",
-      "sister": "web"
+      "sister": "web",
+      "owner": "Websites-by-AI"
     },
     {
       "name": "exhibtion-rag-test1",
       "url": "https://github.com/Websites-by-AI/exhibtion-rag-test1",
       "role": "سورس RAG2 — پوشه vercel-app و huggingface-static",
-      "sister": "seller"
+      "sister": "seller",
+      "owner": "Websites-by-AI"
     },
     {
       "name": "Adv-seo-2",
       "url": "https://github.com/Websites-by-AI/Adv-seo-2",
       "role": "Clinic Signal — ایمپورت نمایشگاه، آدیت، پیام",
-      "sister": "web"
+      "sister": "web",
+      "owner": "Websites-by-AI"
     },
     {
       "name": "Adv-seo",
       "url": "https://github.com/Websites-by-AI/Adv-seo",
       "role": "داشبورد سئو نسخه اول",
-      "sister": "web"
+      "sister": "web",
+      "owner": "Websites-by-AI"
     },
     {
       "name": "seo-liderfer",
       "url": "https://github.com/Websites-by-AI/seo-liderfer",
       "role": "صف لید P1–P3 و کانال پیام",
-      "sister": "seller"
+      "sister": "seller",
+      "owner": "Websites-by-AI"
     },
     {
       "name": "SEO-wordpress-automation",
       "url": "https://github.com/Websites-by-AI/SEO-wordpress-automation",
       "role": "اتوماسیون وردپرس بعد از فروش سایت",
-      "sister": "web"
+      "sister": "web",
+      "owner": "Websites-by-AI"
     },
     {
       "name": "Digifair-ai-cloadfllare",
       "url": "https://github.com/Websites-by-AI/Digifair-ai-cloadfllare",
       "role": "دیجی‌فیر روی کلادفلر",
-      "sister": "logistics"
+      "sister": "logistics",
+      "owner": "Websites-by-AI"
     },
     {
       "name": "Digifair-ai-vercel",
       "url": "https://github.com/Websites-by-AI/Digifair-ai-vercel",
       "role": "دیجی‌فیر نسخه Vercel",
-      "sister": "logistics"
+      "sister": "logistics",
+      "owner": "Websites-by-AI"
     },
     {
       "name": "armanlawfirm.ir … dadgar-AI",
       "url": "https://github.com/Websites-by-AI/armanlawfirm.ir-based-of-adl-pendar-based-of-dadgar-AI-with-insurance-armanlawfirm.ir",
       "role": "سورس وکیل آرمان + بیمه",
-      "sister": "lawyer"
+      "sister": "lawyer",
+      "owner": "Websites-by-AI"
+    },
+    {
+      "name": "Notary-662",
+      "url": "https://github.com/Websites-by-AI/Notary-662",
+      "role": "منبع AI Studio دفتر اسناد ۶۶۲",
+      "sister": "lawyer",
+      "owner": "Websites-by-AI"
+    },
+    {
+      "name": "Chatre-danesh-2hagh-yar",
+      "url": "https://github.com/Websites-by-AI/Chatre-danesh-2hagh-yar",
+      "role": "حق‌یار — مشاوره حقوقی آنلاین",
+      "sister": "lawyer",
+      "owner": "Websites-by-AI"
     },
     {
       "name": "AI-Iimmigration-visa-assistant-",
       "url": "https://github.com/Websites-by-AI/AI-Iimmigration-visa-assistant-",
       "role": "سورس دستیار ویزا روی دامنه نمایشگاه",
-      "sister": "immigration"
+      "sister": "immigration",
+      "owner": "Websites-by-AI"
     },
     {
-      "name": "HesabrasYar",
-      "url": "https://github.com/Websites-by-AI/HesabrasYar---Intelligent-Audit-Assistant-",
-      "role": "دستیار حسابرسی — واحد مالی",
-      "sister": "finance"
+      "name": "Realty-State-AI-Wizard",
+      "url": "https://github.com/Websites-by-AI/Realty-State-AI-Wizard",
+      "role": "املاک AI — برآورد قیمت و پرونده وام",
+      "sister": "loan",
+      "owner": "Websites-by-AI"
+    },
+    {
+      "name": "Eternal-Path-Burial-Portal",
+      "url": "https://github.com/Websites-by-AI/Eternal-Path-Burial-Portal",
+      "role": "مسیریاب قبور — خدمات وابسته بیمه",
+      "sister": "insurance",
+      "owner": "Websites-by-AI"
+    },
+    {
+      "name": "Findexpert2",
+      "url": "https://github.com/Websites-by-AI/Findexpert2",
+      "role": "پیدا کردن متخصص / ecoAI",
+      "sister": "hr",
+      "owner": "Websites-by-AI"
+    },
+    {
+      "name": "AI-4-Homemaker-women",
+      "url": "https://github.com/Websites-by-AI/AI-4-Homemaker-women",
+      "role": "دیجی‌آموزش — آکادمی کسب‌وکار خانگی",
+      "sister": "academy",
+      "owner": "Websites-by-AI"
+    },
+    {
+      "name": "Ai-coirse_1_bootcamp_2day",
+      "url": "https://github.com/Websites-by-AI/Ai-coirse_1_bootcamp_2day",
+      "role": "VibeLab بوت‌کمپ ۲ روزه",
+      "sister": "academy",
+      "owner": "Websites-by-AI"
+    },
+    {
+      "name": "all-master-exams-plattform",
+      "url": "https://github.com/Websites-by-AI/all-master-exams-plattform-based-of-education-Hub",
+      "role": "آزمون‌یار ارشد مهندسی",
+      "sister": "academy",
+      "owner": "Websites-by-AI"
+    },
+    {
+      "name": "SmartWaste-AI",
+      "url": "https://github.com/Websites-by-AI/SmartWaste-AI---Intelligent-Waste-Management-number-2",
+      "role": "پسماند هوشمند — لجستیک سالن",
+      "sister": "logistics",
+      "owner": "Websites-by-AI"
     },
     {
       "name": "Chatredash-CRM",
       "url": "https://github.com/Websites-by-AI/Chatredash-CRM",
-      "role": "CRM گفتگو — پیگیری فروش غرفه",
-      "sister": "seller"
+      "role": "رتبه برتر / CRM معرف",
+      "sister": "seller",
+      "owner": "Websites-by-AI"
+    },
+    {
+      "name": "HesabrasYar",
+      "url": "https://github.com/Websites-by-AI/HesabrasYar---Intelligent-Audit-Assistant-",
+      "role": "حسابرسی — مخزن در اوت ۲۰۲۶ از API گیت‌هاب ۴۰۴ بود",
+      "sister": "finance",
+      "owner": "Websites-by-AI"
     }
   ],
   "huggingface": [
@@ -82,6 +217,54 @@
       "role": "پرتال RAG2 زنده مثل Vercel",
       "priority": "A",
       "sister": "seller"
+    },
+    {
+      "id": "sosa123454321/Notary-662-RAG-Dashboard",
+      "url": "https://huggingface.co/spaces/sosa123454321/Notary-662-RAG-Dashboard",
+      "app": "https://sosa123454321-notary-662-rag-dashboard.static.hf.space/",
+      "role": "تست RAG دفتر اسناد ۶۶۲",
+      "priority": "A",
+      "sister": "lawyer"
+    },
+    {
+      "id": "sosa123454321/dual-diagnosis-protocol",
+      "url": "https://huggingface.co/spaces/sosa123454321/dual-diagnosis-protocol",
+      "app": "https://sosa123454321-dual-diagnosis-protocol.static.hf.space/",
+      "role": "پروتکل تشخیص دوگانه — زنده",
+      "priority": "A",
+      "sister": "academy"
+    },
+    {
+      "id": "sosa123454321/taranom-exam-rag",
+      "url": "https://huggingface.co/spaces/sosa123454321/taranom-exam-rag",
+      "app": "https://sosa123454321-taranom-exam-rag.static.hf.space/",
+      "role": "RAG سوالات کنکور ترنم",
+      "priority": "A",
+      "sister": "academy"
+    },
+    {
+      "id": "sosa123454321/digiamoozesh-static",
+      "url": "https://huggingface.co/spaces/sosa123454321/digiamoozesh-static",
+      "app": "https://sosa123454321-digiamoozesh-static.static.hf.space/",
+      "role": "دیجی‌آموزش نسخه Space",
+      "priority": "A",
+      "sister": "academy"
+    },
+    {
+      "id": "sosa123454321/Business-plan-generator",
+      "url": "https://huggingface.co/spaces/sosa123454321/Business-plan-generator",
+      "app": "https://sosa123454321-business-plan-generator.hf.space",
+      "role": "طرح کسب‌وکار — خطای اجرا",
+      "priority": "B",
+      "sister": "finance"
+    },
+    {
+      "id": "sosa123454321/Bussiness-plan-maker",
+      "url": "https://huggingface.co/spaces/sosa123454321/Bussiness-plan-maker",
+      "app": "https://sosa123454321-bussiness-plan-maker.hf.space",
+      "role": "طرح کسب‌وکار ۲ — خواب",
+      "priority": "B",
+      "sister": "finance"
     },
     {
       "id": "SoSa123456/Exhibition-connector-rag2-static",

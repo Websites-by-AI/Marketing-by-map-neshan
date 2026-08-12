@@ -1,7 +1,19 @@
 {
   "holding": "گروه دیدبان",
-  "tagline": "یک استارتاپ، ده شرکت خواهر — لینک‌های زنده کلادفلر داخل مدل همکاری",
-  "note": "هر واحد خواهر اگر سایت کلادفلر زنده دارد اینجا لینک می‌شود. مهاجرت فقط immigration.exhibition2world.ir است نه بات محصول دیگر. فروش و پیام فقط با رضایت انسان.",
+  "tagline": "ده حوزه همکاری — در هر حوزه دو یا چند استارتاپ واقعی از SBZ-EDU و Websites-by-AI",
+  "note": "لیست از مخازن عمومی https://github.com/SBZ-EDU?tab=repositories و سازمان Websites-by-AI ساخته شده (بررسی ۱۲ مرداد ۱۴۰۵ / ۱۲ اوت ۲۰۲۶). هر حوزه چند برند جدا است، نه یک سایت. بات تلگرام/بله شاهرخ، نگین‌جام و civicavita وصل نمی‌شوند. فروش و پیام فقط با رضایت انسان.",
+  "sources": {
+    "sbzEdu": "https://github.com/SBZ-EDU?tab=repositories",
+    "org": "https://github.com/orgs/Websites-by-AI/repositories"
+  },
+  "excluded": [
+    { "name": "g2ray", "reason": "فورک پروکسی آموزشی — استارتاپ همکاری نیست" },
+    { "name": "Opensource-onlive-body-avatar-app", "reason": "آرشیو ۲۰۲۰" },
+    { "name": "NEGINJAM-COMPANY / neginejam-event-service", "reason": "بات و محصول جدا؛ جشن‌ساز SBZ-EDU جداگانه در حوزه وب آمده" },
+    { "name": "Civicavita-AB", "reason": "سلامت بشردوستانه — خارج از همکاری نمایشگاه" },
+    { "name": "Chatre_daneah3", "reason": "مخزن خالی است" }
+  ],
+  "checkedAt": "2026-08-12",
   "items": [
     {
       "slug": "web",
@@ -12,7 +24,63 @@
       "offer": "لندینگ فارسی + کاتالوگ + سئو محلی روی نقشه نشان",
       "price": "از ۱۸ میلیون",
       "website": "https://neshan-m.exhibition2world.ir",
-      "extraSites": ["https://master.leadfair.pages.dev/seo-lead"]
+      "extraSites": [
+        "https://celebration-design-by-ai.pages.dev",
+        "https://adv-seo-2.vercel.app",
+        "https://master.leadfair.pages.dev/seo-lead"
+      ],
+      "startups": [
+        {
+          "id": "neshan-m",
+          "name": "دیدبان محلی",
+          "brand": "Marketing-by-map-neshan",
+          "owner": "Websites-by-AI",
+          "repo": "https://github.com/Websites-by-AI/Marketing-by-map-neshan",
+          "website": "https://neshan-m.exhibition2world.ir",
+          "status": "live",
+          "role": "نقشه + ۴۴۰ غرفه ساختمان ۱۴۰۵"
+        },
+        {
+          "id": "celebration",
+          "name": "جشن‌ساز",
+          "brand": "Celebration Design by AI",
+          "owner": "SBZ-EDU",
+          "repo": "https://github.com/SBZ-EDU/celebration-design-by-ai",
+          "website": "https://celebration-design-by-ai.pages.dev",
+          "status": "live",
+          "role": "طراحی جشن و رویداد با AI — استارتاپ دوم حوزه وب"
+        },
+        {
+          "id": "adv-seo-2",
+          "name": "Clinic Signal",
+          "brand": "Adv-seo-2",
+          "owner": "Websites-by-AI",
+          "repo": "https://github.com/Websites-by-AI/Adv-seo-2",
+          "website": "https://adv-seo-2.vercel.app",
+          "status": "live",
+          "role": "آدیت سئو، ایمپورت نمایشگاه، موتور لید"
+        },
+        {
+          "id": "adv-seo",
+          "name": "Adv-seo نسخه ۱",
+          "brand": "Adv-seo",
+          "owner": "Websites-by-AI",
+          "repo": "https://github.com/Websites-by-AI/Adv-seo",
+          "website": "https://adv-seo.vercel.app",
+          "status": "live",
+          "role": "داشبورد سئو اول"
+        },
+        {
+          "id": "seo-wp",
+          "name": "اتوماسیون وردپرس",
+          "brand": "SEO-wordpress-automation",
+          "owner": "Websites-by-AI",
+          "repo": "https://github.com/Websites-by-AI/SEO-wordpress-automation",
+          "website": null,
+          "status": "repo",
+          "role": "بعد از فروش سایت غرفه"
+        }
+      ]
     },
     {
       "slug": "seller",
@@ -20,10 +88,47 @@
       "en": "Seller / B2B",
       "role": "فروشنده غرفه",
       "for": "شرکت تولیدی ساختمان و نفت",
-      "offer": "اسکریپت فروش غرفه، پیگیری لید بعد از نمایشگاه، CRM ساده",
+      "offer": "اسکریپت فروش غرفه، پیگیری لید بعد از نمایشگاه، CRM",
       "price": "ماهانه از ۸ میلیون",
       "website": "https://master.leadfair.pages.dev/",
-      "extraSites": ["https://master.leadfair.pages.dev/rag/", "https://rag2.exhibition2world.ir/api/health"]
+      "extraSites": [
+        "https://master.leadfair.pages.dev/rag/",
+        "https://rag2.exhibition2world.ir/api/health",
+        "https://seo-liderfer.vercel.app",
+        "https://vercel-app-amber-five.vercel.app/api/health"
+      ],
+      "startups": [
+        {
+          "id": "leadfair",
+          "name": "لیدفِر / LeadFair RAG",
+          "brand": "exhibtion-rag-test1",
+          "owner": "Websites-by-AI",
+          "repo": "https://github.com/Websites-by-AI/exhibtion-rag-test1",
+          "website": "https://master.leadfair.pages.dev/",
+          "status": "live",
+          "role": "۱۷۳۰ شرکت نفت + جستجوی RAG زنده"
+        },
+        {
+          "id": "seo-liderfer",
+          "name": "لیدفر صف فروش",
+          "brand": "seo-liderfer",
+          "owner": "Websites-by-AI",
+          "repo": "https://github.com/Websites-by-AI/seo-liderfer",
+          "website": "https://seo-liderfer.vercel.app",
+          "status": "live",
+          "role": "رادار فروش سئو و صف P1–P3"
+        },
+        {
+          "id": "chatredash",
+          "name": "رتبه برتر / Chatredash",
+          "brand": "Chatredash-CRM",
+          "owner": "Websites-by-AI",
+          "repo": "https://github.com/Websites-by-AI/Chatredash-CRM",
+          "website": null,
+          "status": "repo",
+          "role": "CRM معرف و پیگیری فروش — محتوای فعلی مخزن رتبه برتر است"
+        }
+      ]
     },
     {
       "slug": "finance",
@@ -31,10 +136,54 @@
       "en": "Finance",
       "role": "مالی و حسابداری",
       "for": "تولیدکننده و بازرگان",
-      "offer": "صورتحساب، مالیات ارزش‌افزوده، گزارش هیئت‌مدیره",
+      "offer": "طرح کسب‌وکار، برآورد ملک، پرونده مالی غرفه",
       "price": "ماهانه از ۶ میلیون",
-      "website": null,
-      "extraSites": []
+      "website": "https://huggingface.co/spaces/sosa123454321/Business-plan-generator",
+      "extraSites": [
+        "https://huggingface.co/spaces/sosa123454321/Bussiness-plan-maker"
+      ],
+      "startups": [
+        {
+          "id": "bizplan",
+          "name": "سازنده طرح کسب‌وکار",
+          "brand": "Business-plan-generator",
+          "owner": "Hugging Face",
+          "repo": "https://huggingface.co/spaces/sosa123454321/Business-plan-generator",
+          "website": "https://sosa123454321-business-plan-generator.hf.space",
+          "status": "hf-error",
+          "role": "طرح مالی غرفه‌دار — Space الان خطای اجرا دارد"
+        },
+        {
+          "id": "bizplan-2",
+          "name": "Business Plan Maker",
+          "brand": "Bussiness-plan-maker",
+          "owner": "Hugging Face",
+          "repo": "https://huggingface.co/spaces/sosa123454321/Bussiness-plan-maker",
+          "website": "https://sosa123454321-bussiness-plan-maker.hf.space",
+          "status": "hf-sleeping",
+          "role": "نسخه دوم طرح کسب‌وکار — خواب/سهمیه CPU"
+        },
+        {
+          "id": "realty-finance",
+          "name": "املاک AI",
+          "brand": "Realty-State-AI-Wizard",
+          "owner": "Websites-by-AI",
+          "repo": "https://github.com/Websites-by-AI/Realty-State-AI-Wizard",
+          "website": null,
+          "status": "repo",
+          "role": "برآورد قیمت ملک تهران/کرج/مشهد — پرونده مالی وثیقه"
+        },
+        {
+          "id": "hesabras",
+          "name": "حسابرس‌یار",
+          "brand": "HesabrasYar",
+          "owner": "Websites-by-AI",
+          "repo": "https://github.com/Websites-by-AI/HesabrasYar---Intelligent-Audit-Assistant-",
+          "website": null,
+          "status": "missing",
+          "role": "دستیار حسابرسی — مخزن در ۱۲ اوت ۲۰۲۶ از API گیت‌هاب ۴۰۴ بود"
+        }
+      ]
     },
     {
       "slug": "loan",
@@ -42,21 +191,99 @@
       "en": "Bank loan",
       "role": "وام و اعتبار بانکی",
       "for": "توسعه خط تولید و سرمایه در گردش",
-      "offer": "پرونده بانکی، معرفی صندوق نوآوری / بانک گردشگری حاضر در سالن",
+      "offer": "پرونده بانکی با طرح کسب‌وکار + برآورد ملک؛ معرفی صندوق نوآوری حاضر در سالن",
       "price": "موفقیت‌محور",
       "website": null,
-      "extraSites": []
+      "extraSites": [],
+      "startups": [
+        {
+          "id": "realty-loan",
+          "name": "املاک AI — وثیقه و برآورد",
+          "brand": "Realty-State-AI-Wizard",
+          "owner": "Websites-by-AI",
+          "repo": "https://github.com/Websites-by-AI/Realty-State-AI-Wizard",
+          "website": null,
+          "status": "repo",
+          "role": "استارتاپ دوم حوزه وام: قیمت‌گذاری ملک برای پرونده تسهیلات"
+        },
+        {
+          "id": "bizplan-loan",
+          "name": "طرح کسب‌وکار برای بانک",
+          "brand": "Bussiness-plan-maker",
+          "owner": "Hugging Face",
+          "repo": "https://huggingface.co/spaces/sosa123454321/Bussiness-plan-maker",
+          "website": "https://huggingface.co/spaces/sosa123454321/Bussiness-plan-maker",
+          "status": "hf-sleeping",
+          "role": "پیش‌نویس طرح برای وام سرمایه در گردش — سایت اختصاصی وام هنوز روی کلادفلر نیست"
+        }
+      ]
     },
     {
       "slug": "lawyer",
       "name": "دیدبان حقوقی",
       "en": "Lawyer",
-      "role": "وکیل قرارداد",
-      "for": "قرارداد غرفه، نمایندگی، برند",
-      "offer": "قرارداد فروش صادراتی، علامت تجاری، اختلاف نمایندگی",
+      "role": "وکیل و سردفتر",
+      "for": "قرارداد غرفه، نمایندگی، برند، سند",
+      "offer": "قرارداد فروش صادراتی، علامت تجاری، پیش‌نویس سند رسمی",
       "price": "از ۴ میلیون مشاوره",
       "website": "https://armanlawfirm.ir",
-      "extraSites": []
+      "extraSites": [
+        "https://notary-662-sbz.pages.dev",
+        "https://notary-662.pages.dev",
+        "https://sosa123454321-notary-662-rag-dashboard.static.hf.space/"
+      ],
+      "startups": [
+        {
+          "id": "arman",
+          "name": "موسسه حقوقی آرمان",
+          "brand": "armanlawfirm.ir",
+          "owner": "Websites-by-AI",
+          "repo": "https://github.com/Websites-by-AI/armanlawfirm.ir-based-of-adl-pendar-based-of-dadgar-AI-with-insurance-armanlawfirm.ir",
+          "website": "https://armanlawfirm.ir",
+          "status": "live",
+          "role": "دستیار وکیل + بیمه"
+        },
+        {
+          "id": "notary-662",
+          "name": "دفتر اسناد رسمی ۶۶۲ تهران",
+          "brand": "Notary-662-Cloudflare",
+          "owner": "SBZ-EDU",
+          "repo": "https://github.com/SBZ-EDU/Notary-662-Cloudflare",
+          "website": "https://notary-662-sbz.pages.dev",
+          "status": "live",
+          "role": "استارتاپ دوم حقوقی: تنظیم سند و RAG حقوقی روی کلادفلر"
+        },
+        {
+          "id": "notary-source",
+          "name": "Notary 662 منبع AI Studio",
+          "brand": "Notary-662",
+          "owner": "Websites-by-AI",
+          "repo": "https://github.com/Websites-by-AI/Notary-662",
+          "website": "https://notary-662.pages.dev",
+          "status": "live",
+          "role": "نسخه منبع همان سردفتر"
+        },
+        {
+          "id": "haqyar",
+          "name": "حق‌یار",
+          "brand": "Chatre-danesh-2hagh-yar",
+          "owner": "Websites-by-AI",
+          "repo": "https://github.com/Websites-by-AI/Chatre-danesh-2hagh-yar",
+          "website": null,
+          "status": "repo",
+          "role": "مشاوره حقوقی آنلاین — متن و قرارداد"
+        },
+        {
+          "id": "arman2",
+          "name": "Arman2 نوت‌بوک",
+          "brand": "Arman2",
+          "owner": "SBZ-EDU",
+          "repo": "https://github.com/SBZ-EDU/Arman2",
+          "website": null,
+          "status": "repo",
+          "role": "فقط نوت‌بوک RAG اتصال نمایشگاه — README ندارد"
+        }
+      ]
     },
     {
       "slug": "immigration",
@@ -64,54 +291,247 @@
       "en": "Immigration",
       "role": "ویزا و مهاجرت کاری",
       "for": "خریدار خارجی و نیروی متخصص",
-      "offer": "دعوت‌نامه نمایشگاه، ویزای تجاری — سایت کلادفلر روی دامنه نمایشگاه",
+      "offer": "دعوت‌نامه نمایشگاه + مسیر ایران به استانبول — فقط سایت، نه بات",
       "price": "پرونده‌ای",
       "website": "https://immigration.exhibition2world.ir",
-      "extraSites": []
+      "extraSites": [
+        "https://shahrokh-immigration.pages.dev"
+      ],
+      "startups": [
+        {
+          "id": "visa-fair",
+          "name": "دستیار ویزای نمایشگاه",
+          "brand": "AI-Iimmigration-visa-assistant-",
+          "owner": "Websites-by-AI",
+          "repo": "https://github.com/Websites-by-AI/AI-Iimmigration-visa-assistant-",
+          "website": "https://immigration.exhibition2world.ir",
+          "status": "live",
+          "role": "ویزای تجاری روی دامنه نمایشگاه"
+        },
+        {
+          "id": "shahrokh",
+          "name": "گروه مهاجرتی شاهرخ",
+          "brand": "shahrokh-immigration-turkey",
+          "owner": "SBZ-EDU",
+          "repo": "https://github.com/SBZ-EDU/shahrokh-immigration-turkey",
+          "website": "https://shahrokh-immigration.pages.dev",
+          "status": "live",
+          "role": "استارتاپ دوم مهاجرت: ایران به استانبول — بات تلگرام وصل نشده"
+        }
+      ]
     },
     {
       "slug": "insurance",
       "name": "دیدبان بیمه",
       "en": "Insurance",
-      "role": "بیمه غرفه و حمل",
-      "for": "کالا، مسئولیت، حمل بین‌الملل",
-      "offer": "بیمه بار، آتش‌سوزی غرفه، مسئولیت مدنی بازدیدکننده",
+      "role": "بیمه غرفه و خدمات وابسته",
+      "for": "کالا، مسئولیت، حمل، خدمات ترحیم",
+      "offer": "بیمه بار و غرفه از آرمان + پورتال مسیر ابدی برای خدمات وابسته",
       "price": "حق بیمه عرف بازار",
       "website": "https://armanlawfirm.ir",
-      "extraSites": []
+      "extraSites": [
+        "https://eternal-path-burial-portal.pages.dev"
+      ],
+      "startups": [
+        {
+          "id": "arman-ins",
+          "name": "بیمه آرمان",
+          "brand": "armanlawfirm.ir",
+          "owner": "Websites-by-AI",
+          "repo": "https://github.com/Websites-by-AI/armanlawfirm.ir-based-of-adl-pendar-based-of-dadgar-AI-with-insurance-armanlawfirm.ir",
+          "website": "https://armanlawfirm.ir",
+          "status": "live",
+          "role": "ماژول بیمه همان سایت وکیل"
+        },
+        {
+          "id": "eternal-path",
+          "name": "مسیریاب قبور",
+          "brand": "Eternal-Path-Burial-Portal",
+          "owner": "Websites-by-AI",
+          "repo": "https://github.com/Websites-by-AI/Eternal-Path-Burial-Portal",
+          "website": "https://eternal-path-burial-portal.pages.dev",
+          "status": "live",
+          "role": "استارتاپ دوم بیمه/خدمات وابسته — پورتال ترحیم روی کلادفلر"
+        }
+      ]
     },
     {
       "slug": "logistics",
       "name": "دیدبان لجستیک",
       "en": "Logistics",
-      "role": "حمل و گمرک",
+      "role": "حمل، گمرک، پسماند",
       "for": "نمونه کالا و صادرات",
-      "offer": "ترخیص، حمل به سالن، انبار موقت بعد از نمایشگاه",
+      "offer": "ترخیص و خدمات غرفه + مدیریت پسماند هوشمند",
       "price": "بر اساس وزن/مسیر",
       "website": "https://digifair-cloudflare-full-fa.elasa2next.workers.dev",
-      "extraSites": []
+      "extraSites": [
+        "https://huggingface.co/spaces/sosa123454321/Expo-connector1"
+      ],
+      "startups": [
+        {
+          "id": "digifair-cf",
+          "name": "دیجی‌فیر کلادفلر",
+          "brand": "Digifair-ai-cloadfllare",
+          "owner": "Websites-by-AI",
+          "repo": "https://github.com/Websites-by-AI/Digifair-ai-cloadfllare",
+          "website": "https://digifair-cloudflare-full-fa.elasa2next.workers.dev",
+          "status": "live",
+          "role": "خدمات غرفه روی Worker"
+        },
+        {
+          "id": "digifair-vercel",
+          "name": "دیجی‌فیر Vercel",
+          "brand": "Digifair-ai-vercel",
+          "owner": "Websites-by-AI",
+          "repo": "https://github.com/Websites-by-AI/Digifair-ai-vercel",
+          "website": null,
+          "status": "repo",
+          "role": "نسخه دوم همان خدمات نمایشگاه"
+        },
+        {
+          "id": "smartwaste",
+          "name": "پسماند هوشمند EcoRide",
+          "brand": "SmartWaste-AI",
+          "owner": "Websites-by-AI",
+          "repo": "https://github.com/Websites-by-AI/SmartWaste-AI---Intelligent-Waste-Management-number-2",
+          "website": null,
+          "status": "repo",
+          "role": "استارتاپ سوم لجستیک: مدیریت پسماند سالن"
+        }
+      ]
     },
     {
       "slug": "hr",
       "name": "دیدبان منابع انسانی",
       "en": "HR",
-      "role": "استخدام غرفه",
-      "for": "ویزیتور و کارشناس فنی",
-      "offer": "استخدام موقت ۴ روزه نمایشگاه + نیروی دائم بعد از قرارداد",
+      "role": "استخدام و مسیر شغلی",
+      "for": "ویزیتور، کارشناس فنی، آزمون حرفه‌ای",
+      "offer": "پیدا کردن متخصص + کارنامه کنکور وکالت/سردفتری",
       "price": "از ۳ میلیون آگهی",
       "website": null,
-      "extraSites": []
+      "extraSites": [],
+      "startups": [
+        {
+          "id": "findexpert",
+          "name": "Find Expert / ecoAI",
+          "brand": "Findexpert2",
+          "owner": "Websites-by-AI",
+          "repo": "https://github.com/Websites-by-AI/Findexpert2",
+          "website": "https://findexpert2.pages.dev",
+          "status": "down",
+          "role": "پیدا کردن متخصص و گزارش محیط‌زیست — Pages الان ۵۲۲ است"
+        },
+        {
+          "id": "chatre-karname",
+          "name": "چتر دانش | کارنامه",
+          "brand": "Chattre-danesh-karname2",
+          "owner": "SBZ-EDU",
+          "repo": "https://github.com/SBZ-EDU/Chattre-danesh-karname2",
+          "website": null,
+          "status": "repo",
+          "role": "استارتاپ دوم منابع انسانی: سامانه کنکور وکالت، سردفتری، قضاوت"
+        },
+        {
+          "id": "chatre-org",
+          "name": "چتر دانش (سازمان)",
+          "brand": "Chattre-danesh-karname2",
+          "owner": "Websites-by-AI",
+          "repo": "https://github.com/Websites-by-AI/Chattre-danesh-karname2",
+          "website": null,
+          "status": "repo",
+          "role": "همان محصول روی سازمان"
+        }
+      ]
     },
     {
       "slug": "academy",
       "name": "دیدبان آموزش",
       "en": "Academy",
-      "role": "آموزش و مترجم",
-      "for": "تیم فروش و هیئت خارجی",
-      "offer": "آموزش پیچ غرفه، زبان تجاری، مترجم همزمان",
+      "role": "آموزش، آزمون، بالینی",
+      "for": "تیم فروش، کنکور، آموزش خانگی، پروتکل بالینی",
+      "offer": "نوت‌بوک RAG نمایشگاه + چند آکادمی خواهر",
       "price": "روزانه از ۵ میلیون",
       "website": "https://neshan-m.exhibition2world.ir/notebooks",
-      "extraSites": []
+      "extraSites": [
+        "https://ai-4-homemaker-women.vercel.app",
+        "https://ai-coirse-1-bootcamp-2day.vercel.app",
+        "https://taranom-psychology-school-10milion.vercel.app",
+        "https://sosa123454321-dual-diagnosis-protocol.static.hf.space/",
+        "https://sosa123454321-taranom-exam-rag.static.hf.space/",
+        "https://sosa123454321-digiamoozesh-static.static.hf.space/"
+      ],
+      "startups": [
+        {
+          "id": "notebooks",
+          "name": "نوت‌بوک RAG نمایشگاه",
+          "brand": "neshan-m /notebooks",
+          "owner": "Websites-by-AI",
+          "repo": "https://github.com/Websites-by-AI/Marketing-by-map-neshan",
+          "website": "https://neshan-m.exhibition2world.ir/notebooks",
+          "status": "live",
+          "role": "Colab تست‌شده RAG نفت/ساختمان"
+        },
+        {
+          "id": "digiamoozesh",
+          "name": "دیجی‌آموزش",
+          "brand": "AI-4-Homemaker-women",
+          "owner": "Websites-by-AI",
+          "repo": "https://github.com/Websites-by-AI/AI-4-Homemaker-women",
+          "website": "https://ai-4-homemaker-women.vercel.app",
+          "status": "live",
+          "role": "آکادمی کسب‌وکار خانگی"
+        },
+        {
+          "id": "vibelab",
+          "name": "VibeLab بوت‌کمپ",
+          "brand": "Ai-coirse_1_bootcamp_2day",
+          "owner": "Websites-by-AI",
+          "repo": "https://github.com/Websites-by-AI/Ai-coirse_1_bootcamp_2day",
+          "website": "https://ai-coirse-1-bootcamp-2day.vercel.app",
+          "status": "live",
+          "role": "ماراتن ۲ روزه ساخت وب‌اپ با AI"
+        },
+        {
+          "id": "taranom",
+          "name": "ترنم مهر",
+          "brand": "taranom2psychology2school",
+          "owner": "SBZ-EDU",
+          "repo": "https://github.com/SBZ-EDU/taranom2psychology2school",
+          "website": "https://taranom-psychology-school-10milion.vercel.app",
+          "status": "live",
+          "role": "مدرسه روانشناسی/کنکور — برند جدا، بات وصل نیست"
+        },
+        {
+          "id": "dual-protocol",
+          "name": "پروتکل تشخیص دوگانه",
+          "brand": "dual-diagnosis-protocol",
+          "owner": "SBZ-EDU",
+          "repo": "https://github.com/SBZ-EDU/dual-diagnosis-protocol",
+          "website": "https://sosa123454321-dual-diagnosis-protocol.static.hf.space/",
+          "status": "live",
+          "role": "آموزش بالینی NICE/APA — جایگزین پزشک نیست"
+        },
+        {
+          "id": "dual-rag",
+          "name": "RAG تشخیص دوگانه",
+          "brand": "dual-diagnosis-rag",
+          "owner": "SBZ-EDU",
+          "repo": "https://github.com/SBZ-EDU/dual-diagnosis-rag",
+          "website": null,
+          "status": "repo",
+          "role": "دستیار بالینی RAG + نوت‌بوک Colab"
+        },
+        {
+          "id": "azmonyar",
+          "name": "آزمون‌یار ارشد",
+          "brand": "all-master-exams-plattform",
+          "owner": "Websites-by-AI",
+          "repo": "https://github.com/Websites-by-AI/all-master-exams-plattform-based-of-education-Hub",
+          "website": null,
+          "status": "repo",
+          "role": "پلتفرم آزمون کارشناسی ارشد مهندسی"
+        }
+      ]
     }
   ]
 }

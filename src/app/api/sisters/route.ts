@@ -6,9 +6,13 @@ import { cooperationModels } from "@/lib/business-data";
 export const dynamic = "force-dynamic";
 
 export async function GET() {
+  const startupCount = sisters.items.reduce((sum, item) => sum + item.startups.length, 0);
   return Response.json({
     ok: true,
     ...sisters,
+    fieldCount: sisters.items.length,
+    startupCount,
+    source: "https://github.com/SBZ-EDU?tab=repositories",
     cloudflareSites,
     network,
     cooperationModels,

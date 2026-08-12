@@ -1,5 +1,5 @@
 {
-  "note": "فقط سایت‌های کلادفلر مرتبط با نمایشگاه / همکاری گروه دیدبان. نگین‌جام، تارانوم و civicavita جدا هستند.",
+  "note": "سایت‌های کلادفلر مرتبط با همکاری گروه دیدبان و مخازن SBZ-EDU. NEGINJAM-COMPANY و civicavita اینجا نیستند. ترنم فقط به‌عنوان آکادمی جدا در JSON خواهرها آمده.",
   "items": [
     {
       "id": "neshan-m",
@@ -16,6 +16,14 @@
       "kind": "worker",
       "sister": "web",
       "role": "همان سایت روی workers.dev"
+    },
+    {
+      "id": "celebration",
+      "label": "جشن‌ساز",
+      "url": "https://celebration-design-by-ai.pages.dev",
+      "kind": "pages",
+      "sister": "web",
+      "role": "استارتاپ دوم وب — طراحی جشن با AI"
     },
     {
       "id": "leadfair-ui",
@@ -74,12 +82,36 @@
       "role": "دستیار حقوقی روی Cloudflare Pages"
     },
     {
+      "id": "notary-662",
+      "label": "دفتر اسناد ۶۶۲",
+      "url": "https://notary-662-sbz.pages.dev",
+      "kind": "pages",
+      "sister": "lawyer",
+      "role": "استارتاپ دوم حقوقی — SBZ-EDU"
+    },
+    {
       "id": "immigration",
       "label": "مهاجرت نمایشگاه",
       "url": "https://immigration.exhibition2world.ir",
       "kind": "pages",
       "sister": "immigration",
       "role": "ویزا/دستیار مهاجرت روی دامنه نمایشگاه"
+    },
+    {
+      "id": "shahrokh",
+      "label": "مهاجرت شاهرخ",
+      "url": "https://shahrokh-immigration.pages.dev",
+      "kind": "pages",
+      "sister": "immigration",
+      "role": "استارتاپ دوم مهاجرت — سایت نه بات"
+    },
+    {
+      "id": "eternal-path",
+      "label": "مسیریاب قبور",
+      "url": "https://eternal-path-burial-portal.pages.dev",
+      "kind": "pages",
+      "sister": "insurance",
+      "role": "استارتاپ دوم بیمه/خدمات وابسته"
     }
   ]
 }

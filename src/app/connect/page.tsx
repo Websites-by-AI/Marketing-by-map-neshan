@@ -71,8 +71,8 @@ export default function ConnectPage() {
         <section className="rounded-3xl bg-[#10263d] p-6 text-white">
           <h1 className="text-[26px] font-black">یک پروژه برای APIهای مرتبط</h1>
           <p className="mt-2 max-w-3xl text-[14px] leading-7 text-slate-200">
-            وضعیت API + سایت‌های کلادفلر مرتبط + لینک گیت‌هاب Websites-by-AI و Hugging Face در مدل همکاری.
-            API زنده نفت روی Vercel است؛ این سایت ۴۴۰ غرفه ساختمان را با همان شبکه یکی می‌کند.
+            وضعیت API + سایت‌های کلادفلر + مخازن SBZ-EDU و Websites-by-AI + Hugging Face.
+            در هر حوزه چند استارتاپ است. API زنده نفت روی Vercel است.
           </p>
         </section>
 
@@ -116,6 +116,8 @@ export default function ConnectPage() {
             </pre>
           </form>
         </section>
+
+        <CooperationNetwork />
       </main>
     </div>
   );

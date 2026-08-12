@@ -1,10 +1,26 @@
 import cloudflareSites from "@/data/cloudflare-sites.json";
 import network from "@/data/cooperation-network.json";
 
+const accounts = "accounts" in network ? network.accounts : { sbzEdu: "https://github.com/SBZ-EDU?tab=repositories", org: "https://github.com/Websites-by-AI/" };
+
 export default function CooperationNetwork() {
+  const sbz = network.github.filter((repo) => ("owner" in repo ? repo.owner : "") === "SBZ-EDU");
+  const org = network.github.filter((repo) => ("owner" in repo ? repo.owner : "Websites-by-AI") !== "SBZ-EDU");
+
   return (
     <div className="space-y-5">
       <p className="text-[13px] leading-7 text-slate-600">{network.note}</p>
+      <p className="text-[12px] text-slate-500">
+        منبع شخصی:{" "}
+        <a className="font-bold text-[#ee6748]" href={accounts.sbzEdu} target="_blank" rel="noreferrer">
+          github.com/SBZ-EDU
+        </a>
+        {" · "}
+        سازمان:{" "}
+        <a className="font-bold text-[#ee6748]" href={accounts.org} target="_blank" rel="noreferrer">
+          Websites-by-AI
+        </a>
+      </p>
 
       <section className="rounded-2xl border bg-white p-5">
         <h3 className="text-[16px] font-black">کلادفلر زنده</h3>
@@ -21,13 +37,30 @@ export default function CooperationNetwork() {
 
       <section className="rounded-2xl border bg-white p-5">
         <div className="flex flex-wrap items-end justify-between gap-2">
+          <h3 className="text-[16px] font-black">گیت‌هاب SBZ-EDU — استارتاپ‌های شخصی</h3>
+          <a href={accounts.sbzEdu} className="text-[12px] font-bold text-[#ee6748]" target="_blank" rel="noreferrer">
+            همه مخازن ←
+          </a>
+        </div>
+        <div className="mt-3 grid gap-2 md:grid-cols-2">
+          {sbz.map((repo) => (
+            <a key={repo.url} href={repo.url} target="_blank" rel="noreferrer" className="rounded-xl bg-slate-50 p-3 hover:bg-slate-100">
+              <p className="text-[13px] font-extrabold">{repo.name}</p>
+              <p className="mt-1 text-[11px] leading-5 text-slate-500">{repo.role}</p>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section className="rounded-2xl border bg-white p-5">
+        <div className="flex flex-wrap items-end justify-between gap-2">
           <h3 className="text-[16px] font-black">گیت‌هاب Websites-by-AI</h3>
-          <a href="https://github.com/Websites-by-AI/" className="text-[12px] font-bold text-[#ee6748]" target="_blank" rel="noreferrer">
+          <a href={accounts.org} className="text-[12px] font-bold text-[#ee6748]" target="_blank" rel="noreferrer">
             سازمان ←
           </a>
         </div>
         <div className="mt-3 grid gap-2 md:grid-cols-2">
-          {network.github.map((repo) => (
+          {org.map((repo) => (
             <a key={repo.url} href={repo.url} target="_blank" rel="noreferrer" className="rounded-xl bg-slate-50 p-3 hover:bg-slate-100">
               <p className="text-[13px] font-extrabold">{repo.name}</p>
               <p className="mt-1 text-[11px] leading-5 text-slate-500">{repo.role}</p>

@@ -32,6 +32,12 @@
     "آکپا ایران کیش"
   ],
   "githubModules": [
+    { "name": "SBZ-EDU / celebration-design-by-ai", "url": "https://github.com/SBZ-EDU/celebration-design-by-ai", "role": "جشن‌ساز — استارتاپ دوم وب روی Pages" },
+    { "name": "SBZ-EDU / Notary-662-Cloudflare", "url": "https://github.com/SBZ-EDU/Notary-662-Cloudflare", "role": "دفتر اسناد ۶۶۲ — استارتاپ دوم حقوقی" },
+    { "name": "SBZ-EDU / shahrokh-immigration-turkey", "url": "https://github.com/SBZ-EDU/shahrokh-immigration-turkey", "role": "مهاجرت شاهرخ — سایت نه بات" },
+    { "name": "SBZ-EDU / dual-diagnosis-protocol", "url": "https://github.com/SBZ-EDU/dual-diagnosis-protocol", "role": "پروتکل آموزشی بالینی" },
+    { "name": "SBZ-EDU / taranom2psychology2school", "url": "https://github.com/SBZ-EDU/taranom2psychology2school", "role": "ترنم مهر — آکادمی جدا" },
+    { "name": "SBZ-EDU / Chattre-danesh-karname2", "url": "https://github.com/SBZ-EDU/Chattre-danesh-karname2", "role": "چتر دانش — کارنامه کنکور وکالت" },
     { "name": "Marketing-by-map-neshan", "url": "https://github.com/Websites-by-AI/Marketing-by-map-neshan", "role": "این سایت — نقشه + غرفه‌داران ۱۴۰۵" },
     { "name": "exhibtion-rag-test1", "url": "https://github.com/Websites-by-AI/exhibtion-rag-test1", "role": "سورس RAG2 / Vercel API / فرانت HF" },
     { "name": "Adv-seo-2 / Clinic Signal", "url": "https://github.com/Websites-by-AI/Adv-seo-2", "role": "موتور لید، ایمپورت نمایشگاه، آدیت سئو، پیام" },
@@ -41,8 +47,8 @@
     { "name": "Digifair-ai-cloadfllare", "url": "https://github.com/Websites-by-AI/Digifair-ai-cloadfllare", "role": "دیجی‌فیر خدمات غرفه روی کلادفلر" },
     { "name": "armanlawfirm.ir", "url": "https://github.com/Websites-by-AI/armanlawfirm.ir-based-of-adl-pendar-based-of-dadgar-AI-with-insurance-armanlawfirm.ir", "role": "وکیل + بیمه خواهر" },
     { "name": "AI-Iimmigration-visa-assistant-", "url": "https://github.com/Websites-by-AI/AI-Iimmigration-visa-assistant-", "role": "سورس ویزا روی immigration.exhibition2world.ir" },
-    { "name": "HesabrasYar", "url": "https://github.com/Websites-by-AI/HesabrasYar---Intelligent-Audit-Assistant-", "role": "حسابرسی — واحد مالی" },
-    { "name": "Chatredash-CRM", "url": "https://github.com/Websites-by-AI/Chatredash-CRM", "role": "CRM پیگیری فروش غرفه" }
+    { "name": "Realty-State-AI-Wizard", "url": "https://github.com/Websites-by-AI/Realty-State-AI-Wizard", "role": "املاک AI — برآورد برای وام" },
+    { "name": "Chatredash-CRM", "url": "https://github.com/Websites-by-AI/Chatredash-CRM", "role": "رتبه برتر / CRM معرف" }
   ],
   "huggingFace": [
     { "id": "SoSa123456/clinic-lead-agent", "priority": "A", "url": "https://huggingface.co/spaces/SoSa123456/clinic-lead-agent", "app": "https://sosa123456-clinic-lead-agent.hf.space", "role": "سیستم عامل لید — باید Docker شود نه Static" },

@@ -81,7 +81,7 @@ export default function LandingPage() {
                 جزئیات نمایشگاه نفت
               </Link>
               <Link href="/sisters" className="rounded-2xl bg-white/10 px-5 py-3 text-[14px] font-extrabold ring-1 ring-white/20">
-                ۱۰ شرکت خواهر
+                ۱۰ حوزه · چند استارتاپ
               </Link>
             </div>
           </div>
@@ -166,16 +166,29 @@ export default function LandingPage() {
         <div className="mt-5 grid gap-3 sm:grid-cols-2 xl:grid-cols-5">
           {sisterCompanies.items.map((item) => (
             <article key={item.slug} className="rounded-2xl border bg-white p-4">
-              <p className="text-[10px] font-bold text-slate-400">{item.en}</p>
+              <div className="flex items-start justify-between gap-2">
+                <p className="text-[10px] font-bold text-slate-400">{item.en}</p>
+                <span className="rounded-full bg-slate-100 px-2 py-0.5 text-[10px] font-black text-slate-600">
+                  {fa.format(item.startups.length)} استارتاپ
+                </span>
+              </div>
               <h3 className="mt-1 text-[14px] font-extrabold">{item.name}</h3>
               <p className="mt-1 text-[12px] text-[#ee6748]">{item.role}</p>
               <p className="mt-2 text-[12px] leading-6 text-slate-600">{item.offer}</p>
+              <ul className="mt-2 space-y-1 text-[11px] leading-5 text-slate-500">
+                {item.startups.slice(0, 3).map((startup) => (
+                  <li key={startup.id}>
+                    {startup.website ? (
+                      <a href={startup.website} target="_blank" rel="noreferrer" className="font-bold text-[#ee6748]">
+                        {startup.name}
+                      </a>
+                    ) : (
+                      <span>{startup.name}</span>
+                    )}
+                  </li>
+                ))}
+              </ul>
               <p className="mt-2 text-[11px] font-black">{item.price}</p>
-              {item.website ? (
-                <a href={item.website} target="_blank" rel="noreferrer" className="mt-2 block truncate text-[11px] font-bold text-[#ee6748]">
-                  {item.website.replace(/^https?:\/\//, "")}
-                </a>
-              ) : null}
             </article>
           ))}
         </div>
@@ -200,8 +213,15 @@ export default function LandingPage() {
         <div className="mx-auto max-w-6xl px-4">
           <h2 className="text-[22px] font-black">شبکه همکاری: کلادفلر + گیت‌هاب + Hugging Face</h2>
           <p className="mt-2 max-w-3xl text-[14px] leading-7 text-slate-600">
-            سازمان <a className="font-bold text-[#ee6748]" href="https://github.com/Websites-by-AI/" target="_blank" rel="noreferrer">Websites-by-AI</a>
-            ، سایت‌های کلادفلر نمایشگاه، و اسپیس‌های RAG. نگین‌جام و تارانوم جدا هستند.
+            حساب{" "}
+            <a className="font-bold text-[#ee6748]" href="https://github.com/SBZ-EDU?tab=repositories" target="_blank" rel="noreferrer">
+              SBZ-EDU
+            </a>
+            {" "}و سازمان{" "}
+            <a className="font-bold text-[#ee6748]" href="https://github.com/Websites-by-AI/" target="_blank" rel="noreferrer">
+              Websites-by-AI
+            </a>
+            : در هر حوزه چند استارتاپ. بات نگین‌جام و civicavita وصل نیستند.
           </p>
           <div className="mt-6">
             <CooperationNetwork />
