@@ -1,3 +1,4 @@
+import cloudflareSites from "@/data/cloudflare-sites.json";
 import sisters from "@/data/sister-companies.json";
 import { cooperationModels } from "@/lib/business-data";
 
@@ -7,6 +8,7 @@ export async function GET() {
   return Response.json({
     ok: true,
     ...sisters,
+    cloudflareSites,
     cooperationModels,
   });
 }

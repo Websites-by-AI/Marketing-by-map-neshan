@@ -1,0 +1,85 @@
+{
+  "note": "فقط سایت‌های کلادفلر مرتبط با نمایشگاه / همکاری گروه دیدبان. نگین‌جام، تارانوم و civicavita جدا هستند.",
+  "items": [
+    {
+      "id": "neshan-m",
+      "label": "دیدبان محلی — نقشه ساختمان ۱۴۰۵",
+      "url": "https://neshan-m.exhibition2world.ir",
+      "kind": "worker",
+      "sister": "web",
+      "role": "نقشه + لیست ۴۴۰ غرفه + همکاری"
+    },
+    {
+      "id": "neshan-worker",
+      "label": "Worker neshan-m",
+      "url": "https://neshan-m.elasa2next.workers.dev",
+      "kind": "worker",
+      "sister": "web",
+      "role": "همان سایت روی workers.dev"
+    },
+    {
+      "id": "leadfair-ui",
+      "label": "LeadFair UI",
+      "url": "https://master.leadfair.pages.dev/",
+      "kind": "pages",
+      "sister": "seller",
+      "role": "اتصال‌گر هوشمند نمایشگاه"
+    },
+    {
+      "id": "leadfair-seo",
+      "label": "LeadFair SEO Lead",
+      "url": "https://master.leadfair.pages.dev/seo-lead",
+      "kind": "pages",
+      "sister": "web",
+      "role": "تحلیل سئو کلاینت‌ساید"
+    },
+    {
+      "id": "leadfair-rag",
+      "label": "LeadFair RAG UI",
+      "url": "https://master.leadfair.pages.dev/rag/",
+      "kind": "pages",
+      "sister": "seller",
+      "role": "چت RAG و نقشه سالن"
+    },
+    {
+      "id": "leadfair-preview",
+      "label": "LeadFair Pages preview",
+      "url": "https://7965e77d.leadfair.pages.dev",
+      "kind": "pages",
+      "sister": "seller",
+      "role": "دیپلوی زنده Pages (دامنه leadfair.exhibition2world.ir فعلاً ۴۰۴ است)"
+    },
+    {
+      "id": "rag2-api",
+      "label": "RAG2 API روی کلادفلر",
+      "url": "https://rag2.exhibition2world.ir/api/health",
+      "kind": "worker-route",
+      "sister": "seller",
+      "role": "پروکسی API نفت ۱۷۳۰ شرکت"
+    },
+    {
+      "id": "digifair",
+      "label": "دیجی‌فیر خدمات نمایشگاه",
+      "url": "https://digifair-cloudflare-full-fa.elasa2next.workers.dev",
+      "kind": "worker",
+      "sister": "logistics",
+      "role": "تأمین خدمات غرفه روی Worker"
+    },
+    {
+      "id": "arman-law",
+      "label": "آرمان لاو — وکیل",
+      "url": "https://armanlawfirm.ir",
+      "kind": "pages",
+      "sister": "lawyer",
+      "role": "دستیار حقوقی روی Cloudflare Pages"
+    },
+    {
+      "id": "immigration",
+      "label": "مهاجرت نمایشگاه",
+      "url": "https://immigration.exhibition2world.ir",
+      "kind": "pages",
+      "sister": "immigration",
+      "role": "ویزا/دستیار مهاجرت روی دامنه نمایشگاه"
+    }
+  ]
+}

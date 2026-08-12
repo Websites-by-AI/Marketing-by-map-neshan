@@ -925,8 +925,13 @@ export const cooperationModels = [
     tag: "استارتاپ ۱۰ واحدی",
     leadRange: "فروش + وام + وکیل + ویزا",
     price: "از ۱۲ میلیون شروع",
-    desc: "بعد از لید دیجیتال، همان مشتری به واحد فروش، مالی، وام، حقوقی، مهاجرت، بیمه، لجستیک، منابع انسانی یا آموزش ارجاع می‌شود.",
-    includes: ["یک پرونده مشترک", "ارجاع داخلی بدون اسپم", "رضایت انسان برای پیام", "گزارش واحد به واحد"],
+    desc: "بعد از لید دیجیتال، همان مشتری به واحدهای خواهر روی کلادفلر ارجاع می‌شود: نقشه، لیدفِر، وکیل، مهاجرت، دیجی‌فیر.",
+    includes: [
+      "نقشه: neshan-m.exhibition2world.ir",
+      "فروش/RAG: master.leadfair.pages.dev",
+      "وکیل: armanlawfirm.ir",
+      "مهاجرت: immigration.exhibition2world.ir",
+    ],
     color: "bg-[#e9f8f3] text-[#0d7a6a] border-[#c7efe3]",
   },
 ] as const;

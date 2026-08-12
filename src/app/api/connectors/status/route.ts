@@ -1,8 +1,10 @@
+import cloudflareSites from "@/data/cloudflare-sites.json";
 import { CONNECTORS, probe } from "@/lib/connectors";
 
 export const dynamic = "force-dynamic";
 
 export async function GET() {
+  const cfProbes = await Promise.all(cloudflareSites.items.map((site) => probe(site.url, 9000)));
   const [ragHealth, ragSearch, seoPage, ragUi, rag2, hfLeadfair, telegram] = await Promise.all([
     probe(`${CONNECTORS.leadfairRagApi}/api/health`),
     probe(`${CONNECTORS.leadfairRagApi}/api/search?q=%D9%84%D9%88%D9%84%D9%87&limit=1`),
