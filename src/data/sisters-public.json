@@ -1,42 +1,8 @@
 {
   "holding": "گروه دیدبان",
-  "tagline": "دوازده حوزه همکاری — استارتاپ‌های SBZ-EDU، Websites-by-AI و Heroku-elasa؛ محیط‌زیست و اجتماعی جدا از غرفه نمایشگاه",
-  "note": "لیست از مخازن عمومی SBZ-EDU، سازمان Websites-by-AI و https://github.com/Heroku-elasa ساخته شده (بررسی ۱۲ اوت ۲۰۲۶). حوزه‌های محیط‌زیست و اجتماعی برای پروژه‌هایی است که در ده حوزه قبلی جا نمی‌گرفتند. بعضی مخازن Heroku-elasa همان برند حوزه‌های قبلی‌اند (وکیل، املاک، پسماند، حسابرسی). Civicavita فقط در حوزه اجتماعی است نه CRM غرفه. بات تلگرام/بله وصل نمی‌شود. فروش و پیام فقط با رضایت انسان.",
-  "sources": {
-    "sbzEdu": "https://github.com/SBZ-EDU?tab=repositories",
-    "org": "https://github.com/orgs/Websites-by-AI/repositories",
-    "herokuElasa": "https://github.com/Heroku-elasa?tab=repositories"
-  },
-  "excluded": [
-    {
-      "name": "g2ray",
-      "reason": "فورک پروکسی آموزشی — استارتاپ همکاری نیست"
-    },
-    {
-      "name": "Opensource-onlive-body-avatar-app",
-      "reason": "آرشیو ۲۰۲۰"
-    },
-    {
-      "name": "NEGINJAM-COMPANY / neginejam-event-service",
-      "reason": "بات و محصول جدا؛ جشن‌ساز SBZ-EDU جداگانه در حوزه وب آمده"
-    },
-    {
-      "name": "Chatre_daneah3",
-      "reason": "مخزن خالی است"
-    },
-    {
-      "name": "ZNU-AI-Innovation-Center",
-      "reason": "مخزن Heroku-elasa بدون README/محتوا"
-    },
-    {
-      "name": "armanlawfirm…crupted",
-      "reason": "کپی خراب آرمان روی Heroku-elasa"
-    },
-    {
-      "name": "Heroku buildpacks / Glype / 2016 forks",
-      "reason": "زیرساخت قدیمی Heroku — استارتاپ محصول نیست"
-    }
-  ],
+  "tagline": "خدمات خواهر برای غرفه‌دار — سایت، امتیاز آمادگی و قدم بعدی",
+  "note": "صفحه عمومی فقط لینک سایت، تصویر، برچسب، توضیح و امتیاز را نشان می‌دهد.",
+  "scoringNote": "امتیاز آمادگی استفاده ۰–۱۰۰ از روی زنده بودن سایت، دامنه، و نوع هاست حساب شده (۱۲ اوت ۲۰۲۶). جزئیات فنی در صفحه عمومی نشان داده نمی‌شود.",
   "checkedAt": "2026-08-12",
   "items": [
     {
@@ -44,25 +10,12 @@
       "name": "دیدبان وب",
       "en": "Web & SEO",
       "role": "سایت و سئو",
-      "for": "غرفه‌دار بی‌سایت یا سایت ضعیف",
       "offer": "لندینگ فارسی + کاتالوگ + سئو محلی روی نقشه نشان",
-      "price": "از ۱۸ میلیون",
-      "website": "https://neshan-m.exhibition2world.ir",
-      "extraSites": [
-        "https://celebration-design-by-ai.pages.dev",
-        "https://adv-seo-2.vercel.app",
-        "https://master.leadfair.pages.dev/seo-lead"
-      ],
       "startups": [
         {
           "id": "neshan-m",
           "name": "دیدبان محلی",
-          "brand": "Marketing-by-map-neshan",
-          "owner": "Websites-by-AI",
-          "repo": "https://github.com/Websites-by-AI/Marketing-by-map-neshan",
           "website": "https://neshan-m.exhibition2world.ir",
-          "status": "live",
-          "role": "نقشه + ۴۴۰ غرفه ساختمان ۱۴۰۵",
           "description": "نقشه رسمی ۴۴۰ غرفه ساختمان ۱۴۰۵ با لید دیجیتال و اتصال به نفت.",
           "tags": [
             "وب",
@@ -81,23 +34,13 @@
             "قرارداد و قیمت آماده کن",
             "۲ کیس موفق غرفه بگذار"
           ],
-          "scoreWhy": [
-            "آدرس عمومی دارد",
-            "سایت زنده پاسخ می‌دهد",
-            "دامنه نمایشگاه یا .ir"
-          ],
           "screenshot": "/sisters/neshan-m.jpg",
           "ready": true
         },
         {
           "id": "celebration",
           "name": "جشن‌ساز",
-          "brand": "Celebration Design by AI",
-          "owner": "SBZ-EDU",
-          "repo": "https://github.com/SBZ-EDU/celebration-design-by-ai",
           "website": "https://celebration-design-by-ai.pages.dev",
-          "status": "live",
-          "role": "طراحی جشن و رویداد با AI — استارتاپ دوم حوزه وب",
           "description": "طراحی جشن و رونمایی محصول برای غرفه‌دار.",
           "tags": [
             "وب",
@@ -113,23 +56,13 @@
             "پکیج قیمت فارسی بنویس",
             "به LeadFair وصل کن"
           ],
-          "scoreWhy": [
-            "آدرس عمومی دارد",
-            "سایت زنده پاسخ می‌دهد",
-            "هاست کلادفلر"
-          ],
           "screenshot": "/sisters/celebration.jpg",
           "ready": true
         },
         {
           "id": "adv-seo-2",
           "name": "Clinic Signal",
-          "brand": "Adv-seo-2",
-          "owner": "Websites-by-AI",
-          "repo": "https://github.com/Websites-by-AI/Adv-seo-2",
           "website": "https://adv-seo-2.vercel.app",
-          "status": "live",
-          "role": "آدیت سئو، ایمپورت نمایشگاه، موتور لید",
           "description": "موتور لید و آدیت سئو با ایمپورت لیست نمایشگاه.",
           "tags": [
             "وب",
@@ -145,23 +78,13 @@
             "پکیج قیمت فارسی بنویس",
             "به LeadFair وصل کن"
           ],
-          "scoreWhy": [
-            "آدرس عمومی دارد",
-            "سایت زنده پاسخ می‌دهد",
-            "دمو Vercel"
-          ],
           "screenshot": "/sisters/adv-seo-2.jpg",
           "ready": true
         },
         {
           "id": "adv-seo",
           "name": "Adv-seo نسخه ۱",
-          "brand": "Adv-seo",
-          "owner": "Websites-by-AI",
-          "repo": "https://github.com/Websites-by-AI/Adv-seo",
           "website": "https://adv-seo.vercel.app",
-          "status": "live",
-          "role": "داشبورد سئو اول",
           "description": "داشبورد سئو نسخه اول؛ برای دمو کافی است.",
           "tags": [
             "وب",
@@ -177,23 +100,13 @@
             "پکیج قیمت فارسی بنویس",
             "به LeadFair وصل کن"
           ],
-          "scoreWhy": [
-            "آدرس عمومی دارد",
-            "سایت زنده پاسخ می‌دهد",
-            "دمو Vercel"
-          ],
           "screenshot": "/sisters/adv-seo.jpg",
           "ready": true
         },
         {
           "id": "seo-wp",
           "name": "اتوماسیون وردپرس",
-          "brand": "SEO-wordpress-automation",
-          "owner": "Websites-by-AI",
-          "repo": "https://github.com/Websites-by-AI/SEO-wordpress-automation",
           "website": null,
-          "status": "repo",
-          "role": "بعد از فروش سایت غرفه",
           "description": "اتوماسیون محتوا بعد از فروش سایت وردپرسی.",
           "tags": [
             "وب",
@@ -211,10 +124,6 @@
             "نسخه دمو را دیپلوی کن",
             "فرم واتساپ/تماس بگذار"
           ],
-          "scoreWhy": [
-            "سایت عمومی ندارد",
-            "فقط مخزن/نمونه"
-          ],
           "screenshot": "/sisters/seo-wp.svg",
           "ready": false
         }
@@ -225,26 +134,12 @@
       "name": "دیدبان فروش",
       "en": "Seller / B2B",
       "role": "فروشنده غرفه",
-      "for": "شرکت تولیدی ساختمان و نفت",
       "offer": "اسکریپت فروش غرفه، پیگیری لید بعد از نمایشگاه، CRM",
-      "price": "ماهانه از ۸ میلیون",
-      "website": "https://master.leadfair.pages.dev/",
-      "extraSites": [
-        "https://master.leadfair.pages.dev/rag/",
-        "https://rag2.exhibition2world.ir/api/health",
-        "https://seo-liderfer.vercel.app",
-        "https://vercel-app-amber-five.vercel.app/api/health"
-      ],
       "startups": [
         {
           "id": "leadfair",
           "name": "لیدفِر / LeadFair RAG",
-          "brand": "exhibtion-rag-test1",
-          "owner": "Websites-by-AI",
-          "repo": "https://github.com/Websites-by-AI/exhibtion-rag-test1",
           "website": "https://master.leadfair.pages.dev/",
-          "status": "live",
-          "role": "۱۷۳۰ شرکت نفت + جستجوی RAG زنده",
           "description": "جستجوی RAG روی ۱۷۳۰ شرکت نفت و صف فروش غرفه.",
           "tags": [
             "فروش",
@@ -260,23 +155,13 @@
             "پکیج قیمت فارسی بنویس",
             "به LeadFair وصل کن"
           ],
-          "scoreWhy": [
-            "آدرس عمومی دارد",
-            "سایت زنده پاسخ می‌دهد",
-            "هاست کلادفلر"
-          ],
           "screenshot": "/sisters/leadfair.jpg",
           "ready": true
         },
         {
           "id": "seo-liderfer",
           "name": "لیدفر صف فروش",
-          "brand": "seo-liderfer",
-          "owner": "Websites-by-AI",
-          "repo": "https://github.com/Websites-by-AI/seo-liderfer",
           "website": "https://seo-liderfer.vercel.app",
-          "status": "live",
-          "role": "رادار فروش سئو و صف P1–P3",
           "description": "صف اولویت لید سئو P1 تا P3.",
           "tags": [
             "فروش",
@@ -292,23 +177,13 @@
             "پکیج قیمت فارسی بنویس",
             "به LeadFair وصل کن"
           ],
-          "scoreWhy": [
-            "آدرس عمومی دارد",
-            "سایت زنده پاسخ می‌دهد",
-            "دمو Vercel"
-          ],
           "screenshot": "/sisters/seo-liderfer.jpg",
           "ready": true
         },
         {
           "id": "chatredash",
           "name": "رتبه برتر / Chatredash",
-          "brand": "Chatredash-CRM",
-          "owner": "Websites-by-AI",
-          "repo": "https://github.com/Websites-by-AI/Chatredash-CRM",
           "website": null,
-          "status": "repo",
-          "role": "CRM معرف و پیگیری فروش — محتوای فعلی مخزن رتبه برتر است",
           "description": "CRM معرف؛ دمو عمومی پایدار ندارد.",
           "tags": [
             "فروش",
@@ -326,22 +201,13 @@
             "نسخه دمو را دیپلوی کن",
             "فرم واتساپ/تماس بگذار"
           ],
-          "scoreWhy": [
-            "سایت عمومی ندارد",
-            "فقط مخزن/نمونه"
-          ],
           "screenshot": "/sisters/chatredash.svg",
           "ready": false
         },
         {
           "id": "elecon",
           "name": "الکُن | فروش صنعت برق",
-          "brand": "Elecon-based-of-helius-num2",
-          "owner": "Heroku-elasa",
-          "repo": "https://github.com/Heroku-elasa/Elecon-based-of-helius-num2",
           "website": null,
-          "status": "repo",
-          "role": "B2B برق — پیش‌بینی فروش و ناهنجاری",
           "description": "فروش هوشمند صنعت برق برای غرفه تاسیسات.",
           "tags": [
             "فروش",
@@ -359,22 +225,13 @@
             "نسخه دمو را دیپلوی کن",
             "فرم واتساپ/تماس بگذار"
           ],
-          "scoreWhy": [
-            "سایت عمومی ندارد",
-            "فقط مخزن/نمونه"
-          ],
           "screenshot": "/sisters/elecon.svg",
           "ready": false
         },
         {
           "id": "hourtash",
           "name": "آزمایشگاه هورتش",
-          "brand": "Hour-Tash-Laboratory",
-          "owner": "Heroku-elasa",
-          "repo": "https://github.com/Heroku-elasa/Hour-Tash-Laboratory-Advanced-Analysis-Services-base-do-site",
           "website": null,
-          "status": "repo",
-          "role": "آزمایش غذا و کشاورزی — خدمات B2B غرفه‌دار",
           "description": "آزمایش غذا و کشاورزی به‌عنوان خدمت جانبی.",
           "tags": [
             "فروش",
@@ -392,10 +249,6 @@
             "نسخه دمو را دیپلوی کن",
             "فرم واتساپ/تماس بگذار"
           ],
-          "scoreWhy": [
-            "سایت عمومی ندارد",
-            "فقط مخزن/نمونه"
-          ],
           "screenshot": "/sisters/hourtash.svg",
           "ready": false
         }
@@ -406,23 +259,12 @@
       "name": "دیدبان مالی",
       "en": "Finance",
       "role": "مالی و حسابداری",
-      "for": "تولیدکننده و بازرگان",
       "offer": "طرح کسب‌وکار، برآورد ملک، پرونده مالی غرفه",
-      "price": "ماهانه از ۶ میلیون",
-      "website": "https://huggingface.co/spaces/sosa123454321/Business-plan-generator",
-      "extraSites": [
-        "https://huggingface.co/spaces/sosa123454321/Bussiness-plan-maker"
-      ],
       "startups": [
         {
           "id": "bizplan",
           "name": "سازنده طرح کسب‌وکار",
-          "brand": "Business-plan-generator",
-          "owner": "Hugging Face",
-          "repo": "https://huggingface.co/spaces/sosa123454321/Business-plan-generator",
           "website": "https://sosa123454321-business-plan-generator.hf.space",
-          "status": "hf-error",
-          "role": "طرح مالی غرفه‌دار — Space الان خطای اجرا دارد",
           "description": "سازنده طرح کسب‌وکار؛ Space الان خطا دارد.",
           "tags": [
             "مالی",
@@ -437,22 +279,13 @@
             "خطای اجرا را درست کن",
             "پشتیبان کلادفلر بساز"
           ],
-          "scoreWhy": [
-            "آدرس عمومی دارد",
-            "Space خطا دارد"
-          ],
           "screenshot": "/sisters/bizplan.svg",
           "ready": false
         },
         {
           "id": "bizplan-2",
           "name": "Business Plan Maker",
-          "brand": "Bussiness-plan-maker",
-          "owner": "Hugging Face",
-          "repo": "https://huggingface.co/spaces/sosa123454321/Bussiness-plan-maker",
           "website": "https://sosa123454321-bussiness-plan-maker.hf.space",
-          "status": "hf-sleeping",
-          "role": "نسخه دوم طرح کسب‌وکار — خواب/سهمیه CPU",
           "description": "نسخه دوم طرح کسب‌وکار؛ Space خواب است.",
           "tags": [
             "مالی",
@@ -467,22 +300,13 @@
             "Space را بیدار کن یا نسخه استاتیک بساز",
             "سقف CPU را رفع کن"
           ],
-          "scoreWhy": [
-            "آدرس عمومی دارد",
-            "Space خواب است"
-          ],
           "screenshot": "/sisters/bizplan-2.svg",
           "ready": false
         },
         {
           "id": "realty-finance",
           "name": "املاک AI",
-          "brand": "Realty-State-AI-Wizard",
-          "owner": "Websites-by-AI",
-          "repo": "https://github.com/Websites-by-AI/Realty-State-AI-Wizard",
           "website": null,
-          "status": "repo",
-          "role": "برآورد قیمت ملک تهران/کرج/مشهد — پرونده مالی وثیقه",
           "description": "برآورد قیمت ملک برای پرونده مالی.",
           "tags": [
             "مالی",
@@ -500,22 +324,13 @@
             "نسخه دمو را دیپلوی کن",
             "فرم واتساپ/تماس بگذار"
           ],
-          "scoreWhy": [
-            "سایت عمومی ندارد",
-            "فقط مخزن/نمونه"
-          ],
           "screenshot": "/sisters/realty-finance.svg",
           "ready": false
         },
         {
           "id": "hesabras",
           "name": "حسابرس‌یار",
-          "brand": "HesabrasYar",
-          "owner": "Websites-by-AI",
-          "repo": "https://github.com/Websites-by-AI/HesabrasYar---Intelligent-Audit-Assistant-",
           "website": null,
-          "status": "missing",
-          "role": "دستیار حسابرسی — مخزن در ۱۲ اوت ۲۰۲۶ از API گیت‌هاب ۴۰۴ بود",
           "description": "دستیار حسابرسی؛ نسخه عمومی الان در دسترس نیست.",
           "tags": [
             "مالی",
@@ -533,22 +348,13 @@
             "پروژه را دوباره بساز یا جایگزین کن",
             "یک صفحه معرفی و دمو استاتیک بساز"
           ],
-          "scoreWhy": [
-            "سایت عمومی ندارد",
-            "مخزن پیدا نشد"
-          ],
           "screenshot": "/sisters/hesabras.svg",
           "ready": false
         },
         {
           "id": "steel-hesabras",
           "name": "حسابرس‌یار استیل‌آنلاین",
-          "brand": "Steel-Online---AI-Assitance-online",
-          "owner": "Heroku-elasa",
-          "repo": "https://github.com/Heroku-elasa/Steel-Online---AI-Assitance-online",
           "website": null,
-          "status": "repo",
-          "role": "نسخه Heroku-elasa دستیار حسابرسی (جایگزین مخزن ۴۰۴ HesabrasYar)",
           "description": "جایگزین حسابرس‌یار روی استیل‌آنلاین.",
           "tags": [
             "مالی",
@@ -566,10 +372,6 @@
             "نسخه دمو را دیپلوی کن",
             "فرم واتساپ/تماس بگذار"
           ],
-          "scoreWhy": [
-            "سایت عمومی ندارد",
-            "فقط مخزن/نمونه"
-          ],
           "screenshot": "/sisters/steel-hesabras.svg",
           "ready": false
         }
@@ -580,21 +382,12 @@
       "name": "دیدبان وام",
       "en": "Bank loan",
       "role": "وام و اعتبار بانکی",
-      "for": "توسعه خط تولید و سرمایه در گردش",
       "offer": "پرونده بانکی با طرح کسب‌وکار + برآورد ملک؛ معرفی صندوق نوآوری حاضر در سالن",
-      "price": "موفقیت‌محور",
-      "website": null,
-      "extraSites": [],
       "startups": [
         {
           "id": "realty-loan",
           "name": "املاک AI — وثیقه و برآورد",
-          "brand": "Realty-State-AI-Wizard",
-          "owner": "Websites-by-AI",
-          "repo": "https://github.com/Websites-by-AI/Realty-State-AI-Wizard",
           "website": null,
-          "status": "repo",
-          "role": "استارتاپ دوم حوزه وام: قیمت‌گذاری ملک برای پرونده تسهیلات",
           "description": "املاک AI برای پرونده وام و وثیقه.",
           "tags": [
             "وام",
@@ -612,22 +405,13 @@
             "نسخه دمو را دیپلوی کن",
             "فرم واتساپ/تماس بگذار"
           ],
-          "scoreWhy": [
-            "سایت عمومی ندارد",
-            "فقط مخزن/نمونه"
-          ],
           "screenshot": "/sisters/realty-loan.svg",
           "ready": false
         },
         {
           "id": "bizplan-loan",
           "name": "طرح کسب‌وکار برای بانک",
-          "brand": "Bussiness-plan-maker",
-          "owner": "Hugging Face",
-          "repo": "https://huggingface.co/spaces/sosa123454321/Bussiness-plan-maker",
           "website": "https://huggingface.co/spaces/sosa123454321/Bussiness-plan-maker",
-          "status": "hf-sleeping",
-          "role": "پیش‌نویس طرح برای وام سرمایه در گردش — سایت اختصاصی وام هنوز روی کلادفلر نیست",
           "description": "طرح کسب‌وکار بانکی؛ سایت وام جدا ندارد.",
           "tags": [
             "وام",
@@ -642,22 +426,13 @@
             "Space را بیدار کن یا نسخه استاتیک بساز",
             "سقف CPU را رفع کن"
           ],
-          "scoreWhy": [
-            "آدرس عمومی دارد",
-            "Space خواب است"
-          ],
           "screenshot": "/sisters/bizplan-loan.svg",
           "ready": false
         },
         {
           "id": "realty-heroku",
           "name": "املاک AI (Heroku-elasa)",
-          "brand": "realty-state-ai-wizard",
-          "owner": "Heroku-elasa",
-          "repo": "https://github.com/Heroku-elasa/realty-state-ai-wizard",
           "website": null,
-          "status": "repo",
-          "role": "همان ویزارد املاک روی حساب Heroku-elasa",
           "description": "کپی ویزارد املاک روی Heroku-elasa.",
           "tags": [
             "وام",
@@ -675,10 +450,6 @@
             "نسخه دمو را دیپلوی کن",
             "فرم واتساپ/تماس بگذار"
           ],
-          "scoreWhy": [
-            "سایت عمومی ندارد",
-            "فقط مخزن/نمونه"
-          ],
           "screenshot": "/sisters/realty-heroku.svg",
           "ready": false
         }
@@ -689,25 +460,12 @@
       "name": "دیدبان حقوقی",
       "en": "Lawyer",
       "role": "وکیل و سردفتر",
-      "for": "قرارداد غرفه، نمایندگی، برند، سند",
       "offer": "قرارداد فروش صادراتی، علامت تجاری، پیش‌نویس سند رسمی",
-      "price": "از ۴ میلیون مشاوره",
-      "website": "https://armanlawfirm.ir",
-      "extraSites": [
-        "https://notary-662-sbz.pages.dev",
-        "https://notary-662.pages.dev",
-        "https://sosa123454321-notary-662-rag-dashboard.static.hf.space/"
-      ],
       "startups": [
         {
           "id": "arman",
           "name": "موسسه حقوقی آرمان",
-          "brand": "armanlawfirm.ir",
-          "owner": "Websites-by-AI",
-          "repo": "https://github.com/Websites-by-AI/armanlawfirm.ir-based-of-adl-pendar-based-of-dadgar-AI-with-insurance-armanlawfirm.ir",
           "website": "https://armanlawfirm.ir",
-          "status": "live",
-          "role": "دستیار وکیل + بیمه",
           "description": "دستیار وکیل و بیمه آرمان روی دامنه زنده.",
           "tags": [
             "حقوقی",
@@ -726,23 +484,13 @@
             "قرارداد و قیمت آماده کن",
             "۲ کیس موفق غرفه بگذار"
           ],
-          "scoreWhy": [
-            "آدرس عمومی دارد",
-            "سایت زنده پاسخ می‌دهد",
-            "دامنه نمایشگاه یا .ir"
-          ],
           "screenshot": "/sisters/arman.jpg",
           "ready": true
         },
         {
           "id": "notary-662",
           "name": "دفتر اسناد رسمی ۶۶۲ تهران",
-          "brand": "Notary-662-Cloudflare",
-          "owner": "SBZ-EDU",
-          "repo": "https://github.com/SBZ-EDU/Notary-662-Cloudflare",
           "website": "https://notary-662-sbz.pages.dev",
-          "status": "live",
-          "role": "استارتاپ دوم حقوقی: تنظیم سند و RAG حقوقی روی کلادفلر",
           "description": "دفتر اسناد ۶۶۲ با RAG حقوقی روی کلادفلر.",
           "tags": [
             "حقوقی",
@@ -758,23 +506,13 @@
             "پکیج قیمت فارسی بنویس",
             "به LeadFair وصل کن"
           ],
-          "scoreWhy": [
-            "آدرس عمومی دارد",
-            "سایت زنده پاسخ می‌دهد",
-            "هاست کلادفلر"
-          ],
           "screenshot": "/sisters/notary-662.jpg",
           "ready": true
         },
         {
           "id": "notary-source",
           "name": "Notary 662 منبع AI Studio",
-          "brand": "Notary-662",
-          "owner": "Websites-by-AI",
-          "repo": "https://github.com/Websites-by-AI/Notary-662",
           "website": "https://notary-662.pages.dev",
-          "status": "live",
-          "role": "نسخه منبع همان سردفتر",
           "description": "نسخه منبع همان سردفتر.",
           "tags": [
             "حقوقی",
@@ -790,23 +528,13 @@
             "پکیج قیمت فارسی بنویس",
             "به LeadFair وصل کن"
           ],
-          "scoreWhy": [
-            "آدرس عمومی دارد",
-            "سایت زنده پاسخ می‌دهد",
-            "هاست کلادفلر"
-          ],
           "screenshot": "/sisters/notary-source.jpg",
           "ready": true
         },
         {
           "id": "haqyar",
           "name": "حق‌یار",
-          "brand": "Chatre-danesh-2hagh-yar",
-          "owner": "Websites-by-AI",
-          "repo": "https://github.com/Websites-by-AI/Chatre-danesh-2hagh-yar",
           "website": null,
-          "status": "repo",
-          "role": "مشاوره حقوقی آنلاین — متن و قرارداد",
           "description": "مشاوره حقوقی آنلاین؛ دمو عمومی ندارد.",
           "tags": [
             "حقوقی",
@@ -824,22 +552,13 @@
             "نسخه دمو را دیپلوی کن",
             "فرم واتساپ/تماس بگذار"
           ],
-          "scoreWhy": [
-            "سایت عمومی ندارد",
-            "فقط مخزن/نمونه"
-          ],
           "screenshot": "/sisters/haqyar.svg",
           "ready": false
         },
         {
           "id": "arman2",
           "name": "Arman2 نوت‌بوک",
-          "brand": "Arman2",
-          "owner": "SBZ-EDU",
-          "repo": "https://github.com/SBZ-EDU/Arman2",
           "website": null,
-          "status": "repo",
-          "role": "فقط نوت‌بوک RAG اتصال نمایشگاه — README ندارد",
           "description": "فقط نوت‌بوک اتصال نمایشگاه.",
           "tags": [
             "حقوقی",
@@ -857,22 +576,13 @@
             "نسخه دمو را دیپلوی کن",
             "فرم واتساپ/تماس بگذار"
           ],
-          "scoreWhy": [
-            "سایت عمومی ندارد",
-            "فقط مخزن/نمونه"
-          ],
           "screenshot": "/sisters/arman2.svg",
           "ready": false
         },
         {
           "id": "dadgar-legal",
           "name": "دادگر AI / دستیار حقوقی",
-          "brand": "Legal-Desitar-Dadgar-AI",
-          "owner": "Heroku-elasa",
-          "repo": "https://github.com/Heroku-elasa/Legal-Desitar-with-its-own-modules-offering-Dadgar-AI---Intelligent-Legal-Assistant",
           "website": null,
-          "status": "repo",
-          "role": "پیش‌نویس سند و جستجوی وکیل — نسخه Heroku-elasa",
           "description": "دادگر AI برای پیش‌نویس سند.",
           "tags": [
             "حقوقی",
@@ -890,22 +600,13 @@
             "نسخه دمو را دیپلوی کن",
             "فرم واتساپ/تماس بگذار"
           ],
-          "scoreWhy": [
-            "سایت عمومی ندارد",
-            "فقط مخزن/نمونه"
-          ],
           "screenshot": "/sisters/dadgar-legal.svg",
           "ready": false
         },
         {
           "id": "arman-heroku",
           "name": "آرمان لاو (Heroku-elasa)",
-          "brand": "armanlawfirm.ir",
-          "owner": "Heroku-elasa",
-          "repo": "https://github.com/Heroku-elasa/armanlawfirm.ir-based-of-adl-pendar-based-of-dadgar-AI-with-insurance-armanlawfirm.ir",
           "website": "https://armanlawfirm.ir",
-          "status": "live",
-          "role": "کپی مخزن وکیل+بیمه روی Heroku-elasa",
           "description": "همان سایت آرمان از حساب Heroku-elasa.",
           "tags": [
             "حقوقی",
@@ -924,11 +625,6 @@
             "قرارداد و قیمت آماده کن",
             "۲ کیس موفق غرفه بگذار"
           ],
-          "scoreWhy": [
-            "آدرس عمومی دارد",
-            "سایت زنده پاسخ می‌دهد",
-            "دامنه نمایشگاه یا .ir"
-          ],
           "screenshot": "/sisters/arman.jpg",
           "ready": true
         }
@@ -939,23 +635,12 @@
       "name": "دیدبان مهاجرت",
       "en": "Immigration",
       "role": "ویزا و مهاجرت کاری",
-      "for": "خریدار خارجی و نیروی متخصص",
       "offer": "دعوت‌نامه نمایشگاه + مسیر ایران به استانبول — فقط سایت، نه بات",
-      "price": "پرونده‌ای",
-      "website": "https://immigration.exhibition2world.ir",
-      "extraSites": [
-        "https://shahrokh-immigration.pages.dev"
-      ],
       "startups": [
         {
           "id": "visa-fair",
           "name": "دستیار ویزای نمایشگاه",
-          "brand": "AI-Iimmigration-visa-assistant-",
-          "owner": "Websites-by-AI",
-          "repo": "https://github.com/Websites-by-AI/AI-Iimmigration-visa-assistant-",
           "website": "https://immigration.exhibition2world.ir",
-          "status": "live",
-          "role": "ویزای تجاری روی دامنه نمایشگاه",
           "description": "دستیار ویزای تجاری روی دامنه نمایشگاه.",
           "tags": [
             "ویزا",
@@ -973,23 +658,13 @@
             "قرارداد و قیمت آماده کن",
             "۲ کیس موفق غرفه بگذار"
           ],
-          "scoreWhy": [
-            "آدرس عمومی دارد",
-            "سایت زنده پاسخ می‌دهد",
-            "دامنه نمایشگاه یا .ir"
-          ],
           "screenshot": "/sisters/visa-fair.jpg",
           "ready": true
         },
         {
           "id": "shahrokh",
           "name": "گروه مهاجرتی شاهرخ",
-          "brand": "shahrokh-immigration-turkey",
-          "owner": "SBZ-EDU",
-          "repo": "https://github.com/SBZ-EDU/shahrokh-immigration-turkey",
           "website": "https://shahrokh-immigration.pages.dev",
-          "status": "live",
-          "role": "استارتاپ دوم مهاجرت: ایران به استانبول — بات تلگرام وصل نشده",
           "description": "مسیر ایران به استانبول — فقط سایت، بدون بات.",
           "tags": [
             "ویزا",
@@ -1004,11 +679,6 @@
             "پکیج قیمت فارسی بنویس",
             "به LeadFair وصل کن"
           ],
-          "scoreWhy": [
-            "آدرس عمومی دارد",
-            "سایت زنده پاسخ می‌دهد",
-            "هاست کلادفلر"
-          ],
           "screenshot": "/sisters/shahrokh.jpg",
           "ready": true
         }
@@ -1019,23 +689,12 @@
       "name": "دیدبان بیمه",
       "en": "Insurance",
       "role": "بیمه غرفه و خدمات وابسته",
-      "for": "کالا، مسئولیت، حمل، خدمات ترحیم",
       "offer": "بیمه بار و غرفه از آرمان + پورتال مسیر ابدی برای خدمات وابسته",
-      "price": "حق بیمه عرف بازار",
-      "website": "https://armanlawfirm.ir",
-      "extraSites": [
-        "https://eternal-path-burial-portal.pages.dev"
-      ],
       "startups": [
         {
           "id": "arman-ins",
           "name": "بیمه آرمان",
-          "brand": "armanlawfirm.ir",
-          "owner": "Websites-by-AI",
-          "repo": "https://github.com/Websites-by-AI/armanlawfirm.ir-based-of-adl-pendar-based-of-dadgar-AI-with-insurance-armanlawfirm.ir",
           "website": "https://armanlawfirm.ir",
-          "status": "live",
-          "role": "ماژول بیمه همان سایت وکیل",
           "description": "ماژول بیمه همان سایت آرمان.",
           "tags": [
             "بیمه",
@@ -1053,23 +712,13 @@
             "قرارداد و قیمت آماده کن",
             "۲ کیس موفق غرفه بگذار"
           ],
-          "scoreWhy": [
-            "آدرس عمومی دارد",
-            "سایت زنده پاسخ می‌دهد",
-            "دامنه نمایشگاه یا .ir"
-          ],
           "screenshot": "/sisters/arman.jpg",
           "ready": true
         },
         {
           "id": "eternal-path",
           "name": "مسیریاب قبور",
-          "brand": "Eternal-Path-Burial-Portal",
-          "owner": "Websites-by-AI",
-          "repo": "https://github.com/Websites-by-AI/Eternal-Path-Burial-Portal",
           "website": "https://eternal-path-burial-portal.pages.dev",
-          "status": "live",
-          "role": "استارتاپ دوم بیمه/خدمات وابسته — پورتال ترحیم روی کلادفلر",
           "description": "پورتال خدمات ترحیم و مسیر قبر.",
           "tags": [
             "بیمه",
@@ -1084,11 +733,6 @@
             "پکیج قیمت فارسی بنویس",
             "به LeadFair وصل کن"
           ],
-          "scoreWhy": [
-            "آدرس عمومی دارد",
-            "سایت زنده پاسخ می‌دهد",
-            "هاست کلادفلر"
-          ],
           "screenshot": "/sisters/eternal-path.jpg",
           "ready": true
         }
@@ -1099,24 +743,12 @@
       "name": "دیدبان لجستیک",
       "en": "Logistics",
       "role": "حمل، گمرک، پسماند",
-      "for": "نمونه کالا و صادرات",
       "offer": "ترخیص و خدمات غرفه + مدیریت پسماند هوشمند",
-      "price": "بر اساس وزن/مسیر",
-      "website": "https://digifair-cloudflare-full-fa.elasa2next.workers.dev",
-      "extraSites": [
-        "https://huggingface.co/spaces/sosa123454321/Expo-connector1",
-        "https://smartwaste.pages.dev"
-      ],
       "startups": [
         {
           "id": "digifair-cf",
           "name": "دیجی‌فیر کلادفلر",
-          "brand": "Digifair-ai-cloadfllare",
-          "owner": "Websites-by-AI",
-          "repo": "https://github.com/Websites-by-AI/Digifair-ai-cloadfllare",
           "website": "https://digifair-cloudflare-full-fa.elasa2next.workers.dev",
-          "status": "live",
-          "role": "خدمات غرفه روی Worker",
           "description": "خدمات غرفه دیجی‌فیر روی Worker.",
           "tags": [
             "لجستیک",
@@ -1132,23 +764,13 @@
             "پکیج قیمت فارسی بنویس",
             "به LeadFair وصل کن"
           ],
-          "scoreWhy": [
-            "آدرس عمومی دارد",
-            "سایت زنده پاسخ می‌دهد",
-            "هاست کلادفلر"
-          ],
           "screenshot": "/sisters/digifair-cf.jpg",
           "ready": true
         },
         {
           "id": "digifair-vercel",
           "name": "دیجی‌فیر Vercel",
-          "brand": "Digifair-ai-vercel",
-          "owner": "Websites-by-AI",
-          "repo": "https://github.com/Websites-by-AI/Digifair-ai-vercel",
           "website": null,
-          "status": "repo",
-          "role": "نسخه دوم همان خدمات نمایشگاه",
           "description": "نسخه دوم دیجی‌فیر بدون دمو پایدار.",
           "tags": [
             "لجستیک",
@@ -1166,22 +788,13 @@
             "نسخه دمو را دیپلوی کن",
             "فرم واتساپ/تماس بگذار"
           ],
-          "scoreWhy": [
-            "سایت عمومی ندارد",
-            "فقط مخزن/نمونه"
-          ],
           "screenshot": "/sisters/digifair-vercel.svg",
           "ready": false
         },
         {
           "id": "smartwaste",
           "name": "پسماند هوشمند EcoRide",
-          "brand": "SmartWaste-AI",
-          "owner": "Websites-by-AI",
-          "repo": "https://github.com/Websites-by-AI/SmartWaste-AI---Intelligent-Waste-Management-number-2",
           "website": "https://smartwaste.pages.dev",
-          "status": "live",
-          "role": "پسماند هوشمند EcoSmart — زنده روی Pages؛ نسخه سازمان و Heroku-elasa یکی است",
           "description": "پسماند هوشمند EcoSmart برای سالن.",
           "tags": [
             "لجستیک",
@@ -1197,11 +810,6 @@
             "پکیج قیمت فارسی بنویس",
             "به LeadFair وصل کن"
           ],
-          "scoreWhy": [
-            "آدرس عمومی دارد",
-            "سایت زنده پاسخ می‌دهد",
-            "هاست کلادفلر"
-          ],
           "screenshot": "/sisters/smartwaste.jpg",
           "ready": true
         }
@@ -1212,21 +820,12 @@
       "name": "دیدبان منابع انسانی",
       "en": "HR",
       "role": "استخدام و مسیر شغلی",
-      "for": "ویزیتور، کارشناس فنی، آزمون حرفه‌ای",
       "offer": "پیدا کردن متخصص + کارنامه کنکور وکالت/سردفتری",
-      "price": "از ۳ میلیون آگهی",
-      "website": null,
-      "extraSites": [],
       "startups": [
         {
           "id": "findexpert",
           "name": "Find Expert / ecoAI",
-          "brand": "Findexpert2",
-          "owner": "Websites-by-AI",
-          "repo": "https://github.com/Websites-by-AI/Findexpert2",
           "website": "https://findexpert2.pages.dev",
-          "status": "down",
-          "role": "پیدا کردن متخصص و گزارش محیط‌زیست — Pages الان ۵۲۲ است",
           "description": "پیدا کردن متخصص؛ Pages الان قطع است.",
           "tags": [
             "منابع انسانی",
@@ -1240,23 +839,13 @@
             "قطع بودن Pages را درست کن",
             "DNS و SSL را چک کن"
           ],
-          "scoreWhy": [
-            "آدرس عمومی دارد",
-            "آدرس هست ولی قطع است",
-            "هاست کلادفلر"
-          ],
           "screenshot": "/sisters/findexpert.svg",
           "ready": false
         },
         {
           "id": "chatre-karname",
           "name": "چتر دانش | کارنامه",
-          "brand": "Chattre-danesh-karname2",
-          "owner": "SBZ-EDU",
-          "repo": "https://github.com/SBZ-EDU/Chattre-danesh-karname2",
           "website": null,
-          "status": "repo",
-          "role": "استارتاپ دوم منابع انسانی: سامانه کنکور وکالت، سردفتری، قضاوت",
           "description": "کارنامه کنکور وکالت و سردفتری.",
           "tags": [
             "منابع انسانی",
@@ -1273,22 +862,13 @@
             "نسخه دمو را دیپلوی کن",
             "فرم واتساپ/تماس بگذار"
           ],
-          "scoreWhy": [
-            "سایت عمومی ندارد",
-            "فقط مخزن/نمونه"
-          ],
           "screenshot": "/sisters/chatre-karname.svg",
           "ready": false
         },
         {
           "id": "chatre-org",
           "name": "چتر دانش (سازمان)",
-          "brand": "Chattre-danesh-karname2",
-          "owner": "Websites-by-AI",
-          "repo": "https://github.com/Websites-by-AI/Chattre-danesh-karname2",
           "website": null,
-          "status": "repo",
-          "role": "همان محصول روی سازمان",
           "description": "همان چتر دانش روی سازمان.",
           "tags": [
             "منابع انسانی",
@@ -1305,22 +885,13 @@
             "نسخه دمو را دیپلوی کن",
             "فرم واتساپ/تماس بگذار"
           ],
-          "scoreWhy": [
-            "سایت عمومی ندارد",
-            "فقط مخزن/نمونه"
-          ],
           "screenshot": "/sisters/chatre-org.svg",
           "ready": false
         },
         {
           "id": "karyab",
           "name": "کاریاب AI | رزومه‌ساز",
-          "brand": "Job-resume-maker-like-tealhq.com",
-          "owner": "Heroku-elasa",
-          "repo": "https://github.com/Heroku-elasa/Job-resume-maker-like-tealhq.com",
           "website": null,
-          "status": "repo",
-          "role": "رزومه لینکدین + ردیاب شغل برای متخصص ایرانی",
           "description": "رزومه‌ساز برای نیروی موقت غرفه.",
           "tags": [
             "منابع انسانی",
@@ -1337,10 +908,6 @@
             "نسخه دمو را دیپلوی کن",
             "فرم واتساپ/تماس بگذار"
           ],
-          "scoreWhy": [
-            "سایت عمومی ندارد",
-            "فقط مخزن/نمونه"
-          ],
           "screenshot": "/sisters/karyab.svg",
           "ready": false
         }
@@ -1351,28 +918,12 @@
       "name": "دیدبان آموزش",
       "en": "Academy",
       "role": "آموزش، آزمون، بالینی",
-      "for": "تیم فروش، کنکور، آموزش خانگی، پروتکل بالینی",
       "offer": "نوت‌بوک RAG نمایشگاه + چند آکادمی خواهر",
-      "price": "روزانه از ۵ میلیون",
-      "website": "https://neshan-m.exhibition2world.ir/notebooks",
-      "extraSites": [
-        "https://ai-4-homemaker-women.vercel.app",
-        "https://ai-coirse-1-bootcamp-2day.vercel.app",
-        "https://taranom-psychology-school-10milion.vercel.app",
-        "https://sosa123454321-dual-diagnosis-protocol.static.hf.space/",
-        "https://sosa123454321-taranom-exam-rag.static.hf.space/",
-        "https://sosa123454321-digiamoozesh-static.static.hf.space/"
-      ],
       "startups": [
         {
           "id": "notebooks",
           "name": "نوت‌بوک RAG نمایشگاه",
-          "brand": "neshan-m /notebooks",
-          "owner": "Websites-by-AI",
-          "repo": "https://github.com/Websites-by-AI/Marketing-by-map-neshan",
           "website": "https://neshan-m.exhibition2world.ir/notebooks",
-          "status": "live",
-          "role": "Colab تست‌شده RAG نفت/ساختمان",
           "description": "نوت‌بوک‌های تست‌شده RAG نفت و ساختمان.",
           "tags": [
             "آموزش",
@@ -1391,23 +942,13 @@
             "قرارداد و قیمت آماده کن",
             "۲ کیس موفق غرفه بگذار"
           ],
-          "scoreWhy": [
-            "آدرس عمومی دارد",
-            "سایت زنده پاسخ می‌دهد",
-            "دامنه نمایشگاه یا .ir"
-          ],
           "screenshot": "/sisters/notebooks.jpg",
           "ready": true
         },
         {
           "id": "digiamoozesh",
           "name": "دیجی‌آموزش",
-          "brand": "AI-4-Homemaker-women",
-          "owner": "Websites-by-AI",
-          "repo": "https://github.com/Websites-by-AI/AI-4-Homemaker-women",
           "website": "https://ai-4-homemaker-women.vercel.app",
-          "status": "live",
-          "role": "آکادمی کسب‌وکار خانگی",
           "description": "آکادمی کسب‌وکار خانگی دیجی‌آموزش.",
           "tags": [
             "آموزش",
@@ -1423,23 +964,13 @@
             "پکیج قیمت فارسی بنویس",
             "به LeadFair وصل کن"
           ],
-          "scoreWhy": [
-            "آدرس عمومی دارد",
-            "سایت زنده پاسخ می‌دهد",
-            "دمو Vercel"
-          ],
           "screenshot": "/sisters/digiamoozesh.jpg",
           "ready": true
         },
         {
           "id": "vibelab",
           "name": "VibeLab بوت‌کمپ",
-          "brand": "Ai-coirse_1_bootcamp_2day",
-          "owner": "Websites-by-AI",
-          "repo": "https://github.com/Websites-by-AI/Ai-coirse_1_bootcamp_2day",
           "website": "https://ai-coirse-1-bootcamp-2day.vercel.app",
-          "status": "live",
-          "role": "ماراتن ۲ روزه ساخت وب‌اپ با AI",
           "description": "بوت‌کمپ دو روزه ساخت وب‌اپ.",
           "tags": [
             "آموزش",
@@ -1455,23 +986,13 @@
             "پکیج قیمت فارسی بنویس",
             "به LeadFair وصل کن"
           ],
-          "scoreWhy": [
-            "آدرس عمومی دارد",
-            "سایت زنده پاسخ می‌دهد",
-            "دمو Vercel"
-          ],
           "screenshot": "/sisters/vibelab.jpg",
           "ready": true
         },
         {
           "id": "taranom",
           "name": "ترنم مهر",
-          "brand": "taranom2psychology2school",
-          "owner": "SBZ-EDU",
-          "repo": "https://github.com/SBZ-EDU/taranom2psychology2school",
           "website": "https://taranom-psychology-school-10milion.vercel.app",
-          "status": "live",
-          "role": "مدرسه روانشناسی/کنکور — برند جدا، بات وصل نیست",
           "description": "مدرسه روانشناسی و کنکور ترنم.",
           "tags": [
             "آموزش",
@@ -1487,23 +1008,13 @@
             "پکیج قیمت فارسی بنویس",
             "به LeadFair وصل کن"
           ],
-          "scoreWhy": [
-            "آدرس عمومی دارد",
-            "سایت زنده پاسخ می‌دهد",
-            "دمو Vercel"
-          ],
           "screenshot": "/sisters/taranom.jpg",
           "ready": true
         },
         {
           "id": "dual-protocol",
           "name": "پروتکل تشخیص دوگانه",
-          "brand": "dual-diagnosis-protocol",
-          "owner": "SBZ-EDU",
-          "repo": "https://github.com/SBZ-EDU/dual-diagnosis-protocol",
           "website": "https://sosa123454321-dual-diagnosis-protocol.static.hf.space/",
-          "status": "live",
-          "role": "آموزش بالینی NICE/APA — جایگزین پزشک نیست",
           "description": "پروتکل آموزشی تشخیص دوگانه؛ جایگزین پزشک نیست.",
           "tags": [
             "آموزش",
@@ -1519,22 +1030,13 @@
             "پکیج قیمت فارسی بنویس",
             "به LeadFair وصل کن"
           ],
-          "scoreWhy": [
-            "آدرس عمومی دارد",
-            "سایت زنده پاسخ می‌دهد"
-          ],
           "screenshot": "/sisters/dual-protocol.jpg",
           "ready": true
         },
         {
           "id": "dual-rag",
           "name": "RAG تشخیص دوگانه",
-          "brand": "dual-diagnosis-rag",
-          "owner": "SBZ-EDU",
-          "repo": "https://github.com/SBZ-EDU/dual-diagnosis-rag",
           "website": null,
-          "status": "repo",
-          "role": "دستیار بالینی RAG + نوت‌بوک Colab",
           "description": "RAG بالینی بدون Space پایدار.",
           "tags": [
             "آموزش",
@@ -1552,22 +1054,13 @@
             "نسخه دمو را دیپلوی کن",
             "فرم واتساپ/تماس بگذار"
           ],
-          "scoreWhy": [
-            "سایت عمومی ندارد",
-            "فقط مخزن/نمونه"
-          ],
           "screenshot": "/sisters/dual-rag.svg",
           "ready": false
         },
         {
           "id": "azmonyar",
           "name": "آزمون‌یار ارشد",
-          "brand": "all-master-exams-plattform",
-          "owner": "Websites-by-AI",
-          "repo": "https://github.com/Websites-by-AI/all-master-exams-plattform-based-of-education-Hub",
           "website": null,
-          "status": "repo",
-          "role": "پلتفرم آزمون کارشناسی ارشد مهندسی",
           "description": "پلتفرم آزمون ارشد مهندسی.",
           "tags": [
             "آموزش",
@@ -1585,22 +1078,13 @@
             "نسخه دمو را دیپلوی کن",
             "فرم واتساپ/تماس بگذار"
           ],
-          "scoreWhy": [
-            "سایت عمومی ندارد",
-            "فقط مخزن/نمونه"
-          ],
           "screenshot": "/sisters/azmonyar.svg",
           "ready": false
         },
         {
           "id": "rooish",
           "name": "مرکز کارآفرینی رویش",
-          "brand": "Rooish-Entrepreneurship-Center",
-          "owner": "Heroku-elasa",
-          "repo": "https://github.com/Heroku-elasa/Rooish-Entrepreneurship-Center",
           "website": null,
-          "status": "repo",
-          "role": "شتاب‌دهنده سبزوار — آموزش و شتاب استارتاپ",
           "description": "شتاب‌دهنده رویش سبزوار.",
           "tags": [
             "آموزش",
@@ -1618,10 +1102,6 @@
             "نسخه دمو را دیپلوی کن",
             "فرم واتساپ/تماس بگذار"
           ],
-          "scoreWhy": [
-            "سایت عمومی ندارد",
-            "فقط مخزن/نمونه"
-          ],
           "screenshot": "/sisters/rooish.svg",
           "ready": false
         }
@@ -1632,23 +1112,12 @@
       "name": "دیدبان محیط‌زیست",
       "en": "Environment / cleaning",
       "role": "پاکسازی، پسماند، آب، درخت",
-      "for": "سالن نمایشگاه، شهر، منابع آب، جنگل",
       "offer": "پسماند هوشمند سالن + کاشت درخت + گزارش محیط‌زیست + ورشکستگی آبی",
-      "price": "پروژه‌ای",
-      "website": "https://green-hope-fire-jugle-pages.pages.dev",
-      "extraSites": [
-        "https://smartwaste.pages.dev"
-      ],
       "startups": [
         {
           "id": "green-hope",
           "name": "امید سبز | کاشت درخت",
-          "brand": "Green-Hope-Project---Planting-Trees",
-          "owner": "Heroku-elasa",
-          "repo": "https://github.com/Heroku-elasa/Green-Hope-Project---Planting-Trees-with-Artificial-Intelligence",
           "website": "https://green-hope-fire-jugle-pages.pages.dev",
-          "status": "live",
-          "role": "برنامه کاشت درخت، گرنت و گزارش سبز",
           "description": "کاشت درخت و گرنت سبز.",
           "tags": [
             "محیط‌زیست",
@@ -1664,23 +1133,13 @@
             "پکیج قیمت فارسی بنویس",
             "به LeadFair وصل کن"
           ],
-          "scoreWhy": [
-            "آدرس عمومی دارد",
-            "سایت زنده پاسخ می‌دهد",
-            "هاست کلادفلر"
-          ],
           "screenshot": "/sisters/green-hope.jpg",
           "ready": true
         },
         {
           "id": "green-hope-pages",
           "name": "امید سبز Pages (سازمان)",
-          "brand": "green-hope-fire-jugle-pages",
-          "owner": "Websites-by-AI",
-          "repo": "https://github.com/Websites-by-AI/green-hope-fire-jugle-pages",
           "website": "https://green-hope-fire-jugle-pages.pages.dev",
-          "status": "live",
-          "role": "همان امید سبز روی کلادفلر Pages",
           "description": "همان امید سبز روی Cloudflare Pages.",
           "tags": [
             "محیط‌زیست",
@@ -1696,23 +1155,13 @@
             "پکیج قیمت فارسی بنویس",
             "به LeadFair وصل کن"
           ],
-          "scoreWhy": [
-            "آدرس عمومی دارد",
-            "سایت زنده پاسخ می‌دهد",
-            "هاست کلادفلر"
-          ],
           "screenshot": "/sisters/green-hope.jpg",
           "ready": true
         },
         {
           "id": "smartwaste-env",
           "name": "EcoSmart پسماند",
-          "brand": "SmartWaste-AI",
-          "owner": "Heroku-elasa",
-          "repo": "https://github.com/Heroku-elasa/SmartWaste-AI---Intelligent-Waste-Management-number-2",
           "website": "https://smartwaste.pages.dev",
-          "status": "live",
-          "role": "جمع‌آوری و تحلیل پسماند — پاکسازی محیط سالن",
           "description": "پسماند هوشمند در حوزه محیط‌زیست.",
           "tags": [
             "محیط‌زیست",
@@ -1728,23 +1177,13 @@
             "پکیج قیمت فارسی بنویس",
             "به LeadFair وصل کن"
           ],
-          "scoreWhy": [
-            "آدرس عمومی دارد",
-            "سایت زنده پاسخ می‌دهد",
-            "هاست کلادفلر"
-          ],
           "screenshot": "/sisters/smartwaste.jpg",
           "ready": true
         },
         {
           "id": "water-bankruptcy",
           "name": "ورشکستگی آبی ایران",
-          "brand": "iran-Water-Bankruptcy-Management",
-          "owner": "Heroku-elasa",
-          "repo": "https://github.com/Heroku-elasa/iran-Water-Bankruptcy-Management",
           "website": null,
-          "status": "repo",
-          "role": "داشبورد آبخوان و مدیریت کم‌آبی",
           "description": "داشبورد کم‌آبی و آبخوان ایران.",
           "tags": [
             "محیط‌زیست",
@@ -1762,22 +1201,13 @@
             "نسخه دمو را دیپلوی کن",
             "فرم واتساپ/تماس بگذار"
           ],
-          "scoreWhy": [
-            "سایت عمومی ندارد",
-            "فقط مخزن/نمونه"
-          ],
           "screenshot": "/sisters/water-bankruptcy.svg",
           "ready": false
         },
         {
           "id": "ecoai",
           "name": "ecoAI دستیار محیط‌زیست",
-          "brand": "Findexpert.iro-ecoAI-Environmental-Assistant",
-          "owner": "Heroku-elasa",
-          "repo": "https://github.com/Heroku-elasa/Findexpert.iro-ecoAI-Environmental-Assistant",
           "website": null,
-          "status": "repo",
-          "role": "گزارش پایداری و پیش‌نویس پروژه سبز",
           "description": "گزارش پایداری و پیشنهاد پروژه سبز.",
           "tags": [
             "محیط‌زیست",
@@ -1795,22 +1225,13 @@
             "نسخه دمو را دیپلوی کن",
             "فرم واتساپ/تماس بگذار"
           ],
-          "scoreWhy": [
-            "سایت عمومی ندارد",
-            "فقط مخزن/نمونه"
-          ],
           "screenshot": "/sisters/ecoai.svg",
           "ready": false
         },
         {
           "id": "wildfire",
           "name": "پیش‌بینی گسترش آتش",
-          "brand": "Wildfires-SatelliteVu",
-          "owner": "Websites-by-AI",
-          "repo": "https://github.com/Websites-by-AI/Wildfires-SatelliteVu-AWS-Disaster-Response-Hackathon",
           "website": null,
-          "status": "repo",
-          "role": "مدل ماهواره‌ای آتش‌سوزی جنگل — هکاتون AWS",
           "description": "مدل ماهواره‌ای گسترش آتش جنگل.",
           "tags": [
             "محیط‌زیست",
@@ -1828,10 +1249,6 @@
             "نسخه دمو را دیپلوی کن",
             "فرم واتساپ/تماس بگذار"
           ],
-          "scoreWhy": [
-            "سایت عمومی ندارد",
-            "فقط مخزن/نمونه"
-          ],
           "screenshot": "/sisters/wildfire.svg",
           "ready": false
         }
@@ -1842,21 +1259,12 @@
       "name": "دیدبان اجتماعی",
       "en": "Social / civic",
       "role": "سلامت اجتماعی، پناهگاه، رسانه، تندرستی",
-      "for": "سازمان مردم‌نهاد، پناهگاه حیوان، رسانه، باشگاه",
       "offer": "ابزار اجتماعی جدا از غرفه نمایشگاه — Civicavita اینجا برند اجتماعی است نه CRM غرفه",
-      "price": "پروژه‌ای",
-      "website": "https://aura-ai.pages.dev",
-      "extraSites": [],
       "startups": [
         {
           "id": "civicavita",
           "name": "Civicavita AB",
-          "brand": "Civicavita-AB---Global-Health-Humanitarian-Science",
-          "owner": "Heroku-elasa",
-          "repo": "https://github.com/Heroku-elasa/Civicavita-AB---Global-Health-Humanitarian-Science",
           "website": null,
-          "status": "repo",
-          "role": "سلامت جهانی و علم بشردوستانه — فقط حوزه اجتماعی، بات/غرفه وصل نیست",
           "description": "سلامت بشردوستانه — فقط حوزه اجتماعی.",
           "tags": [
             "اجتماعی",
@@ -1873,22 +1281,13 @@
             "نسخه دمو را دیپلوی کن",
             "فرم واتساپ/تماس بگذار"
           ],
-          "scoreWhy": [
-            "سایت عمومی ندارد",
-            "فقط مخزن/نمونه"
-          ],
           "screenshot": "/sisters/civicavita.svg",
           "ready": false
         },
         {
           "id": "janpanah",
           "name": "جان‌پناه | نجات حیوان",
-          "brand": "Green-Hope-Project---Animal-Rescue-AI",
-          "owner": "Heroku-elasa",
-          "repo": "https://github.com/Heroku-elasa/Green-Hope-Project---Animal-Rescue-AI",
           "website": null,
-          "status": "repo",
-          "role": "پناهگاه حیوانات، گرنت و تطبیق زیستگاه",
           "description": "پناهگاه و نجات حیوان.",
           "tags": [
             "اجتماعی",
@@ -1905,22 +1304,13 @@
             "نسخه دمو را دیپلوی کن",
             "فرم واتساپ/تماس بگذار"
           ],
-          "scoreWhy": [
-            "سایت عمومی ندارد",
-            "فقط مخزن/نمونه"
-          ],
           "screenshot": "/sisters/janpanah.svg",
           "ready": false
         },
         {
           "id": "aura-wellness",
           "name": "آورا تندرستی",
-          "brand": "AURA-AI-Your-Partner-in-Wellness-Physique",
-          "owner": "Heroku-elasa",
-          "repo": "https://github.com/Heroku-elasa/AURA-AI-Your-Partner-in-Wellness-Physique",
           "website": "https://aura-ai.pages.dev",
-          "status": "live",
-          "role": "کوچ زیبایی، ورزش و تندرستی",
           "description": "کوچ تندرستی و زیبایی آورا.",
           "tags": [
             "اجتماعی",
@@ -1935,23 +1325,13 @@
             "پکیج قیمت فارسی بنویس",
             "به LeadFair وصل کن"
           ],
-          "scoreWhy": [
-            "آدرس عمومی دارد",
-            "سایت زنده پاسخ می‌دهد",
-            "هاست کلادفلر"
-          ],
           "screenshot": "/sisters/aura-wellness.jpg",
           "ready": true
         },
         {
           "id": "aura-music",
           "name": "آورا استودیو موسیقی",
-          "brand": "AURA-AI-Music-Studio",
-          "owner": "Heroku-elasa",
-          "repo": "https://github.com/Heroku-elasa/AURA-AI-Music-Studio",
           "website": null,
-          "status": "repo",
-          "role": "ایده موسیقی، روند و مشاوره تولید",
           "description": "استودیو ایده موسیقی آورا.",
           "tags": [
             "اجتماعی",
@@ -1968,22 +1348,13 @@
             "نسخه دمو را دیپلوی کن",
             "فرم واتساپ/تماس بگذار"
           ],
-          "scoreWhy": [
-            "سایت عمومی ندارد",
-            "فقط مخزن/نمونه"
-          ],
           "screenshot": "/sisters/aura-music.svg",
           "ready": false
         },
         {
           "id": "aura-sport",
           "name": "آورا مربی ورزش",
-          "brand": "sport-coach-by-AURA-AI",
-          "owner": "Heroku-elasa",
-          "repo": "https://github.com/Heroku-elasa/sport-coach-by-AURA-AI-Wellness-Physique-number-",
           "website": null,
-          "status": "repo",
-          "role": "برنامه تمرین و تحلیل بدن",
           "description": "مربی ورزش آورا.",
           "tags": [
             "اجتماعی",
@@ -2000,22 +1371,13 @@
             "نسخه دمو را دیپلوی کن",
             "فرم واتساپ/تماس بگذار"
           ],
-          "scoreWhy": [
-            "سایت عمومی ندارد",
-            "فقط مخزن/نمونه"
-          ],
           "screenshot": "/sisters/aura-sport.svg",
           "ready": false
         },
         {
           "id": "sahar-aura",
           "name": "گالری شابلون سحر / آورا",
-          "brand": "Sahar-shablon-gallery-AURA",
-          "owner": "Heroku-elasa",
-          "repo": "https://github.com/Heroku-elasa/Sahar-shablon-gallery-live-cosmetic-test-AURA-AI-Wellness-Physique-number--for",
           "website": null,
-          "status": "repo",
-          "role": "تست آرایشی زنده روی برند آورا",
           "description": "گالری شابلون و تست آرایشی.",
           "tags": [
             "اجتماعی",
@@ -2032,22 +1394,13 @@
             "نسخه دمو را دیپلوی کن",
             "فرم واتساپ/تماس بگذار"
           ],
-          "scoreWhy": [
-            "سایت عمومی ندارد",
-            "فقط مخزن/نمونه"
-          ],
           "screenshot": "/sisters/sahar-aura.svg",
           "ready": false
         },
         {
           "id": "media-compassion",
           "name": "تحلیل‌گر مهربانی رسانه",
-          "brand": "Media-compassion-analyzer",
-          "owner": "Websites-by-AI",
-          "repo": "https://github.com/Websites-by-AI/Media-compassion-analyzer",
           "website": null,
-          "status": "repo",
-          "role": "تحلیل لحن و سوگیری ویدیوی یوتیوب",
           "description": "تحلیل لحن و مهربانی رسانه.",
           "tags": [
             "اجتماعی",
@@ -2064,15 +1417,10 @@
             "نسخه دمو را دیپلوی کن",
             "فرم واتساپ/تماس بگذار"
           ],
-          "scoreWhy": [
-            "سایت عمومی ندارد",
-            "فقط مخزن/نمونه"
-          ],
           "screenshot": "/sisters/media-compassion.svg",
           "ready": false
         }
       ]
     }
-  ],
-  "scoringNote": "امتیاز آمادگی استفاده ۰–۱۰۰ از روی زنده بودن سایت، دامنه، و نوع هاست حساب شده (۱۲ اوت ۲۰۲۶). مخزن گیت‌هاب در صفحه عمومی نشان داده نمی‌شود."
+  ]
 }

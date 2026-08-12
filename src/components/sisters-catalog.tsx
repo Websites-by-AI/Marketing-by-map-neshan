@@ -1,7 +1,6 @@
 "use client";
 
-import sisters from "@/data/sister-companies.json";
-import { hostOf, scoreBar, sistersStats, stageClass } from "@/lib/sisters";
+import { hostOf, scoreBar, sistersPublic as sisters, sistersStats, stageClass } from "@/lib/sisters-public";
 import { useMemo, useState } from "react";
 
 const fa = new Intl.NumberFormat("fa-IR");
@@ -49,8 +48,8 @@ export default function SistersCatalog() {
         <section className="rounded-3xl bg-[#10263d] p-6 text-white">
           <h1 className="text-[26px] font-black">خدمات خواهر آماده همکاری با غرفه</h1>
           <p className="mt-3 max-w-3xl text-[14px] leading-8 text-slate-200">
-            اینجا فقط سایت زنده، تصویر صفحه، برچسب، توضیح، امتیاز آمادگی و قدم بعدی دیده می‌شود.
-            سورس و مخزن گیت‌هاب در صفحه عمومی نیست — جزئیات فنی در پنل ادمین است.
+            برای هر خدمت: تصویر صفحه، برچسب، توضیح کوتاه، امتیاز آمادگی برای استفاده، و قدم‌های بهبود.
+            اگر سایت زنده باشد فقط لینک همان سایت نشان داده می‌شود.
           </p>
           <div className="mt-5 grid grid-cols-2 gap-2 sm:grid-cols-4">
             {[
