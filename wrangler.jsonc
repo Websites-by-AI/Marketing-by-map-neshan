@@ -23,5 +23,11 @@
   "vars": {
     "LEADFAIR_RAG_API": "https://vercel-app-amber-five.vercel.app",
     "LEADFAIR_SEO_URL": "https://master.leadfair.pages.dev/seo-lead"
-  }
+  },
+  "kv_namespaces": [
+    {
+      "binding": "AGENT_MEMORY",
+      "id": "4ea51f7cafaf47efb73a366098015e3d"
+    }
+  ]
 }
