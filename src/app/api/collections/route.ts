@@ -1,6 +1,6 @@
 import { db } from "@/db";
 import { businesses, collectionRuns } from "@/db/schema";
-import { generateWebsitePrompt, toBusinessRecord } from "@/lib/business-data";
+import { collectFromDemoCatalog, generateWebsitePrompt, toBusinessRecord, type BusinessRecord } from "@/lib/business-data";
 import { eq } from "drizzle-orm";
 
 export const dynamic = "force-dynamic";
@@ -34,6 +34,21 @@ export async function POST(request: Request) {
     return Response.json({ message: "مختصات مرکز جست‌وجو معتبر نیست." }, { status: 400 });
   }
 
+  const apiKey = process.env.NESHAN_API_KEY?.trim();
+
+  if (!apiKey || !db) {
+    const items = collectFromDemoCatalog(term, latitude, longitude);
+    return Response.json({
+      runId: null,
+      count: items.length,
+      items,
+      source: "demo",
+      message: apiKey
+        ? "دیتابیس در دسترس نیست؛ نتایج نمونه بر اساس مختصات و عبارت جست‌وجو آماده شد."
+        : "کلید نشان تنظیم نشده؛ نتایج نمونه غرب تهران بر اساس مختصات و عبارت جست‌وجو آماده شد.",
+    });
+  }
+
   const [run] = await db
     .insert(collectionRuns)
     .values({
@@ -43,26 +58,6 @@ export async function POST(request: Request) {
       status: "running",
     })
     .returning();
-
-  const apiKey = process.env.NESHAN_API_KEY;
-  if (!apiKey) {
-    await db
-      .update(collectionRuns)
-      .set({
-        status: "blocked",
-        errorMessage: "متغیر NESHAN_API_KEY در محیط سرور تنظیم نشده است.",
-        completedAt: new Date(),
-      })
-      .where(eq(collectionRuns.id, run.id));
-
-    return Response.json(
-      {
-        message: "برای اجرای جمع‌آوری واقعی، متغیر NESHAN_API_KEY را در محیط سرور تنظیم کنید.",
-        runId: run.id,
-      },
-      { status: 424 },
-    );
-  }
 
   try {
     const query = new URLSearchParams({
@@ -82,7 +77,7 @@ export async function POST(request: Request) {
 
     const payload = (await response.json()) as NeshanSearchResponse;
     const items = Array.isArray(payload.items) ? payload.items : [];
-    const saved = [];
+    const saved: BusinessRecord[] = [];
 
     for (const item of items) {
       const name = stringValue(item.title, "کسب‌وکار بدون نام");
@@ -148,7 +143,7 @@ export async function POST(request: Request) {
       .set({ status: "completed", resultsCount: saved.length, completedAt: new Date() })
       .where(eq(collectionRuns.id, run.id));
 
-    return Response.json({ runId: run.id, count: saved.length, items: saved });
+    return Response.json({ runId: run.id, count: saved.length, items: saved, source: "neshan" });
   } catch (error) {
     const message = error instanceof Error ? error.message : "خطای ناشناخته در دریافت داده از نشان";
     await db
@@ -156,6 +151,16 @@ export async function POST(request: Request) {
       .set({ status: "failed", errorMessage: message, completedAt: new Date() })
       .where(eq(collectionRuns.id, run.id));
 
-    return Response.json({ message, runId: run.id }, { status: 502 });
+    const fallback = collectFromDemoCatalog(term, latitude, longitude);
+    return Response.json(
+      {
+        message: `${message} — نتایج نمونه به‌عنوان جایگزین بارگذاری شد.`,
+        runId: run.id,
+        count: fallback.length,
+        items: fallback,
+        source: "demo-fallback",
+      },
+      { status: 200 },
+    );
   }
 }

@@ -1,7 +1,7 @@
 import { lookup } from "node:dns/promises";
 import { db } from "@/db";
 import { businesses } from "@/db/schema";
-import { generateWebsitePrompt, toBusinessRecord } from "@/lib/business-data";
+import { demoBusinesses, generateWebsitePrompt, simulateWebsiteAnalysis, toBusinessRecord } from "@/lib/business-data";
 import { eq } from "drizzle-orm";
 
 export const dynamic = "force-dynamic";
@@ -44,8 +44,22 @@ function pageTitle(html: string) {
 export async function POST(request: Request) {
   const body = (await request.json()) as { businessId?: number };
   const businessId = Number(body.businessId);
-  if (!Number.isInteger(businessId) || businessId <= 0) {
+  if (!Number.isInteger(businessId) || businessId === 0) {
     return Response.json({ message: "شناسه کسب‌وکار معتبر نیست." }, { status: 400 });
+  }
+
+  if (businessId < 0 || !db) {
+    const demo = demoBusinesses.find((item) => item.id === businessId);
+    if (!demo) return Response.json({ message: "کسب‌وکار نمونه پیدا نشد." }, { status: 404 });
+    const item = simulateWebsiteAnalysis(demo);
+    return Response.json({
+      item,
+      report: {
+        title: item.websiteTitle ?? item.name,
+        score: item.qualityScore,
+        simulated: true,
+      },
+    });
   }
 
   const [business] = await db.select().from(businesses).where(eq(businesses.id, businessId)).limit(1);
@@ -58,7 +72,7 @@ export async function POST(request: Request) {
     const timeout = setTimeout(() => controller.abort(), 10_000);
     const response = await fetch(url, {
       cache: "no-store",
-      redirect: "manual",
+      redirect: "follow",
       signal: controller.signal,
       headers: {
         "User-Agent": "Local-Intelligence-Analyzer/1.0 (+website-analysis)",

@@ -1,6 +1,6 @@
 import { db } from "@/db";
 import { businesses } from "@/db/schema";
-import { buildMapLinks, toBusinessRecord } from "@/lib/business-data";
+import { buildMapLinks, demoBusinesses, findRelatedCompanies, toBusinessRecord, type BusinessRecord } from "@/lib/business-data";
 import { desc } from "drizzle-orm";
 
 export const dynamic = "force-dynamic";
@@ -10,12 +10,22 @@ function escapeCsv(value: string) {
   return `"${escaped}"`;
 }
 
+async function loadRecords(): Promise<BusinessRecord[]> {
+  if (db) {
+    try {
+      const rows = await db.select().from(businesses).orderBy(desc(businesses.leadScore), desc(businesses.updatedAt)).limit(1000);
+      if (rows.length) return rows.map(toBusinessRecord);
+    } catch {
+      // demo fallback
+    }
+  }
+  return demoBusinesses;
+}
+
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const format = searchParams.get("format") ?? "json";
-
-  const rows = await db.select().from(businesses).orderBy(desc(businesses.leadScore), desc(businesses.updatedAt)).limit(1000);
-  const records = rows.map(toBusinessRecord);
+  const records = await loadRecords();
 
   if (format === "csv") {
     const header = [
@@ -34,6 +44,7 @@ export async function GET(request: Request) {
       "لینک_گوگل_مپ",
       "لینک_نشان",
       "لینک_ویز",
+      "همسایگان_مرتبط",
       "پرامپت_طراحی_سایت",
     ];
 
@@ -41,6 +52,9 @@ export async function GET(request: Request) {
 
     for (const record of records) {
       const links = buildMapLinks(record);
+      const related = findRelatedCompanies(record, records, 900, 4)
+        .map((item) => `${item.name} (${item.distanceMeters}م)`)
+        .join(" | ");
       lines.push(
         [
           String(record.id),
@@ -58,6 +72,7 @@ export async function GET(request: Request) {
           links.google,
           links.neshan,
           links.waze,
+          related,
           (record.websitePrompt ?? "").slice(0, 8000).replace(/\n/g, " "),
         ]
           .map(escapeCsv)
@@ -77,13 +92,20 @@ export async function GET(request: Request) {
   const enriched = records.map((record) => ({
     ...record,
     mapLinks: buildMapLinks(record),
+    related: findRelatedCompanies(record, records, 900, 4).map((item) => ({
+      id: item.id,
+      name: item.name,
+      distanceMeters: item.distanceMeters,
+      reason: item.connectionReason,
+      type: item.connectionType,
+    })),
   }));
 
   return Response.json(
     {
       generatedAt: new Date().toISOString(),
       count: enriched.length,
-      notice: "فایل نهایی شامل لینک‌های قابل کلیک گوگل مپ، نشان، ویز و پرامپت طراحی سایت برای هر کسب‌وکار بحرانی است.",
+      notice: "خروجی شامل لینک‌های قابل کلیک گوگل مپ، نشان، ویز، شبکه همسایگی و پرامپت طراحی سایت است.",
       areas: {
         density: "بررسی تراکم در سعادت‌آباد، حوالی پل مدیریت و چهارراه سرو با کلاستر نقشه",
         hotspots: ["سعادت‌آباد مرکز", "میدان کاج", "پل مدیریت", "شهرک غرب دادمان", "مرزداران پل یادگار"],

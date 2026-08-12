@@ -1,25 +1,40 @@
 import { db } from "@/db";
 import { businesses } from "@/db/schema";
-import { findRelatedCompanies, buildLocalNetworkClusters, toBusinessRecord, buildMapLinks, demoBusinesses } from "@/lib/business-data";
+import {
+  buildLocalNetworkClusters,
+  buildMapLinks,
+  demoBusinesses,
+  findRelatedCompanies,
+  toBusinessRecord,
+  type BusinessRecord,
+} from "@/lib/business-data";
 
 export const dynamic = "force-dynamic";
 
+async function loadRecords(): Promise<BusinessRecord[]> {
+  if (db) {
+    try {
+      const allRows = await db.select().from(businesses);
+      const mapped = allRows.map(toBusinessRecord);
+      if (mapped.length) return mapped;
+    } catch {
+      // demo fallback
+    }
+  }
+  return demoBusinesses;
+}
+
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
-  const businessId = Number(searchParams.get("businessId"));
-  const lat = Number(searchParams.get("lat"));
-  const lng = Number(searchParams.get("lng"));
+  const businessIdRaw = searchParams.get("businessId");
+  const businessId = businessIdRaw == null || businessIdRaw === "" ? NaN : Number(businessIdRaw);
+  const latRaw = searchParams.get("lat");
+  const lngRaw = searchParams.get("lng");
+  const lat = latRaw == null || latRaw === "" ? NaN : Number(latRaw);
+  const lng = lngRaw == null || lngRaw === "" ? NaN : Number(lngRaw);
   const radiusParam = Number(searchParams.get("radius") ?? 900);
   const radius = Number.isFinite(radiusParam) ? Math.min(2000, Math.max(100, radiusParam)) : 900;
-
-  let effective: ReturnType<typeof toBusinessRecord>[] = [];
-  try {
-    const allRows = await db.select().from(businesses);
-    const mapped = allRows.map(toBusinessRecord);
-    effective = mapped.length ? mapped : (demoBusinesses as unknown as ReturnType<typeof toBusinessRecord>[]);
-  } catch {
-    effective = demoBusinesses as unknown as ReturnType<typeof toBusinessRecord>[];
-  }
+  const effective = await loadRecords();
 
   if (Number.isInteger(businessId) && businessId !== 0) {
     const target = effective.find((b) => b.id === businessId);
@@ -44,33 +59,16 @@ export async function GET(request: Request) {
 
   if (Number.isFinite(lat) && Number.isFinite(lng)) {
     const fakeTarget = {
+      ...demoBusinesses[0],
       id: 0,
-      neshanId: null,
       name: "نقطه مرکزی",
       category: "مرکز جستجو",
       address: `${lat}, ${lng}`,
-      city: "تهران",
       latitude: lat,
       longitude: lng,
-      phone: null,
-      website: null,
-      websiteTitle: null,
       websiteFound: false,
-      websiteStatus: "unknown",
-      websiteQuality: "مرکز",
-      websitePrompt: null,
-      qualityScore: 0,
-      digitalMaturity: 0,
-      hasOnlineOrder: false,
-      hasBooking: false,
-      hasContactPage: false,
-      hasSocialLinks: false,
       leadScore: 0,
-      technologies: [],
-      socialLinks: [],
-      source: "query",
-      lastChecked: null,
-    } as unknown as ReturnType<typeof toBusinessRecord>;
+    };
 
     const related = findRelatedCompanies(fakeTarget, effective, radius, 15).map((r) => ({
       ...r,
