@@ -49,19 +49,7 @@ export default function SistersPage() {
           ))}
         </section>
 
-        <section className="rounded-2xl border bg-white p-5">
-          <h2 className="text-[20px] font-black">سایت‌های کلادفلر مرتبط</h2>
-          <p className="mt-1 text-[12px] text-slate-500">{cloudflareSites.note}</p>
-          <div className="mt-4 grid gap-2 md:grid-cols-2">
-            {cloudflareSites.items.map((site) => (
-              <a key={site.id} href={site.url} target="_blank" rel="noreferrer" className="rounded-xl bg-slate-50 p-3 hover:bg-slate-100">
-                <p className="text-[13px] font-extrabold">{site.label}</p>
-                <p className="mt-1 text-[11px] text-slate-500">{site.role}</p>
-                <p className="mt-1 truncate text-[11px] font-bold text-[#ee6748]">{site.url}</p>
-              </a>
-            ))}
-          </div>
-        </section>
+        <CooperationNetwork />
 
         <section>
           <h2 className="text-[20px] font-black">مدل همکاری به‌روز</h2>
